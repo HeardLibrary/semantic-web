@@ -8,6 +8,17 @@ Authors: Dean Allemang and James Hendler
 
 Access URI (Vanderbilt IP addresses only): [http://www.sciencedirect.com/science/book/9780123859655](http://www.sciencedirect.com/science/book/9780123859655)
 
+##Particapants
+  * Ed Warga - Scholarly Communications - Vanderbilt Library
+  * Zora Breeding - Technical Services - Vanderbilt Library
+  * Suellen Stringer Hye - Scholarly Communications - Vanderbilt Library
+  * Steve Baskauf - 
+  * Chris Benda - Divinity Library
+  * Cathy Jill - Divinity Library
+  * Jake Schaub - Music Library
+  * William Sealy
+  * Alex Aysis
+
 [Chapter 1 Notes] (sw4wo-ch1.md)
 
 
