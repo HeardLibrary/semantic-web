@@ -2,6 +2,8 @@
 
 Some general references:
 
+As requested by Suellen: [RDF Primer video](http://youtu.be/XAGifYBiXMY)
+
 [Reference list for standards and other resources](https://github.com/tdwg/rdf/blob/master/Beginners.md#03-significant-documents-tools-and-rdf-implementations)
 
 [Architecture of the World Wide Web, Volume One (W3C](https://www.w3.org/TR/webarch/)
