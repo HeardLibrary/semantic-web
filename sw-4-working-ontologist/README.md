@@ -12,7 +12,7 @@ Access URI (Vanderbilt IP addresses only): [http://www.sciencedirect.com/science
   * Ed Warga - Scholarly Communications - Vanderbilt Library
   * Zora Breeding - Technical Services - Vanderbilt Library
   * Suellen Stringer Hye - Scholarly Communications - Vanderbilt Library
-  * Steve Baskauf - 
+  * Steve Baskauf - Biological Sciences
   * Chris Benda - Divinity Library
   * Cathy Jill - Divinity Library
   * Jake Schaub - Music Library
