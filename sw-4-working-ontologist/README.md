@@ -21,6 +21,6 @@ Access URI (Vanderbilt IP addresses only): [http://www.sciencedirect.com/science
 
 [Chapter 1 Notes] (sw4wo-ch1.md)
 
-
+[Chapter 3 Notes] (sw4wo-ch3.md)
 
 
