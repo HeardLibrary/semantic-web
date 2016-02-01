@@ -247,6 +247,126 @@ I got the RDF describing Cliff at ORCID using approximately the same method as a
         foaf:publications  <http://orcid.org/0000-0003-0328-0792#workspace-works> .
 ```
 
+## RDF description of Cliff from the meeting
+
+(I got rid of one rouge colon that was preventing it from validating.)
+
+### RDF/Turtle
+
+```
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema: <http://schema.org/Person> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+  <http://orcid.org/0000-0003-0328-0792> a rdf:Person ;
+    foaf:name "Cliff Anderson" ;
+    dc:alternative "Clifford Blake Anderson" ;
+    schema:additionalName "Clifford Blake Anderson" ;
+    foaf:title "Dr." ;
+
+    #Educational Level
+    schema:alumniOf <https://www.pratt.edu/the-institute/> ;
+      dc:educationalLevel <https://en.wikipedia.org/wiki/Master_of_Library_and_Information_Science> ;
+      dc:date "2011-2012" ;
+    schema:alumniOf <http://www.ptsem.edu/> ;
+      dc:educationalLevel <https://en.wikipedia.org/wiki/Doctor_of_Philosophy> ;
+      dc:educationalLevel <https://en.wikipedia.org/wiki/Master_of_Theology> ;
+      dc:date "1996-2005" ;
+    schema:alumniOf <http://hds.harvard.edu/> ;
+      dc:educationalLevel <https://en.wikipedia.org/wiki/Master_of_Divinity> ;
+      dc:date "1992-1995" ;
+    schema:alumniOf <http://www.kenyon.edu/> ;
+      dc:educationalLevel <https://en.wikipedia.org/wiki/Bachelor_of_Arts> ;
+      dc:date "1988-1992" ;
+
+    #Employment History  
+    schema:employee <http://vanderbilt.edu/> ;
+      geo:location [ geo:lat 36.144724 ; geo:long -86.802715 ] ;
+    schema:jobTitle "Director of Scholarly Communications" ;
+
+    #Colleagues
+    schema:colleague <http://orcid.org/0000-0002-2174-0484> ;
+    foaf:knows <http://orcid.org/0000-0003-4365-3135> ;
+
+    #Website and social media
+    foaf:page <http://www.library.vanderbilt.edu/scholarly/> ;
+    foaf:page <https://www.hastac.org/u/clifford-anderson> ;
+    foaf:account <https://www.linkedin.com/in/cliffordbanderson> ;
+    foaf:account <https://twitter.com/andersoncliffb> ;
+
+    #Publications
+    foaf:publications <http://dx.doi.org/10.11630/1550-4891.10.02.118>, <http://dx.doi.org/10.4242/balisagevol13.anderson01>, <http://dx.doi.org/10.11630/1550-4891.09.02.130>, <http://dx.doi.org/10.1163/ej.9789004203365.i-284.36>, <http://dx.doi.org/10.1017/s003693060700364x>, <http://dx.doi.org/10.1163/156973208x316234>, <http://dx.doi.org/10.1177/004057369905500421> ;
+
+    #Scholarly Interests
+    foaf:topic_Interest "Digital Libraries", "XQuery", "Semantic Web", "Library Science", "Theology" ;
+
+    #Digital Images
+    foaf:thumbNail <http://www.library.vanderbilt.edu/scholarly/images/cba-small.jpg> ;
+    foaf:thumbNail <http://news.vanderbilt.edu/files/Catherine-Lee-Michael-Stuart-Clifford-Anderson-585x390.jpg> .
+```
+
+Here's the RDF/XML in case you want to try pasting it into the W3C Validator to see the bubble and arrow diagram:
+
+### RDF/XML
+
+```
+<?xml version="1.0" encoding="utf-16"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+	<!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+	<!ENTITY xsd 'http://www.w3.org/2001/XMLSchema#'>
+	<!ENTITY foaf 'http://xmlns.com/foaf/0.1/'>
+	<!ENTITY dc 'http://purl.org/dc/elements/1.1/'>
+	<!ENTITY skos 'http://www.w3.org/2004/02/skos/core#'>
+	<!ENTITY schema 'http://schema.org/Person'>
+	<!ENTITY geo 'http://www.w3.org/2003/01/geo/wgs84_pos#'>
+]>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:schema="http://schema.org/Person" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Person rdf:about="http://orcid.org/0000-0003-0328-0792" dc:alternative="Clifford Blake Anderson" dc:date="1988-1992" schema:additionalName="Clifford Blake Anderson" schema:jobTitle="Director of Scholarly Communications" foaf:name="Cliff Anderson" foaf:title="Dr." foaf:topic_Interest="Digital Libraries">
+    <dc:date>1992-1995</dc:date>
+    <dc:date>1996-2005</dc:date>
+    <dc:date>2011-2012</dc:date>
+    <dc:educationalLevel rdf:resource="https://en.wikipedia.org/wiki/Bachelor_of_Arts" />
+    <dc:educationalLevel rdf:resource="https://en.wikipedia.org/wiki/Doctor_of_Philosophy" />
+    <dc:educationalLevel rdf:resource="https://en.wikipedia.org/wiki/Master_of_Divinity" />
+    <dc:educationalLevel rdf:resource="https://en.wikipedia.org/wiki/Master_of_Library_and_Information_Science" />
+    <dc:educationalLevel rdf:resource="https://en.wikipedia.org/wiki/Master_of_Theology" />
+    <schema:alumniOf rdf:resource="http://hds.harvard.edu/" />
+    <schema:alumniOf rdf:resource="http://www.kenyon.edu/" />
+    <schema:alumniOf rdf:resource="http://www.ptsem.edu/" />
+    <schema:alumniOf rdf:resource="https://www.pratt.edu/the-institute/" />
+    <schema:colleague rdf:resource="http://orcid.org/0000-0002-2174-0484" />
+    <schema:employee rdf:resource="http://vanderbilt.edu/" />
+    <geo:location rdf:parseType="Resource">
+      <geo:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">36.144724</geo:lat>
+      <geo:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-86.802715</geo:long>
+    </geo:location>
+    <foaf:account rdf:resource="https://twitter.com/andersoncliffb" />
+    <foaf:account rdf:resource="https://www.linkedin.com/in/cliffordbanderson" />
+    <foaf:knows rdf:resource="http://orcid.org/0000-0003-4365-3135" />
+    <foaf:page rdf:resource="http://www.library.vanderbilt.edu/scholarly/" />
+    <foaf:page rdf:resource="https://www.hastac.org/u/clifford-anderson" />
+    <foaf:publications rdf:resource="http://dx.doi.org/10.1017/s003693060700364x" />
+    <foaf:publications rdf:resource="http://dx.doi.org/10.1163/156973208x316234" />
+    <foaf:publications rdf:resource="http://dx.doi.org/10.1163/ej.9789004203365.i-284.36" />
+    <foaf:publications rdf:resource="http://dx.doi.org/10.11630/1550-4891.09.02.130" />
+    <foaf:publications rdf:resource="http://dx.doi.org/10.11630/1550-4891.10.02.118" />
+    <foaf:publications rdf:resource="http://dx.doi.org/10.1177/004057369905500421" />
+    <foaf:publications rdf:resource="http://dx.doi.org/10.4242/balisagevol13.anderson01" />
+    <foaf:thumbNail rdf:resource="http://news.vanderbilt.edu/files/Catherine-Lee-Michael-Stuart-Clifford-Anderson-585x390.jpg" />
+    <foaf:thumbNail rdf:resource="http://www.library.vanderbilt.edu/scholarly/images/cba-small.jpg" />
+    <foaf:topic_Interest>Library Science</foaf:topic_Interest>
+    <foaf:topic_Interest>Semantic Web</foaf:topic_Interest>
+    <foaf:topic_Interest>Theology</foaf:topic_Interest>
+    <foaf:topic_Interest>XQuery</foaf:topic_Interest>
+  </rdf:Person>
+</rdf:RDF>
+```
+
 ---
 Notes from Heath, T. and C. Bizer. 2011. Linked Data: Evolving the Web into a Global Data Space.
 
