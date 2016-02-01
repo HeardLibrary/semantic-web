@@ -11,7 +11,9 @@ Here's how I found out what VIAF had to say about Cliff:
 
 4. Here's what was returned from the server:
 
-'''xml
+### RDF/XML
+
+'''
 <?xml version="1.0" encoding="utf-16"?>
 <!DOCTYPE rdf:RDF [
 	<!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
@@ -65,7 +67,9 @@ Here's how I found out what VIAF had to say about Cliff:
 </rdf:RDF>
 '''
 
-5. To convert it to Turtle, I used rdfEditor, which unfortunately is only available for PCs.  In rdfEditor, I opened the RDF/XML file and used Save With from the file menu to save with the Turtle writer.  Here's what I got:
+To convert it to Turtle, I used rdfEditor, which unfortunately is only available for PCs.  In rdfEditor, I opened the RDF/XML file and used Save With from the file menu to save with the Turtle writer.  Here's what I got:
+
+### RDF/Turtle
 
 ```
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
@@ -124,7 +128,9 @@ Here's how I found out what VIAF had to say about Cliff:
 ```
 These are exactly the same 39 triples as in the XML serialization.
 
-6. To visualize the RDF as a bubble and arrow graph diagram, go to the W3C RDF Validation Service at http://www.w3.org/RDF/Validator/ .  Copy and paste the RDF/XML into the "Check by Direct Input" box.  Drop down "Graph Only" or "Triples and Graph" depending on what you want to see, then click on Parse RDF.
+### RDF as a bubble and arrow diagram
+
+To visualize the RDF as a bubble and arrow graph diagram, go to the W3C RDF Validation Service at http://www.w3.org/RDF/Validator/ .  Copy and paste the RDF/XML into the "Check by Direct Input" box.  Drop down "Graph Only" or "Triples and Graph" depending on what you want to see, then click on Parse RDF.
 
 ## Clifford Anderson RDF at ORCID
 
