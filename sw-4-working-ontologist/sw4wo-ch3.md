@@ -65,7 +65,7 @@ Here's how I found out what VIAF had to say about Cliff:
     <foaf:focus rdf:resource="http://viaf.org/viaf/168432349" />
   </skos:Concept>
 </rdf:RDF>
-'''
+```
 
 To convert it to Turtle, I used rdfEditor, which unfortunately is only available for PCs.  In rdfEditor, I opened the RDF/XML file and used Save With from the file menu to save with the Turtle writer.  Here's what I got:
 
