@@ -249,7 +249,7 @@ I got the RDF describing Cliff at ORCID using approximately the same method as a
 
 ## RDF description of Cliff from the meeting
 
-(I got rid of one rouge colon that was preventing it from validating.)
+(I got rid of one rogue colon that was preventing it from validating.)
 
 ### RDF/Turtle
 
