@@ -13,7 +13,7 @@ Here's how I found out what VIAF had to say about Cliff:
 
 ### RDF/XML
 
-'''
+```
 <?xml version="1.0" encoding="utf-16"?>
 <!DOCTYPE rdf:RDF [
 	<!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
