@@ -5,7 +5,7 @@
 * mobile applications are the future of web use. today we discuss applications that access RDF data to drive functionality
 
 ## Slides!
-[swipe.to/7136ct](swipe.to/7136ct)
+[swipe.to/7136ct](https://www.swipe.to/7136ct)
 
 ## Stardog!
 Exercise? Identify components of semantic web application as present in [stardog](http://stardog.com/).
