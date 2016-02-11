@@ -1,0 +1,39 @@
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+#warga
+<http://orcid.org/0000-0003-2445-1511> foaf:made <http://dx.doi.org/10.2218/ijdc.v8i1.242>,
+<http://dx.doi.org/10.1002/meet.14504901283>,
+<http://dx.doi.org/10.1145/2132176.2132324>.
+
+#baskauf
+<http://orcid.org/0000-0003-4365-3135> foaf:made <http://dx.doi.org/10.1371/journal.pone.0089606>,
+<http://dx.doi.org/10.1603/0046-225x-32.5.915>,
+<http://dx.doi.org/10.1603/0046-225x-30.2.181>,
+<http://dx.doi.org/10.5281/zenodo.45640>;
+owl:sameAs <http://viaf.org/viaf/63557389>.
+
+#anderson
+<http://orcid.org/0000-0003-0328-0792> foaf:made <http://dx.doi.org/10.11630/1550-4891.10.02.118>,
+<http://dx.doi.org/10.4242/balisagevol13.anderson01>,
+<http://dx.doi.org/10.11630/1550-4891.09.02.130>,
+<http://dx.doi.org/10.1163/ej.9789004203365.i-284.36>,
+<http://dx.doi.org/10.1017/s003693060700364x>,
+<http://dx.doi.org/10.1163/156973208x316234>,
+<http://dx.doi.org/10.1177/004057369905500421>;
+owl:sameAs <http://viaf.org/viaf/168432349>.
+
+#stringer-hye
+<http://orcid.org/0000-0002-2174-0484> foaf:made <http://dx.doi.org/10.1108/07378830810857753>,
+<http://dx.doi.org/10.1108/10650750510598657>,
+<http://dx.doi.org/10.1353/nab.2011.0046>.
+
+#semantic web working group (blank node)
+_:swwg a foaf:Group;
+foaf:name "Semantic Web Working Group";
+foaf:homepage <https://github.com/HeardLibrary/semantic-web>;
+foaf:member <http://orcid.org/0000-0003-2445-1511>,
+<http://orcid.org/0000-0003-4365-3135>,
+<http://orcid.org/0000-0003-0328-0792>,
+<http://orcid.org/0000-0002-2174-0484>.

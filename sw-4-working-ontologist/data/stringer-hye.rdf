@@ -1,0 +1,152 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:pav="http://purl.org/pav/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:gn="http://www.geonames.org/ontology#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:j.0="http://purl.org/ontology/bibo/"
+    xmlns:j.1="http://xmlns.com/foaf/0.1/"
+    xmlns:j.2="http://purl.org/dc/terms/"
+    xmlns:j.3="http://prismstandard.org/namespaces/basic/2.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://orcid.org/0000-0002-2174-0484#workspace-works">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://orcid.org/0000-0002-2174-0484#orcid-id">
+    <rdfs:label>0000-0002-2174-0484</rdfs:label>
+    <foaf:accountName>0000-0002-2174-0484</foaf:accountName>
+    <foaf:accountServiceHomepage rdf:resource="http://orcid.org"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://orcid.org/0000-0002-2174-0484">
+    <foaf:account rdf:resource="http://orcid.org/0000-0002-2174-0484#orcid-id"/>
+    <foaf:publications rdf:resource="http://orcid.org/0000-0002-2174-0484#workspace-works"/>
+    <foaf:familyName>Stringer-Hye</foaf:familyName>
+    <foaf:givenName>Suellen</foaf:givenName>
+    <rdfs:label>Suellen Stringer-Hye</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pub.orcid.org/orcid-pub-web/experimental_rdf_v1/0000-0002-2174-0484">
+    <pav:createdOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-17T16:48:10.112Z</pav:createdOn>
+    <prov:generatedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-12-17T23:17:46.408Z</prov:generatedAtTime>
+    <pav:lastUpdateOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-12-17T23:17:46.408Z</pav:lastUpdateOn>
+    <pav:createdWith rdf:resource="http://orcid.org"/>
+    <prov:wasAttributedTo rdf:resource="http://orcid.org/0000-0002-2174-0484"/>
+    <pav:createdBy rdf:resource="http://orcid.org/0000-0002-2174-0484"/>
+    <foaf:maker rdf:resource="http://orcid.org/0000-0002-2174-0484"/>
+    <foaf:primaryTopic rdf:resource="http://orcid.org/0000-0002-2174-0484"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/PersonalProfileDocument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dx.doi.org/10.1108/07378830810857753">
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/bradford-eden-2ni9au4bbgzq3">
+        <j.1:name>Bradford Eden</j.1:name>
+        <j.1:familyName>Eden</j.1:familyName>
+        <j.1:givenName>Bradford</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.0:volume>26</j.0:volume>
+    <j.0:pageStart>12</j.0:pageStart>
+    <j.2:identifier>10.1108/07378830810857753</j.2:identifier>
+    <j.2:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2008-3-7</j.2:date>
+    <j.0:pageEnd>18</j.0:pageEnd>
+    <owl:sameAs rdf:resource="info:doi/10.1108/07378830810857753"/>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/suellen-stringer-hye-2ni9au4bbgzq3">
+        <j.1:name>Suellen Stringer Hye</j.1:name>
+        <j.1:familyName>Stringer Hye</j.1:familyName>
+        <j.1:givenName>Suellen</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:title>Topic maps and the ILS: an undelivered promise</j.2:title>
+    <j.0:doi>10.1108/07378830810857753</j.0:doi>
+    <j.2:publisher>Emerald</j.2:publisher>
+    <j.2:isPartOf>
+      <j.0:Journal rdf:about="http://id.crossref.org/issn/0737-8831">
+        <owl:sameAs>urn:issn:0737-8831</owl:sameAs>
+        <j.2:title>Library Hi Tech</j.2:title>
+        <j.3:issn>0737-8831</j.3:issn>
+        <j.0:issn>0737-8831</j.0:issn>
+      </j.0:Journal>
+    </j.2:isPartOf>
+    <j.3:volume>26</j.3:volume>
+    <j.3:endingPage>18</j.3:endingPage>
+    <j.3:startingPage>12</j.3:startingPage>
+    <owl:sameAs rdf:resource="doi:10.1108/07378830810857753"/>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/edward-iglesias-2ni9au4bbgzq3">
+        <j.1:name>Edward Iglesias</j.1:name>
+        <j.1:familyName>Iglesias</j.1:familyName>
+        <j.1:givenName>Edward</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.3:doi>10.1108/07378830810857753</j.3:doi>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dx.doi.org/10.1108/10650750510598657">
+    <owl:sameAs rdf:resource="doi:10.1108/10650750510598657"/>
+    <j.3:volume>21</j.3:volume>
+    <j.3:startingPage>89</j.3:startingPage>
+    <j.0:pageEnd>91</j.0:pageEnd>
+    <j.3:endingPage>91</j.3:endingPage>
+    <j.2:identifier>10.1108/10650750510598657</j.2:identifier>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/suellen-stringerhye-1a28rb0pkbasx">
+        <j.1:name>Suellen Stringer‐Hye</j.1:name>
+        <j.1:familyName>Stringer‐Hye</j.1:familyName>
+        <j.1:givenName>Suellen</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:title>Reinventing the wheel: can librarians help?</j.2:title>
+    <j.0:volume>21</j.0:volume>
+    <owl:sameAs rdf:resource="info:doi/10.1108/10650750510598657"/>
+    <j.0:pageStart>89</j.0:pageStart>
+    <j.2:isPartOf>
+      <j.0:Journal rdf:about="http://id.crossref.org/issn/1065-075X">
+        <owl:sameAs>urn:issn:1065-075X</owl:sameAs>
+        <j.2:title>OCLC Systems &amp; Services: International digital library perspectives</j.2:title>
+        <j.3:issn>1065-075X</j.3:issn>
+        <j.0:issn>1065-075X</j.0:issn>
+      </j.0:Journal>
+    </j.2:isPartOf>
+    <j.2:publisher>Emerald</j.2:publisher>
+    <j.0:doi>10.1108/10650750510598657</j.0:doi>
+    <j.2:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYearMonth"
+    >2005-6</j.2:date>
+    <j.3:doi>10.1108/10650750510598657</j.3:doi>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dx.doi.org/10.1353/nab.2011.0046">
+    <j.2:isPartOf>
+      <j.0:Journal rdf:about="http://id.crossref.org/issn/1548-9965">
+        <owl:sameAs>urn:issn:1548-9965</owl:sameAs>
+        <j.2:title>Nabokov Studies</j.2:title>
+        <j.3:issn>1548-9965</j.3:issn>
+        <j.0:issn>1548-9965</j.0:issn>
+      </j.0:Journal>
+    </j.2:isPartOf>
+    <j.0:doi>10.1353/nab.2011.0046</j.0:doi>
+    <j.2:title>The Weed Exiles the Flower (Melville and Nabokov)</j.2:title>
+    <j.0:pageStart>117</j.0:pageStart>
+    <j.2:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >1998</j.2:date>
+    <j.2:publisher>Johns Hopkins University Press</j.2:publisher>
+    <j.3:startingPage>117</j.3:startingPage>
+    <j.3:endingPage>127</j.3:endingPage>
+    <j.3:volume>5</j.3:volume>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/suellen-stringer-hye-3ewp726050ni1">
+        <j.1:name> Suellen Stringer-Hye</j.1:name>
+        <j.1:familyName>Suellen Stringer-Hye</j.1:familyName>
+      </j.1:Person>
+    </j.2:creator>
+    <owl:sameAs rdf:resource="doi:10.1353/nab.2011.0046"/>
+    <j.2:identifier>10.1353/nab.2011.0046</j.2:identifier>
+    <owl:sameAs rdf:resource="info:doi/10.1353/nab.2011.0046"/>
+    <j.3:doi>10.1353/nab.2011.0046</j.3:doi>
+    <j.0:volume>5</j.0:volume>
+    <j.0:pageEnd>127</j.0:pageEnd>
+  </rdf:Description>
+</rdf:RDF>

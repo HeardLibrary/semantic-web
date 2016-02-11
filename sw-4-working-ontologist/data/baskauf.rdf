@@ -1,0 +1,276 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:pav="http://purl.org/pav/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:gn="http://www.geonames.org/ontology#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:j.0="http://purl.org/ontology/bibo/"
+    xmlns:j.1="http://xmlns.com/foaf/0.1/"
+    xmlns:j.2="http://purl.org/dc/terms/"
+    xmlns:j.3="http://prismstandard.org/namespaces/basic/2.1/"
+    xmlns:schema="http://schema.org/" xmlns:genont="http://www.w3.org/2006/gen/ont#" xmlns:bgn="http://bibliograph.net/" xmlns:umbel="http://umbel.org/umbel#" xmlns:pto="http://www.productontology.org/id/">
+  <rdf:Description rdf:nodeID="A0">
+    <gn:parentCountry rdf:resource="http://sws.geonames.org/6252001/"/>
+    <gn:countryCode>US</gn:countryCode>
+    <rdf:type rdf:resource="http://www.geonames.org/ontology#Feature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sws.geonames.org/6252001/">
+    <gn:name>United States</gn:name>
+    <gn:countryCode>US</gn:countryCode>
+    <rdfs:label>United States</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pub.orcid.org/orcid-pub-web/experimental_rdf_v1/0000-0003-4365-3135">
+    <pav:createdOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-19T13:44:30.678Z</pav:createdOn>
+    <prov:generatedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-02-05T16:33:18.704Z</prov:generatedAtTime>
+    <pav:lastUpdateOn rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-02-05T16:33:18.704Z</pav:lastUpdateOn>
+    <pav:createdWith rdf:resource="http://orcid.org"/>
+    <prov:wasAttributedTo rdf:resource="http://orcid.org/0000-0003-4365-3135"/>
+    <pav:createdBy rdf:resource="http://orcid.org/0000-0003-4365-3135"/>
+    <foaf:maker rdf:resource="http://orcid.org/0000-0003-4365-3135"/>
+    <foaf:primaryTopic rdf:resource="http://orcid.org/0000-0003-4365-3135"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/PersonalProfileDocument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://orcid.org/0000-0003-4365-3135#workspace-works">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://orcid.org/0000-0003-4365-3135">
+    <foaf:based_near rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Person"/>
+    <foaf:page rdf:resource="http://vanderbilt.edu/trees"/>
+    <foaf:name>Steven J. Baskauf</foaf:name>
+    <foaf:publications rdf:resource="http://orcid.org/0000-0003-4365-3135#workspace-works"/>
+    <foaf:page rdf:resource="http://bioimages.vanderbilt.edu/"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:plan>Other identifiers:&#xD;
+http://bioimages.vanderbilt.edu/contact/baskauf&#xD;
+http://viaf.org/viaf/63557389</foaf:plan>
+    <foaf:familyName>Baskauf</foaf:familyName>
+    <foaf:givenName>Steve</foaf:givenName>
+    <foaf:page rdf:resource="https://my.vanderbilt.edu/baskauf/"/>
+    <rdfs:label>Steven J. Baskauf</rdfs:label>
+    <foaf:account rdf:resource="http://orcid.org/0000-0003-4365-3135#orcid-id"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://orcid.org/0000-0003-4365-3135#orcid-id">
+    <rdfs:label>0000-0003-4365-3135</rdfs:label>
+    <foaf:accountName>0000-0003-4365-3135</foaf:accountName>
+    <foaf:accountServiceHomepage rdf:resource="http://orcid.org"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dx.doi.org/10.1371/journal.pone.0089606">
+    <j.0:doi>10.1371/journal.pone.0089606</j.0:doi>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/ramona-l-walls-2pi02w6t45ct3">
+        <j.1:name>Ramona L. Walls</j.1:name>
+        <j.1:familyName>Walls</j.1:familyName>
+        <j.1:givenName>Ramona L.</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <owl:sameAs rdf:resource="info:doi/10.1371/journal.pone.0089606"/>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/maria-alejandra-gandolfo-2pi02w6t45ct3">
+        <j.1:name>Maria Alejandra Gandolfo</j.1:name>
+        <j.1:familyName>Gandolfo</j.1:familyName>
+        <j.1:givenName>Maria Alejandra</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/mark-schildhauer-2pi02w6t45ct3">
+        <j.1:name>Mark Schildhauer</j.1:name>
+        <j.1:familyName>Schildhauer</j.1:familyName>
+        <j.1:givenName>Mark</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/vladimir-b-bajic-2pi02w6t45ct3">
+        <j.1:name>Vladimir B. Bajic</j.1:name>
+        <j.1:familyName>Bajic</j.1:familyName>
+        <j.1:givenName>Vladimir B.</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/peter-midford-2pi02w6t45ct3">
+        <j.1:name>Peter Midford</j.1:name>
+        <j.1:familyName>Midford</j.1:familyName>
+        <j.1:givenName>Peter</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/stanley-blum-2pi02w6t45ct3">
+        <j.1:name>Stanley Blum</j.1:name>
+        <j.1:familyName>Blum</j.1:familyName>
+        <j.1:givenName>Stanley</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/neil-davies-2pi02w6t45ct3">
+        <j.1:name>Neil Davies</j.1:name>
+        <j.1:familyName>Davies</j.1:familyName>
+        <j.1:givenName>Neil</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.3:startingPage>e89606</j.3:startingPage>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/dag-endresen-2pi02w6t45ct3">
+        <j.1:name>Dag Endresen</j.1:name>
+        <j.1:familyName>Endresen</j.1:familyName>
+        <j.1:givenName>Dag</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/john-deck-2pi02w6t45ct3">
+        <j.1:name>John Deck</j.1:name>
+        <j.1:familyName>Deck</j.1:familyName>
+        <j.1:givenName>John</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/barry-smith-2pi02w6t45ct3">
+        <j.1:name>Barry Smith</j.1:name>
+        <j.1:familyName>Smith</j.1:familyName>
+        <j.1:givenName>Barry</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/eamonn-o-tuama-2pi02w6t45ct3">
+        <j.1:name>Éamonn Ó. Tuama</j.1:name>
+        <j.1:familyName>Tuama</j.1:familyName>
+        <j.1:givenName>Éamonn Ó.</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/brian-j-stucky-2pi02w6t45ct3">
+        <j.1:name>Brian J. Stucky</j.1:name>
+        <j.1:familyName>Stucky</j.1:familyName>
+        <j.1:givenName>Brian J.</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/robert-hanner-2pi02w6t45ct3">
+        <j.1:name>Robert Hanner</j.1:name>
+        <j.1:familyName>Hanner</j.1:familyName>
+        <j.1:givenName>Robert</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/robert-guralnick-2pi02w6t45ct3">
+        <j.1:name>Robert Guralnick</j.1:name>
+        <j.1:familyName>Guralnick</j.1:familyName>
+        <j.1:givenName>Robert</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:isPartOf>
+      <j.0:Journal rdf:about="http://id.crossref.org/issn/1932-6203">
+        <owl:sameAs>urn:issn:1932-6203</owl:sameAs>
+        <j.2:title>PLoS ONE</j.2:title>
+        <j.3:issn>1932-6203</j.3:issn>
+        <j.0:issn>1932-6203</j.0:issn>
+      </j.0:Journal>
+    </j.2:isPartOf>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/shawn-bowers-2pi02w6t45ct3">
+        <j.1:name>Shawn Bowers</j.1:name>
+        <j.1:familyName>Bowers</j.1:familyName>
+        <j.1:givenName>Shawn</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.0:pageStart>e89606</j.0:pageStart>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/john-wieczorek-2pi02w6t45ct3">
+        <j.1:name>John Wieczorek</j.1:name>
+        <j.1:familyName>Wieczorek</j.1:familyName>
+        <j.1:givenName>John</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/reed-beaman-2pi02w6t45ct3">
+        <j.1:name>Reed Beaman</j.1:name>
+        <j.1:familyName>Beaman</j.1:familyName>
+        <j.1:givenName>Reed</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/jamie-whitacre-2pi02w6t45ct3">
+        <j.1:name>Jamie Whitacre</j.1:name>
+        <j.1:familyName>Whitacre</j.1:familyName>
+        <j.1:givenName>Jamie</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/alyssa-janning-2pi02w6t45ct3">
+        <j.1:name>Alyssa Janning</j.1:name>
+        <j.1:familyName>Janning</j.1:familyName>
+        <j.1:givenName>Alyssa</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:publisher>Public Library of Science (PLoS)</j.2:publisher>
+    <owl:sameAs rdf:resource="doi:10.1371/journal.pone.0089606"/>
+    <j.3:volume>9</j.3:volume>
+    <j.3:doi>10.1371/journal.pone.0089606</j.3:doi>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/andrea-thomer-2pi02w6t45ct3">
+        <j.1:name>Andrea Thomer</j.1:name>
+        <j.1:familyName>Thomer</j.1:familyName>
+        <j.1:givenName>Andrea</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:identifier>10.1371/journal.pone.0089606</j.2:identifier>
+    <j.2:title>Semantics in Support of Biodiversity Knowledge Discovery: An Introduction to the Biological Collections Ontology and Related Ontologies</j.2:title>
+    <j.2:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-3-3</j.2:date>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/john-wooley-2pi02w6t45ct3">
+        <j.1:name>John Wooley</j.1:name>
+        <j.1:familyName>Wooley</j.1:familyName>
+        <j.1:givenName>John</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/andrea-matsunaga-2pi02w6t45ct3">
+        <j.1:name>Andréa Matsunaga</j.1:name>
+        <j.1:familyName>Matsunaga</j.1:familyName>
+        <j.1:givenName>Andréa</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/steve-baskauf-2pi02w6t45ct3">
+        <j.1:name>Steve Baskauf</j.1:name>
+        <j.1:familyName>Baskauf</j.1:familyName>
+        <j.1:givenName>Steve</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/pier-luigi-buttigieg-2pi02w6t45ct3">
+        <j.1:name>Pier Luigi Buttigieg</j.1:name>
+        <j.1:familyName>Buttigieg</j.1:familyName>
+        <j.1:givenName>Pier Luigi</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/norman-morrison-2pi02w6t45ct3">
+        <j.1:name>Norman Morrison</j.1:name>
+        <j.1:familyName>Morrison</j.1:familyName>
+        <j.1:givenName>Norman</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+    <j.0:volume>9</j.0:volume>
+    <j.2:creator>
+      <j.1:Person rdf:about="http://id.crossref.org/contributor/leonard-krishtalka-2pi02w6t45ct3">
+        <j.1:name>Leonard Krishtalka</j.1:name>
+        <j.1:familyName>Krishtalka</j.1:familyName>
+        <j.1:givenName>Leonard</j.1:givenName>
+      </j.1:Person>
+    </j.2:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dx.doi.org/10.5281/zenodo.45640">
+    <j.2:creator>Steve Baskauf</j.2:creator>
+    <j.2:publisher>Zenodo</j.2:publisher>
+    <j.2:title>Bioimages Release 2016-02-06</j.2:title>
+    <j.2:date>2016</j.2:date>
+    <owl:sameAs>doi:10.5281/zenodo.45640</owl:sameAs>
+    <owl:sameAs>info:doi/10.5281/zenodo.45640</owl:sameAs>
+    <j.2:identifier>10.5281/zenodo.45640</j.2:identifier>
+  </rdf:Description>
+<rdf:Description rdf:about="http://viaf.org/viaf/63557389/"><rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/><rdf:type rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/><void:inDataset xmlns:void="http://rdfs.org/ns/void#" rdf:resource="http://viaf.org/viaf/data"/><foaf:primaryTopic xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="http://viaf.org/viaf/63557389"/></rdf:Description><rdf:Description rdf:about="http://viaf.org/viaf/63557389"><dcterms:identifier xmlns:dcterms="http://purl.org/dc/terms/">63557389</dcterms:identifier><rdf:type rdf:resource="http://schema.org/Person"/><schema:name xml:lang="en-US">Steven J. Baskauf</schema:name><rdfs:comment xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xml:lang="en">Warning: skos:prefLabels are not ensured against change!</rdfs:comment><skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#" xml:lang="en-US">Steven J. Baskauf</skos:prefLabel><schema:sameAs><rdf:Description rdf:about="http://id.loc.gov/authorities/names/no00075757"/></schema:sameAs></rdf:Description><rdf:Description rdf:about="http://viaf.org/viaf/sourceID/LC%7Cno+00075757#skos:Concept"><rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/><skos:inScheme xmlns:skos="http://www.w3.org/2004/02/skos/core#" rdf:resource="http://viaf.org/authorityScheme/LC"/><skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Baskauf, Steven J.</skos:prefLabel><foaf:focus xmlns:foaf="http://xmlns.com/foaf/0.1/" rdf:resource="http://viaf.org/viaf/63557389"/></rdf:Description></rdf:RDF>
