@@ -19,7 +19,7 @@ Note: later AM.  There were malformed xsd:date datatyped literals.  I fixed them
 
 ## Example query to run on data after loading the files into StarDog:
 
-``
+```
 SELECT DISTINCT ?name ?title
 WHERE
 {
@@ -29,4 +29,4 @@ WHERE
 ?person foaf:made ?publication.
 ?publication dcterms:title ?title.
 }
-``
+```
