@@ -4,7 +4,8 @@
 
 Load this stuff into StarDog for SPARQL practice on Monday.
 
-Note: 2016-02-11 (AM): for whatever reason, StarDog doesn't like any of the .rdf files.  I've validated them two places and tried uploading them as Turtle as well, but there is some offending triple(s) somewhere that I'll need to fix.  Stay tuned!
+Note: 2016-02-11 (AM): for whatever reason, StarDog doesn't like any of the .rdf files.  I've validated them two places and tried uploading them as Turtle as well, but there is some offending triple(s) somewhere that I'll need to fix.  
+Note: later AM.  There were malformed xsd:date datatyped literals.  I fixed them and they now load into StarDog.  Interestingly, the W3C RDF validator and RDFEditor were both fine with this.  But not StarDog.
 
 * Andersion orcid, doi, viaf [anderson.rdf](data/anderson.rdf)
 * Baskauf orcid, doi, viaf [baskauf.rdf](data/baskauf.rdf)
