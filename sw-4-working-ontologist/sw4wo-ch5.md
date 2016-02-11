@@ -16,3 +16,17 @@ Note: later AM.  There were malformed xsd:date datatyped literals.  I fixed them
 [Email Steve](mailto:steve.baskauf@vanderbilt.edu) your ORCID ID and he'll add your data, too.
 
 ## Some notes from last semester's SPARQL group are [here](../learning-sparql/README.md).
+
+## Example query to run on data after loading the files into StarDog:
+
+``
+SELECT DISTINCT ?name ?title
+WHERE
+{
+?s a foaf:Group.
+?s foaf:member ?person.
+?person rdfs:label ?name.
+?person foaf:made ?publication.
+?publication dcterms:title ?title.
+}
+``
