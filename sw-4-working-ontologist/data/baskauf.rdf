@@ -219,7 +219,7 @@ http://viaf.org/viaf/63557389</foaf:plan>
     <j.2:identifier>10.1371/journal.pone.0089606</j.2:identifier>
     <j.2:title>Semantics in Support of Biodiversity Knowledge Discovery: An Introduction to the Biological Collections Ontology and Related Ontologies</j.2:title>
     <j.2:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2014-3-3</j.2:date>
+    >2014-03-03</j.2:date>
     <j.2:creator>
       <j.1:Person rdf:about="http://id.crossref.org/contributor/john-wooley-2pi02w6t45ct3">
         <j.1:name>John Wooley</j.1:name>

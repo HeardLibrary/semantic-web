@@ -52,7 +52,7 @@
     <j.0:pageStart>12</j.0:pageStart>
     <j.2:identifier>10.1108/07378830810857753</j.2:identifier>
     <j.2:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2008-3-7</j.2:date>
+    >2008-03-07</j.2:date>
     <j.0:pageEnd>18</j.0:pageEnd>
     <owl:sameAs rdf:resource="info:doi/10.1108/07378830810857753"/>
     <j.2:creator>
@@ -115,7 +115,7 @@
     <j.2:publisher>Emerald</j.2:publisher>
     <j.0:doi>10.1108/10650750510598657</j.0:doi>
     <j.2:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYearMonth"
-    >2005-6</j.2:date>
+    >2005-06</j.2:date>
     <j.3:doi>10.1108/10650750510598657</j.3:doi>
   </rdf:Description>
   <rdf:Description rdf:about="http://dx.doi.org/10.1353/nab.2011.0046">

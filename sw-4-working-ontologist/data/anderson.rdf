@@ -75,7 +75,7 @@
       </j.1:Person>
     </j.2:creator>
     <j.2:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2014-12-1</j.2:date>
+    >2014-12-01</j.2:date>
     <j.2:title>Barth und Goethe: Die Goethe-Rezeption Karl Barths, 1906–1921</j.2:title>
     <j.3:endingPage>120</j.3:endingPage>
     <j.2:isPartOf>
@@ -88,8 +88,6 @@
     </j.2:isPartOf>
   </rdf:Description>
   <rdf:Description rdf:about="http://dx.doi.org/10.4242/balisagevol13.anderson01">
-    <j.2:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
-    ></j.2:date>
     <owl:sameAs rdf:resource="info:doi/10.4242/balisagevol13.anderson01"/>
     <j.2:isPartOf>
       <j.0:Book rdf:about="http://id.crossref.org/isbn/http://id.crossref.org/isbn/978-1-935958-09-3">
@@ -143,8 +141,6 @@
     >2013-12-31</j.2:date>
   </rdf:Description>
   <rdf:Description rdf:about="http://dx.doi.org/10.1163/ej.9789004203365.i-284.36">
-    <j.2:date rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
-    ></j.2:date>
     <owl:sameAs rdf:resource="doi:10.1163/ej.9789004203365.i-284.36"/>
     <j.0:pageStart>147</j.0:pageStart>
     <j.3:endingPage>168</j.3:endingPage>
@@ -199,7 +195,7 @@
     </j.2:isPartOf>
     <j.0:doi>10.1017/s003693060700364x</j.0:doi>
     <j.2:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2010-7-1</j.2:date>
+    >2010-07-01</j.2:date>
     <j.0:pageEnd>369</j.0:pageEnd>
     <j.0:pageStart>368</j.0:pageStart>
     <j.2:title>Herman Bavinck, Reformed Dogmatics, vol. 3: Sin and Salvation in Christ, ed. John Bolt, trans. John Vriend (Grand Rapids: Baker Academic, 2006), pp. 685. $49.99.</j.2:title>
@@ -226,7 +222,7 @@
     <j.3:startingPage>379</j.3:startingPage>
     <j.3:doi>10.1163/156973208x316234</j.3:doi>
     <j.2:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2008-6-1</j.2:date>
+    >2008-06-01</j.2:date>
     <owl:sameAs rdf:resource="doi:10.1163/156973208x316234"/>
     <j.2:identifier>10.1163/156973208x316234</j.2:identifier>
     <j.2:creator>
@@ -243,7 +239,7 @@
     <j.3:startingPage>599</j.3:startingPage>
     <owl:sameAs rdf:resource="doi:10.1177/004057369905500421"/>
     <j.2:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >1999-1-1</j.2:date>
+    >1999-01-01</j.2:date>
     <j.3:endingPage>603</j.3:endingPage>
     <j.2:publisher>SAGE Publications</j.2:publisher>
     <j.3:volume>55</j.3:volume>
