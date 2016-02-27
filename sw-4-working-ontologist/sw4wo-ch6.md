@@ -1,3 +1,9 @@
+# SWWO Chapter 6 Do-it-yourself activities.
+
+Link to Heard Library SPARQL endpoint:
+
+http://rdf.library.vanderbilt.edu/sparql?view
+
 # Files loaded into Callimachus:
 
 The FOAF vocabulary: http://rdf.library.vanderbilt.edu/swwg/foaf.rdf
@@ -181,6 +187,7 @@ http://rdf.library.vanderbilt.edu/sparql?query=CONSTRUCT%20%7B%3Fperson%20a%20fo
 <http://orcid.org/0000-0003-0328-0792> a foaf:Agent.
 <http://orcid.org/0000-0003-2445-1511> a foaf:Agent.
 ```
+### Recall: "cached inferencing": inferences are stored with the data.
 
 ### SELECT query for Agents:
 
@@ -199,4 +206,86 @@ WHERE {
 
 Don't forget to add:
 
+```
 FROM <http://rdf.library.vanderbilt.edu/swwg/agents.ttl>
+```
+
+### Remove restriction that people are members of SWW Group:
+
+```
+CONSTRUCT {
+  ?person a foaf:Agent.
+}
+FROM <http://rdf.library.vanderbilt.edu/swwg/foaf.rdf>
+FROM <http://rdf.library.vanderbilt.edu/swwg/sww-group.rdf>
+FROM <http://rdf.library.vanderbilt.edu/swwg/assertions.ttl>
+WHERE {
+  ?person a foaf:Person.
+}
+```
+
+### Find/Construct all superclasses:
+
+```
+SELECT ?thing ?subclass ?class
+# CONSTRUCT {?thing a ?class.}
+FROM <http://rdf.library.vanderbilt.edu/swwg/foaf.rdf>
+FROM <http://rdf.library.vanderbilt.edu/swwg/sww-group.rdf>
+# FROM <http://rdf.library.vanderbilt.edu/swwg/assertions.ttl>
+
+WHERE {
+?thing a ?subclass.
+?subclass rdfs:subClassOf ?class.
+}
+```
+
+### Same query, but transitive and excluding entailed triples already asserted:
+
+```
+SELECT ?thing ?subclass ?class
+# CONSTRUCT {?thing a ?class.}
+FROM <http://rdf.library.vanderbilt.edu/swwg/foaf.rdf>
+FROM <http://rdf.library.vanderbilt.edu/swwg/sww-group.rdf>
+# FROM <http://rdf.library.vanderbilt.edu/swwg/assertions.ttl>
+
+WHERE {
+?thing a ?subclass.
+?subclass rdfs:subClassOf+ ?class.
+MINUS {?thing a ?class.}
+}
+```
+
+Note: SPARQL 1.1 property paths are highly relevant to constructing reasoning queries and 1.1 was not complete when the book was written.  See https://www.w3.org/TR/sparql11-query/#propertypaths
+
+# Recall "just in time inferencing": implementation never stores inferred triples; inferences computed at the last moment.  Stardog does this.
+
+### Tbox: set of rules upon which reasoning should be based (a.k.a. schema)
+
+```
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+foaf:Person rdfs:subClassOf foaf:Agent.
+```
+
+
+### Query:
+
+```
+SELECT ?thing ?class
+WHERE {
+  ?thing a foaf:Person.
+  ?thing a ?class.
+  }
+```
+
+### Do:
+
+1. Upload the data.
+2. Query Stardog with inferencing off.
+3. In Admin Console, set Tbox graph.
+4. Upload the schema.
+5. Query Stardog with inferencing on.
+
+### p. 122: "Model as specification"
+
+The model tells us what should happen.  It doesn't tell us how we should make it happen.
