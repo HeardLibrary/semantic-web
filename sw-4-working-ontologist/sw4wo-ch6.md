@@ -57,7 +57,7 @@ WHERE {
 }
 ```
 
-# Reason entailed class relationships in the SWWG metadata:
+# Reason entailed superclass relationships in the SWWG metadata:
 
 ### Relevant Turtle snippets (from sw-group.rdf):
 
