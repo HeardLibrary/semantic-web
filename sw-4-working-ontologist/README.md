@@ -15,7 +15,7 @@ Hypothes.is group: [https://hypothes.is/groups/zV7y9MGp/vu-semanticweb](https://
 
 ##Particapants
   * Cliff Anderson - Scholarly Communications - Vanderbilt Library
-  * Alex Aysis - Divinity School
+  * Alex Ayris - Divinity School
   * Chris Benda - Divinity Library
   * Zora Breeding - Technical Services - Vanderbilt Library
   * Steve Baskauf - Biological Sciences
