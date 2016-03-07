@@ -36,3 +36,5 @@ Hypothes.is group: [https://hypothes.is/groups/zV7y9MGp/vu-semanticweb](https://
 [Chapter 5 Notes](sw4wo-ch5.md)
 
 [Chapter 6 Notes](sw4wo-ch6.md)
+
+[Chapter 7 Notes](sw4wo-ch7.md)

@@ -58,10 +58,12 @@ WHERE {
 
 ### Other RDFS relationships
 rdfs:domain
+
 rdfs:range
 
 rdfs:seeAlso (linked resource may not be dereferenceable as RDF)
 
 # Used in RDF vocabularies (e.g. dcterms:)
 rdfs:isDefinedBy
+
 rdfs:comment
