@@ -6,14 +6,14 @@ http://rdf.library.vanderbilt.edu/sparql?view
 
 # Files loaded into Callimachus:
 
-The FOAF vocabulary: http://rdf.library.vanderbilt.edu/swwg/foaf.rdf
+The FOAF vocabulary: http://rdf.library.vanderbilt.edu/swwg/foaf.rdf or  [foaf.rdf](data/foaf.rdf)
 
-FOAF in Turtle: https://gist.github.com/baskaufs/fefa1bfbff14a9efc174
+FOAF in Turtle: https://gist.github.com/baskaufs/fefa1bfbff14a9efc174 or [foaf.ttl](data/foaf.ttl)
 
-SW Working Group metadata: http://rdf.library.vanderbilt.edu/swwg/sww-group.rdf
+SW Working Group metadata: http://rdf.library.vanderbilt.edu/swwg/sww-group.rdf or  [sww-group.rdf](data/sww-group.rdf) or [sww-group.ttl](data/sww-group.ttl)
 
 SW Working Group relationships:
-http://rdf.library.vanderbilt.edu/swwg/assertions.ttl
+http://rdf.library.vanderbilt.edu/swwg/assertions.ttl or [assertions.ttl](data/assertions.ttl)
 
 # Find subproperty relationships expressed in the data:
 
