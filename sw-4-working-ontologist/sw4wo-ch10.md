@@ -8,7 +8,7 @@ Link to FactForge SPARQL endpoint (for GeoNames triples):
 
 http://factforge.net/sparql
 
-### Find countries in Africa
+### Find concepts that have Africa as a broader concept
 
 ```
 SELECT ?concept ?label WHERE {
@@ -28,7 +28,7 @@ SELECT ?prefLabel WHERE
     }
 ```
 
-# Find the "preferred" prefLabel along with the prefLabel for different languages:
+### Find the "preferred" prefLabel along with the prefLabel for different languages:
 
 ```
 SELECT DISTINCT ?country ?value ?engLabel WHERE
