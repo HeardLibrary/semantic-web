@@ -1,5 +1,7 @@
 # SWWO Chapter 10 Do-it-yourself activities.
 
+The PowerPoint for this chapter is at https://github.com/HeardLibrary/semantic-web/blob/master/sw-4-working-ontologist/ch10.pptx
+
 Link to Getty Vocabularies SPARQL endpoint:
 
 http://vocab.getty.edu/sparql
