@@ -51,7 +51,7 @@ https://github.com/HeardLibrary/semantic-web/blob/master/sw-4-working-ontologist
 
 https://github.com/HeardLibrary/semantic-web/blob/master/sw-4-working-ontologist/data/veggie.owl
 
-The triples are exactly the same as they were in the veggie.ttl file except that there's a type declaration for the blank-node representing the ontology itself.
+The triples are mostly the same as they were in the veggie.ttl file except that there's a type declaration for the blank-node representing the ontology itself plus declarations of named individuals.
 
  #8. To try reasoning the entailed triple shown in the example:
 
@@ -60,3 +60,5 @@ The triples are exactly the same as they were in the veggie.ttl file except that
 ```
 
 I went to the Reasoner menu and selected Pellet.  I then selected Start reasoner from the same menu.  Now if you click on the :Marizpan individual, you will see that its type listed in the description window is :VegetarianFood.  If you click on the question mark at the right of the type listing, it will explain the justification for the inference.  Similarly, you can check on the reasons for class inferences for :Maverick, :Steak, and :Marzipan. Turn the reasoner off and the entailed types disappear!
+
+This approach should work for testing the other examples in the book.
