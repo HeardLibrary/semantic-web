@@ -12,16 +12,48 @@
 
 #################################################################
 #
+#    Object Properties
+#
+#################################################################
+
+
+###  http://example.org/eats
+
+:eats rdf:type owl:ObjectProperty ;
+      
+      rdfs:domain :Person ;
+      
+      rdfs:range :Food .
+
+
+
+
+
+#################################################################
+#
 #    Classes
 #
 #################################################################
+
+
+###  http://example.org/Food
+
+:Food rdf:type owl:Class .
+
+
+
+###  http://example.org/Person
+
+:Person rdf:type owl:Class .
+
 
 
 ###  http://example.org/Vegetarian
 
 :Vegetarian rdf:type owl:Class ;
             
-            rdfs:subClassOf [ rdf:type owl:Restriction ;
+            rdfs:subClassOf :Person ,
+                            [ rdf:type owl:Restriction ;
                               owl:onProperty :eats ;
                               owl:allValuesFrom :VegetarianFood
                             ] .
@@ -30,7 +62,9 @@
 
 ###  http://example.org/VegetarianFood
 
-:VegetarianFood rdf:type owl:Class .
+:VegetarianFood rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Food .
 
 
 
@@ -49,6 +83,26 @@
               :Vegetarian ;
      
      :eats :Marzipan .
+
+
+
+###  http://example.org/Marzipan
+
+:Marzipan rdf:type owl:NamedIndividual .
+
+
+
+###  http://example.org/Maverick
+
+:Maverick rdf:type owl:NamedIndividual ;
+          
+          :eats :Steak .
+
+
+
+###  http://example.org/Steak
+
+:Steak rdf:type owl:NamedIndividual .
 
 
 

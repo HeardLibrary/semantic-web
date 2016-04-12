@@ -3,10 +3,22 @@
 @prefix : <http://example.org/>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 
+:Person a owl:Class.
+:Food a owl:Class.
+:eats rdfs:domain :Person.
+:eats rdfs:range :Food.
+
+:Maverick :eats :Steak.
+
+:Vegetarian a owl:Class;
+rdfs:subClassOf :Person.
+:VegetarianFood a owl:Class;
+rdfs:subClassOf :Food.
+
 :Vegetarian rdfs:subClassOf
 [a owl:Restriction;
 owl:onProperty :eats;
 owl:allValuesFrom :VegetarianFood].
 
-:Jen a :Vegetarian.
-:Jen :eats :Marzipan.
+:Jen a :Vegetarian;
+     :eats :Marzipan.
