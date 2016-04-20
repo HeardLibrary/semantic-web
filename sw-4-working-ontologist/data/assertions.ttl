@@ -29,6 +29,15 @@ owl:sameAs <http://viaf.org/viaf/168432349>.
 <http://dx.doi.org/10.1108/10650750510598657>,
 <http://dx.doi.org/10.1353/nab.2011.0046>.
 
+#wernke
+<http://orcid.org/0000-0001-8180-9896> foaf:made <http://dx.doi.org/10.1016/j.jas.2011.12.014>,
+<http://dx.doi.org/10.1007/s10745-009-9261-2>,
+<http://dx.doi.org/10.1007/s10761-007-0027-5>,
+<http://dx.doi.org/10.1525/AA.2007.109.1.130>.
+
+#casad
+<http://rdf.library.vanderbilt.edu/swwg/sww-group.rdf#casad> foaf:made <http://dx.doi.org/10.1045/september2015-casad>.
+
 #semantic web working group (blank node)
 _:swwg a foaf:Group;
 foaf:name "Semantic Web Working Group";
@@ -36,4 +45,6 @@ foaf:homepage <https://github.com/HeardLibrary/semantic-web>;
 foaf:member <http://orcid.org/0000-0003-2445-1511>,
 <http://orcid.org/0000-0003-4365-3135>,
 <http://orcid.org/0000-0003-0328-0792>,
-<http://orcid.org/0000-0002-2174-0484>.
+<http://orcid.org/0000-0001-8180-9896>,
+<http://orcid.org/0000-0002-2174-0484>,
+<http://rdf.library.vanderbilt.edu/swwg/sww-group.rdf#casad>.
