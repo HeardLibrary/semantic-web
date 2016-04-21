@@ -38,6 +38,9 @@ owl:sameAs <http://viaf.org/viaf/168432349>.
 #casad
 <http://rdf.library.vanderbilt.edu/swwg/sww-group.rdf#casad> foaf:made <http://dx.doi.org/10.1045/september2015-casad>.
 
+#miller
+<http://viaf.org/viaf/1904521> foaf:made <http://dx.doi.org/10.2307/3177398>.
+
 #semantic web working group (blank node)
 _:swwg a foaf:Group;
 foaf:name "Semantic Web Working Group";
@@ -47,4 +50,5 @@ foaf:member <http://orcid.org/0000-0003-2445-1511>,
 <http://orcid.org/0000-0003-0328-0792>,
 <http://orcid.org/0000-0001-8180-9896>,
 <http://orcid.org/0000-0002-2174-0484>,
-<http://rdf.library.vanderbilt.edu/swwg/sww-group.rdf#casad>.
+<http://rdf.library.vanderbilt.edu/swwg/sww-group.rdf#casad>,
+<http://viaf.org/viaf/1904521>.
