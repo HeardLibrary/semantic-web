@@ -44,3 +44,5 @@ Hypothes.is group: [https://hypothes.is/groups/zV7y9MGp/vu-semanticweb](https://
 [Chapter 11 notes (pdf)](OWLchapter11.pdf)
 
 [Chapter 11 vegetarian example solved using Protégé and the Pellet reasoner](protege.md)
+
+[Chapter 13 notes (pdf)](ch13.pdf) [(in PowerPoint format)](ch13.pptx)
