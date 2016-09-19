@@ -1,0 +1,12 @@
+header,predicate,type,value,attribute,class
+label,rdfs:label,language,,en,http://rs.tdwg.org/dwc/terms/Organism
+cameo,blocal:cameo,iri,,,http://rs.tdwg.org/dwc/terms/Organism
+description,dcterms:description,language,,en,http://rs.tdwg.org/dwc/terms/Organism
+identifier,dcterms:identifier,plain,,,http://rs.tdwg.org/dwc/terms/Organism
+tsnid,blocal:itisTsn,datatype,,http://www.w3.org/2001/XMLSchema#integer,http://rs.tdwg.org/dwc/terms/Identification
+scope,dwc:organismScope,plain,,,http://rs.tdwg.org/dwc/terms/Organism
+depiction,foaf:depiction,iri,,,http://rs.tdwg.org/dwc/terms/Organism
+$link,dsw:hasIdentification,iri,#det,,http://rs.tdwg.org/dwc/terms/Organism
+$constant,rdf:type,iri,http://purl.org/dc/terms/PhysicalResource,,http://rs.tdwg.org/dwc/terms/Organism
+$constant,dwc:identifiedBy,plain,Steve Baskauf,,http://rs.tdwg.org/dwc/terms/Identification
+common-name,dwc:vernacularName,language,,en,http://rs.tdwg.org/dwc/terms/Identification

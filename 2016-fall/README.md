@@ -12,7 +12,9 @@ Sep. 19 meeting:
 
 Some tools:
 
-[RDF Translator](http://rdf-translator.appspot.com/)
+[RDF Translator](http://rdf-translator.appspot.com/) Note: this only seems to work correctly with JSON-LD that is in "expanded" form, not "compacted" form. Convert to expanded form at JSON-LD Playground before convertint to other serializations.
+
+[JSON-LD Playground](http://json-ld.org/playground/) Validates JSON-LD and converts from one form to another.  Also includes some examples.
 
 [LODLive for graph visualization](http://en.lodlive.it/)
 
