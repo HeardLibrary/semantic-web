@@ -3,15 +3,17 @@ Notes for fall 2016 sessions of the Semantic Web Working Group
 
 ---
 Sep. 12 meeting: Chapter 1 through Section 1.6
-[PowerPoint presentation](linked-data-ch1.pptx) [PowerPoint in PDF format](linked-data-ch1.pdf)
+[PowerPoint presentation](linked-data-ch1.pptx)   [PowerPoint in PDF format](linked-data-ch1.pdf)
 
 The Postman HTTP client (Chrome plugin) that was demonstrated during the meeting is available [here](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 
 ---
-Sep. 19 meeting:
+Sep. 19 meeting: Section 1.7 through 2.6
+[PowerPoint presentation](Chapters_1_7-2_6.pdf)
 
 [Linked Open Vocabularies (LOV)](http://lov.okfn.org/dataset/lov/) repository of information on vocabularies used in Linked Data
 
+---
 Some tools:
 
 [RDF Translator](http://rdf-translator.appspot.com/) Note: this only seems to work correctly with JSON-LD that is in "expanded" form, not "compacted" form. Convert to expanded form at JSON-LD Playground before converting to other serializations.
