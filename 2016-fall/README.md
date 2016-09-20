@@ -10,9 +10,11 @@ The Postman HTTP client (Chrome plugin) that was demonstrated during the meeting
 ---
 Sep. 19 meeting:
 
+[Linked Open Vocabularies (LOV)](http://lov.okfn.org/dataset/lov/) repository of information on vocabularies used in Linked Data
+
 Some tools:
 
-[RDF Translator](http://rdf-translator.appspot.com/) Note: this only seems to work correctly with JSON-LD that is in "expanded" form, not "compacted" form. Convert to expanded form at JSON-LD Playground before convertint to other serializations.
+[RDF Translator](http://rdf-translator.appspot.com/) Note: this only seems to work correctly with JSON-LD that is in "expanded" form, not "compacted" form. Convert to expanded form at JSON-LD Playground before converting to other serializations.
 
 [JSON-LD Playground](http://json-ld.org/playground/) Validates JSON-LD and converts from one form to another.  Also includes some examples.
 
