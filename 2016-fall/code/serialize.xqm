@@ -59,6 +59,25 @@ return (
 
 (:--------------------------------------------------------------------------------------------------:)
 
+declare function serialize:describe-document($baseIRI,$modified,$serialization)
+{
+  let $type := "http://xmlns.com/foaf/0.1/Document"
+  let $suffix := propvalue:extension($serialization)
+  let $iri := concat($baseIRI,$suffix)
+  return concat(
+    propvalue:subject($iri,$serialization),
+    propvalue:plain-literal("dc:format",propvalue:media-type($serialization),$serialization),
+    propvalue:plain-literal("dc:creator","Vanderbilt Heard Library",$serialization),
+    propvalue:iri("dcterms:references",$baseIRI,$serialization),
+    if ($modified)
+    then propvalue:datatyped-literal("dcterms:modified",$modified,"http://www.w3.org/2001/XMLSchema#dateTime",$serialization)
+    else "",
+    propvalue:type($type,$serialization)
+  )  
+};
+
+(:--------------------------------------------------------------------------------------------------:)
+
 declare function serialize:remove-last-comma($temp)
 {
   concat(fn:substring($temp,1,fn:string-length($temp)-2),"&#10;")
@@ -159,23 +178,6 @@ declare function serialize:property-value-pairs($IRIs,$columnInfo,$record,$type,
       where $iri/id/text()=$suffix
       let $object := $iri/fullId/text()
       return propvalue:iri($columnType/predicate/text(),$object,$serialization)
-};
-
-(:--------------------------------------------------------------------------------------------------:)
-
-declare function serialize:describe-document($baseIRI,$modified,$serialization)
-{
-  let $type := "http://xmlns.com/foaf/0.1/Document"
-  let $suffix := propvalue:extension($serialization)
-  let $iri := concat($baseIRI,$suffix)
-  return concat(
-    propvalue:subject($iri,$serialization),
-    propvalue:plain-literal("dc:format",propvalue:media-type($serialization),$serialization),
-    propvalue:plain-literal("dc:creator","Vanderbilt Heard Library",$serialization),
-    propvalue:iri("dcterms:references",$baseIRI,$serialization),
-    propvalue:datatyped-literal("dcterms:modified",$modified,"http://www.w3.org/2001/XMLSchema#dateTime",$serialization),
-    propvalue:type($type,$serialization)
-  )  
 };
 
 (:--------------------------------------------------------------------------------------------------:)
