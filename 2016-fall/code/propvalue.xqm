@@ -4,10 +4,16 @@ module namespace propvalue = 'http://bioimages.vanderbilt.edu/xqm/propvalue';
 
 declare function propvalue:subject($iri,$serialization)
 {
-  (: Note: the subject iri begins the description, so the returned string includes characters necessary to open the container :)
+  (: Note: the subject iri begins the description, so the returned string includes characters necessary to open the container.  In turtle and xml, blank nodes have different formats than full URIs :)
 switch ($serialization)
-  case "turtle" return concat("<",$iri,">&#10;")
-  case "xml" return concat('<rdf:Description rdf:about="',$iri,'">&#10;')
+  case "turtle" return 
+       if (fn:substring($iri,1,2)="_:") 
+       then concat($iri,"&#10;") 
+       else concat("<",$iri,">&#10;")
+  case "xml" return 
+        if (fn:substring($iri,1,2)="_:") 
+       then concat('<rdf:Description rdf:nodeID="',concat("U",fn:substring($iri,3,fn:string-length($iri)-2)),'">&#10;') 
+       else concat('<rdf:Description rdf:about="',$iri,'">&#10;')
   case "json" return concat("{&#10;",'"@id": "',$iri,'",&#10;')
   default return ""
 };
@@ -41,9 +47,16 @@ switch ($serialization)
 
 declare function propvalue:iri($predicate,$string,$serialization)
 {
+  (: blank nodes need special handling for turtle and xml :)
 switch ($serialization)
-  case "turtle" return concat("     ",$predicate,' <',$string,'>',";&#10;")
-  case "xml" return concat("     <",$predicate,' rdf:resource="',$string,'"/>&#10;')
+  case "turtle" return 
+       if (fn:substring($string,1,2)="_:") 
+       then concat("     ",$predicate,' ',$string,";&#10;") 
+       else concat("     ",$predicate,' <',$string,'>',";&#10;")
+  case "xml" return 
+       if (fn:substring($string,1,2)="_:") 
+       then concat("     <",$predicate,' rdf:nodeID="',concat("U",fn:substring($string,3,fn:string-length($string)-2)),'"/>&#10;') 
+       else concat("     <",$predicate,' rdf:resource="',$string,'"/>&#10;')
   case "json" return concat('"',$predicate,'": {"@id": "',$string,'"},&#10;')
   default return ""
 };
