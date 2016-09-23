@@ -8,7 +8,7 @@ declare function serialize:main($id,$serialization)
   
 (: to run on local files, change the following paths to the location where you put the csv files, comment out the send-request lines, and uncomment the read-file lines :)  
 let $localFilesFolderUnix := "c:/github/semantic-web/2016-fall/tang-song"
-let $localFilesFolderPC := "c:\github\semantic-web\2016-fall\tang-song"
+(: let $localFilesFolderPC := "c:\github\semantic-web\2016-fall\tang-song" :)
 
 let $metadataDoc := file:read-text(concat('file:///',$localFilesFolderUnix,'/metadata.csv'))
 (: let $metadataDoc := http:send-request(<http:request method='get' href='https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/code/metadata.csv'/>)[2] :)
