@@ -210,9 +210,9 @@ declare function serialize:construct-iri($baseIRI,$classes)
 
 (:--------------------------------------------------------------------------------------------------:)
 
-declare function serialize:html($ns,$id,$serialization)
+declare function serialize:html($id,$serialization)
 {
- let $value := concat("Placeholder page for namespace=",$ns," and local ID=",$id,".")
+ let $value := concat("Placeholder page for local ID=",$id,".")
 return 
 <html>
   <body>
