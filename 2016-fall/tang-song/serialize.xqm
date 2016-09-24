@@ -1,6 +1,6 @@
 xquery version "3.1";
 module namespace serialize = 'http://bioimages.vanderbilt.edu/xqm/serialize';
-import module namespace propvalue = 'http://bioimages.vanderbilt.edu/xqm/propvalue' at 'https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/code/propvalue.xqm'; (: can substitute local directory if you need to mess with it :)
+import module namespace propvalue = 'http://bioimages.vanderbilt.edu/xqm/propvalue' at 'https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/code/propvalue1.xqm'; (: can substitute local directory if you need to mess with it :)
 (:--------------------------------------------------------------------------------------------------:)
 
 declare function serialize:main($id,$serialization)
