@@ -47,10 +47,10 @@ return (
           let $IRIs := serialize:construct-iri($baseIRI,$classes)
           (: generate a description for each class of resource included in the record :)
           for $modifiedClass in $IRIs
-          return serialize:describe-resource($IRIs,$columnInfo,$record,$modifiedClass,$serialization) 
+          return serialize:describe-resource($IRIs,$columnInfo,$record,$modifiedClass,$serialization,$namespaces) 
           ,
           (: The document description is done once for each record. :)
-          serialize:describe-document($baseIRI,$modified,$serialization)
+          serialize:describe-document($baseIRI,$modified,$serialization,$namespaces)
         )
       ),
     serialize:close-container($serialization)
@@ -60,7 +60,7 @@ return (
 
 (:--------------------------------------------------------------------------------------------------:)
 
-declare function serialize:describe-document($baseIRI,$modified,$serialization)
+declare function serialize:describe-document($baseIRI,$modified,$serialization,$namespaces)
 {
   let $type := "http://xmlns.com/foaf/0.1/Document"
   let $suffix := propvalue:extension($serialization)
@@ -69,11 +69,11 @@ declare function serialize:describe-document($baseIRI,$modified,$serialization)
     propvalue:subject($iri,$serialization),
     propvalue:plain-literal("dc:format",propvalue:media-type($serialization),$serialization),
     propvalue:plain-literal("dc:creator","Vanderbilt History of Art Department",$serialization),
-    propvalue:iri("dcterms:references",$baseIRI,$serialization),
+    propvalue:iri("dcterms:references",$baseIRI,$serialization,$namespaces),
     if ($modified)
-    then propvalue:datatyped-literal("dcterms:modified",$modified,"http://www.w3.org/2001/XMLSchema#dateTime",$serialization)
+    then propvalue:datatyped-literal("dcterms:modified",$modified,"http://www.w3.org/2001/XMLSchema#dateTime",$serialization,$namespaces)
     else "",
-    propvalue:type($type,$serialization)
+    propvalue:type($type,$serialization,$namespaces)
   )  
 };
 
@@ -124,7 +124,7 @@ declare function serialize:curie-value-pairs($namespaces,$serialization)
 (:--------------------------------------------------------------------------------------------------:)
 
 (: This function describes a single instance of the type of resource being described by the table :)
-declare function serialize:describe-resource($IRIs,$columnInfo,$record,$class,$serialization)
+declare function serialize:describe-resource($IRIs,$columnInfo,$record,$class,$serialization,$namespaces)
 {  
 (: Note: the propvalue:subject function sets up any string necessary to open the container, and the propvalue:type function closes the container :)
   let $type := $class/class/text()
@@ -132,8 +132,8 @@ declare function serialize:describe-resource($IRIs,$columnInfo,$record,$class,$s
   let $iri := $class/fullId/text()
   return concat(
     propvalue:subject($iri,$serialization),
-    string-join(serialize:property-value-pairs($IRIs,$columnInfo,$record,$type,$serialization)),
-    propvalue:type($type,$serialization)
+    string-join(serialize:property-value-pairs($IRIs,$columnInfo,$record,$type,$serialization,$namespaces)),
+    propvalue:type($type,$serialization,$namespaces)
   )
   ,
   (: each described resource must be separated by a comma in JSON. The last described resource is the document, which isn't followed by a trailing comma :)
@@ -145,28 +145,28 @@ declare function serialize:describe-resource($IRIs,$columnInfo,$record,$class,$s
 (:--------------------------------------------------------------------------------------------------:)
 
 (: generate sequence of non-type property/value pair strings :)
-declare function serialize:property-value-pairs($IRIs,$columnInfo,$record,$type,$serialization)
+declare function serialize:property-value-pairs($IRIs,$columnInfo,$record,$type,$serialization,$namespaces)
 {
   (: generates property/value pairs that have fixed values :)
   for $columnType in $columnInfo
   where "$constant" = $columnType/header/text() and $columnType/class/text() = $type
   return switch ($columnType/type/text())
      case "plain" return propvalue:plain-literal($columnType/predicate/text(),$columnType/value/text(),$serialization)
-     case "datatype" return propvalue:datatyped-literal($columnType/predicate/text(),$columnType/value/text(),$columnType/attribute/text(),$serialization)
+     case "datatype" return propvalue:datatyped-literal($columnType/predicate/text(),$columnType/value/text(),$columnType/attribute/text(),$serialization,$namespaces)
      case "language" return propvalue:language-tagged-literal($columnType/predicate/text(),$columnType/value/text(),$columnType/attribute/text(),$serialization)
-     case "iri" return propvalue:iri($columnType/predicate/text(),$columnType/value/text(),$serialization)
+     case "iri" return propvalue:iri($columnType/predicate/text(),$columnType/value/text(),$serialization,$namespaces)
      default return ""
 ,
 
   (: generates property/value pairs whose values are given in the metadata table :)
   for $column in $record/child::*, $columnType in $columnInfo
-  (: The loop only includes columns containing properties associated with the class of the described resource :)
-  where fn:local-name($column) = $columnType/header/text() and $columnType/class/text() = $type
+  (: The loop only includes columns containing properties associated with the class of the described resource; that column in the record must not be empty :)
+  where fn:local-name($column) = $columnType/header/text() and $columnType/class/text() = $type and $column//text() != ""
   return switch ($columnType/type/text())
      case "plain" return propvalue:plain-literal($columnType/predicate/text(),$column//text(),$serialization)
-     case "datatype" return propvalue:datatyped-literal($columnType/predicate/text(),$column//text(),$columnType/attribute/text(),$serialization)
+     case "datatype" return propvalue:datatyped-literal($columnType/predicate/text(),$column//text(),$columnType/attribute/text(),$serialization,$namespaces)
      case "language" return propvalue:language-tagged-literal($columnType/predicate/text(),$column//text(),$columnType/attribute/text(),$serialization)
-     case "iri" return propvalue:iri($columnType/predicate/text(),$column//text(),$serialization)
+     case "iri" return propvalue:iri($columnType/predicate/text(),$column//text(),$serialization,$namespaces)
      default return ""
 ,
 
@@ -178,7 +178,7 @@ declare function serialize:property-value-pairs($IRIs,$columnInfo,$record,$type,
       for $iri in $IRIs
       where $iri/id/text()=$suffix
       let $object := $iri/fullId/text()
-      return propvalue:iri($columnType/predicate/text(),$object,$serialization)
+      return propvalue:iri($columnType/predicate/text(),$object,$serialization,$namespaces)
 };
 
 (:--------------------------------------------------------------------------------------------------:)
