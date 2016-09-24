@@ -2,6 +2,45 @@ xquery version "3.1";
 
 module namespace propvalue = 'http://bioimages.vanderbilt.edu/xqm/propvalue';
 
+(: Note: copied this function from http://www.xqueryfunctions.com/xq/functx_chars.html :)
+declare function propvalue:chars
+  ( $arg as xs:string? )  as xs:string* {
+
+   for $ch in string-to-codepoints($arg)
+   return codepoints-to-string($ch)
+ } ;
+
+
+(:--------------------------------------------------------------------------------------------------:)
+
+declare function propvalue:escape-bad-characters($string,$serialization)
+{
+switch ($serialization)
+    case "json"
+    case "turtle" 
+       return fn:replace(
+                       fn:replace($string,'\\','\\\\')
+                       ,'"','\\"')
+              
+    case "xml"
+       return propvalue:escape-less-than(
+                       fn:replace($string,'&amp;','&amp;amp;')
+                      )
+    default return $string
+};
+
+declare function propvalue:escape-less-than($string)
+{
+string-join(
+for $char in propvalue:chars($string)
+return 
+  if ($char = '<') then
+     ``[&lt;]``
+  else
+     $char
+ )
+};
+
 declare function propvalue:subject($iri,$serialization)
 {
   (: Note: the subject iri begins the description, so the returned string includes characters necessary to open the container.  In turtle and xml, blank nodes have different formats than full URIs :)
@@ -18,27 +57,30 @@ switch ($serialization)
   default return ""
 };
 
-declare function propvalue:plain-literal($predicate,$string,$serialization)
+declare function propvalue:plain-literal($predicate,$dirtyString,$serialization)
 {
-switch ($serialization)
+let $string := propvalue:escape-bad-characters($dirtyString,$serialization)
+return switch ($serialization)
   case "turtle" return concat("     ",$predicate,' "',$string,'";&#10;')
   case "xml" return concat("     <",$predicate,'>',$string,'</',$predicate,'>&#10;')
   case "json" return concat('"',$predicate,'": "',$string,'",&#10;')
   default return ""
 };
 
-declare function propvalue:datatyped-literal($predicate,$string,$datatype,$serialization)
+declare function propvalue:datatyped-literal($predicate,$dirtyString,$datatype,$serialization)
 {
-switch ($serialization)
+let $string := propvalue:escape-bad-characters($dirtyString,$serialization)
+return switch ($serialization)
   case "turtle" return concat("     ",$predicate,' "',$string,'"^^<',$datatype,">;&#10;")
   case "xml" return concat("     <",$predicate,' rdf:datatype="',$datatype,'">',$string,'</',$predicate,'>&#10;')
   case "json" return concat('"',$predicate,'": {"@type": "',$datatype,'","@value": "',$string,'"},&#10;')
   default return ""
 };
 
-declare function propvalue:language-tagged-literal($predicate,$string,$lang,$serialization)
+declare function propvalue:language-tagged-literal($predicate,$dirtyString,$lang,$serialization)
 {
-switch ($serialization)
+let $string := propvalue:escape-bad-characters($dirtyString,$serialization)
+return switch ($serialization)
   case "turtle" return concat("     ",$predicate,' "',$string,'"@',$lang,";&#10;")
   case "xml" return concat("     <",$predicate,' xml:lang="',$lang,'">',$string,'</',$predicate,'>&#10;')
   case "json" return concat('"',$predicate,'": {"@language": "',$lang,'","@value": "',$string,'"},&#10;')
