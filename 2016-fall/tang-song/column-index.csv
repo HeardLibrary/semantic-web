@@ -1,3 +1,6 @@
 header,predicate,type,value,attribute,class
-building_name_en_extracted,rdfs:label,plain,,,http://example.org/Building
-site_name_zh-Hans,rdfs:label,language,,zh-Hans,http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+building_name_en_extracted,rdfs:label,language,,en,schema:LandmarksOrHistoricalBuildings
+site_name_zh-Hans,rdfs:label,language,,zh-Hans,geo:SpatialThing
+decimal_latitude,geo:lat,datatype,,xsd:decimal,schema:LandmarksOrHistoricalBuildings
+decimal_longitude,geo:long,datatype,,xsd:decimal,schema:LandmarksOrHistoricalBuildings
+$link,schema:containedInPlace,iri,_:1,,schema:LandmarksOrHistoricalBuildings
