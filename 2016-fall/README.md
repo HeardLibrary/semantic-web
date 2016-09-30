@@ -14,7 +14,7 @@ Sep. 19 meeting: Section 1.7 through 2.6
 [Linked Open Vocabularies (LOV)](http://lov.okfn.org/dataset/lov/) repository of information on vocabularies used in Linked Data
 
 ---
-Sep 26 meeting: Work session
+<a name="wsession"></a>Sep 26 meeting: Work session
 
 Implementation notes:
 
