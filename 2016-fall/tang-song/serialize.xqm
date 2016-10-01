@@ -5,25 +5,27 @@ import module namespace propvalue = 'http://bioimages.vanderbilt.edu/xqm/propval
 
 declare function serialize:main($id,$serialization)
 {
-  
-(: to run on local files, change the following paths to the location where you put the csv files, comment out the send-request lines, and uncomment the read-file lines :)  
-let $localFilesFolderUnix := "c:/github/semantic-web/2016-fall/tang-song"
-(: let $localFilesFolderPC := "c:\github\semantic-web\2016-fall\tang-song" :)
+(: will use a variation on this if outputting to a file
+let $localFilesFolderPC := "c:\github\semantic-web\2016-fall\tang-song" :)
 
-let $metadataDoc := file:read-text(concat('file:///',$localFilesFolderUnix,'/metadata.csv'))
-(: let $metadataDoc := http:send-request(<http:request method='get' href='https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/code/metadata.csv'/>)[2] :)
+let $localFilesFolderUnix := 
+  if (fn:substring(file:current-dir(),1,2) = "C:") 
+  then 
+    (: the computer is a PC with a C: drive, subsitute your path here :)
+    "file:///c:/github/semantic-web/2016-fall/tang-song/"
+  else
+    (: its a Mac with the query running from a repo located at the default under the user directory :)
+    file:current-dir() || "/Repositories/semantic-web/2016-fall/tang-song/"
+
+let $metadataDoc := file:read-text($localFilesFolderUnix || 'metadata.csv')
+(: at some point if files are stable enough, they could be loaded from the GitHub repo like this:
+let $metadataDoc := http:send-request(<http:request method='get' href='https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/code/metadata.csv'/>)[2] :)
 let $xmlMetadata := csv:parse($metadataDoc, map { 'header' : true(),'separator' : "," })
-
-let $columnIndexDoc := file:read-text(concat('file:///',$localFilesFolderUnix,'/column-index.csv'))
-(: let $columnIndexDoc := http:send-request(<http:request method='get' href='https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/code/column-index.csv'/>)[2] :)
+let $columnIndexDoc := file:read-text(concat($localFilesFolderUnix, 'column-index.csv'))
 let $xmlColumnIndex := csv:parse($columnIndexDoc, map { 'header' : true(),'separator' : "," })
-
-let $namespaceDoc := file:read-text(concat('file:///',$localFilesFolderUnix,'/namespace.csv'))
-(: let $namespaceDoc := http:send-request(<http:request method='get' href='https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/code/namespace.csv'/>)[2] :)
+let $namespaceDoc := file:read-text(concat($localFilesFolderUnix,'namespace.csv'))
 let $xmlNamespace := csv:parse($namespaceDoc, map { 'header' : true(),'separator' : "," })
-
-let $classesDoc := file:read-text(concat('file:///',$localFilesFolderUnix,'/classes.csv'))
-(: let $classesDoc := http:send-request(<http:request method='get' href='https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/code/classes.csv'/>)[2] :)
+let $classesDoc := file:read-text(concat($localFilesFolderUnix,'classes.csv'))
 let $xmlClasses := csv:parse($classesDoc, map { 'header' : true(),'separator' : "," })
 
 let $namespaces := $xmlNamespace/csv/record
