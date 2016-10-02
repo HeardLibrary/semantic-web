@@ -1,0 +1,13 @@
+header,predicate,type,value,attribute,class
+building_name_zh-Latn-pinyin,rdfs:label,language,,zh-Latn-pinyin,schema:LandmarksOrHistoricalBuildings
+building_name_zh-Hans,rdfs:label,language,,zh-Hans,schema:LandmarksOrHistoricalBuildings
+building_name_en,rdfs:label,language,,en,schema:LandmarksOrHistoricalBuildings
+$link,dcterms:temporal,iri,_:2,,schema:LandmarksOrHistoricalBuildings
+building_date,rdf:value,language,,en,dcterms:PeriodOfTime
+$link,geo:location,iri,_:3,,schema:LandmarksOrHistoricalBuildings
+decimal_latitude,geo:lat,plain,,,geo:Point
+decimal_longitude,geo:long,plain,,,geo:Point
+verbatim_latitude,dwc:verbatimLatitude,plain,,,geo:Point
+verbatim_longitude,dwc:verbatimLongitude,plain,,,geo:Point
+significance,rdfs:comment,plain,,,schema:LandmarksOrHistoricalBuildings
+notes,rdfs:comment,plain,,,schema:LandmarksOrHistoricalBuildings

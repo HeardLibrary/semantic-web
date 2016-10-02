@@ -1,0 +1,12 @@
+header,predicate,type,value,attribute,class
+site_name_zh-Latn-pinyin,rdfs:label,language,,zh-Latn-pinyin,geo:SpatialThing
+site_name_zh-Hans,rdfs:label,language,,zh-Hans,geo:SpatialThing
+site_name_en,rdfs:label,language,,en,geo:SpatialThing
+locality_zn-Hans,dwc:locality,language,,zh-Hans,geo:SpatialThing
+locality_en,dwc:locality,language,,en,geo:SpatialThing
+site_geonames_id,rdfs:seeAlso,iri,,,geo:SpatialThing
+$link,dcterms:temporal,iri,_:1,,geo:SpatialThing
+site_date_verbatim_zn-Hans,rdf:value,language,,zh-Hans,dcterms:PeriodOfTime
+site_date_verbatim_en,rdf:value,language,,en,dcterms:PeriodOfTime
+locality_geonames_id,schema:containedInPlace,iri,,,geo:SpatialThing
+site_getty_togn_id,dcterms:spatial,iri,,,geo:SpatialThing

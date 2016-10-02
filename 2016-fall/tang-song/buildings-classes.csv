@@ -1,3 +1,4 @@
 id,class
 ,schema:LandmarksOrHistoricalBuildings
-_:1,geo:SpatialThing
+_:2,dcterms:PeriodOfTime
+_:3,geo:Point
