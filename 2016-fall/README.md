@@ -13,6 +13,8 @@ Sep. 19 meeting: Section 1.7 through 2.6
 
 [Linked Open Vocabularies (LOV)](http://lov.okfn.org/dataset/lov/) repository of information on vocabularies used in Linked Data
 
+[A list of Linked Data datasets and vocabularies compiled by the W3C](http://www.w3.org/2005/Incubator/lld/XGR-lld-vocabdataset/) This is super-good and important.  All of the most authoritative sources relevant to libraries (and pretty much everybody!) are listed here.
+
 ---
 <a name="wsession"></a>Sep 26 meeting: Work session
 
