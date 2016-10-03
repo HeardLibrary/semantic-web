@@ -1,0 +1,111 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix schema: <http://schema.org/>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+<http://lod.vanderbilt.edu/historyart/site/Longxingsi>
+     rdfs:label "隆兴寺"@zh-Hans;
+     rdfs:label "Longxingsi"@zh-Latn-pinyin;
+     dwc:locality "河北省正定县"@zh-Hans;
+     dcterms:temporal _:8f7e1a57-5772-4409-ad3f-e4957e63a62a;
+     a geo:SpatialThing.
+
+_:8f7e1a57-5772-4409-ad3f-e4957e63a62a
+     rdf:value "initially built 586; now 宋 10th-11th century"@zh-Hans;
+     a dcterms:PeriodOfTime.
+
+<http://lod.vanderbilt.edu/historyart/site/Longxingsi#Tianwangdian>
+     rdfs:label "Tianwangdian"@zh-Latn-pinyin;
+     rdfs:label "天王殿"@zh-Hans;
+     rdfs:comment "late 10th century (982?); modified in 1780. Early mojiao gong similar to Dulesi";
+     rdfs:comment "zgmscd 105-106";
+     dcterms:temporal _:6ae5ac86-8dcd-4f33-9805-a3505d461b42;
+     geo:location _:abc303e6-a9fd-4fd9-9f7f-9776ba8c9155;
+     schema:containedInPlace <http://lod.vanderbilt.edu/historyart/site/Longxingsi>;
+     a schema:LandmarksOrHistoricalBuildings.
+
+_:6ae5ac86-8dcd-4f33-9805-a3505d461b42
+     rdf:value "982"@en;
+     a dcterms:PeriodOfTime.
+
+_:abc303e6-a9fd-4fd9-9f7f-9776ba8c9155
+     geo:lat "38.14109167";
+     geo:long "114.5763528";
+     dwc:verbatimLatitude "38˚ 08' 27.97' N (google earth 9/2009)";
+     dwc:verbatimLongitude "114˚ 34' 34.88\" E";
+     a geo:Point.
+
+<http://lod.vanderbilt.edu/historyart/site/Longxingsi#Monidian>
+     rdfs:label "Monidian"@zh-Latn-pinyin;
+     rdfs:label "摩尼殿"@zh-Hans;
+     rdfs:comment "1052 with angled bracket arms; qinmian ang appears to be recarved";
+     dcterms:temporal _:185dba69-6a1e-48bf-86c0-b7588ae80a20;
+     geo:location _:b31a0f92-d0d9-4b86-b9f0-a6e8feaf80ba;
+     schema:containedInPlace <http://lod.vanderbilt.edu/historyart/site/Longxingsi>;
+     a schema:LandmarksOrHistoricalBuildings.
+
+_:185dba69-6a1e-48bf-86c0-b7588ae80a20
+     rdf:value "1052"@en;
+     a dcterms:PeriodOfTime.
+
+_:b31a0f92-d0d9-4b86-b9f0-a6e8feaf80ba
+     geo:lat "38.14256944";
+     geo:long "114.5762444";
+     dwc:verbatimLatitude "38˚ 08' 33.25\" N (google earth 9/2009)";
+     dwc:verbatimLongitude "114˚ 34' 34.48\" E";
+     a geo:Point.
+
+<http://lod.vanderbilt.edu/historyart/site/Longxingsi#Revolving_Sutra_Repository>
+     rdfs:label "Revolving Sutra Repository"@en;
+     rdfs:label "轉論藏閣"@zh-Hans;
+     rdfs:comment "upper eaves bracket sets;";
+     rdfs:comment "2nd half of 11th century; see Qi Yingtao";
+     dcterms:temporal _:085f1446-5cf2-4b90-9ec8-1181ef68b89f;
+     geo:location _:174b849e-31b0-42a5-9802-4208434f85bc;
+     schema:containedInPlace <http://lod.vanderbilt.edu/historyart/site/Longxingsi>;
+     a schema:LandmarksOrHistoricalBuildings.
+
+_:085f1446-5cf2-4b90-9ec8-1181ef68b89f
+     rdf:value "1050-1100"@en;
+     a dcterms:PeriodOfTime.
+
+_:174b849e-31b0-42a5-9802-4208434f85bc
+     geo:lat "38.14345556";
+     geo:long "114.5761833";
+     dwc:verbatimLatitude "38˚ 08' 36.44\" N (google earth 9/2009)";
+     dwc:verbatimLongitude "114˚ 34' 34.26\" E";
+     a geo:Point.
+
+<http://lod.vanderbilt.edu/historyart/site/Longxingsi#Maitreya_Pavilion>
+     rdfs:label "Maitreya Pavilion"@en;
+     rdfs:label "慈氏閣"@zh-Hans;
+     rdfs:comment "upper eaves bracket sets";
+     rdfs:comment "2nd half of 11th century; see Qi Yingtao";
+     dcterms:temporal _:7bf698d8-760a-4737-ac5d-0e234d0b0941;
+     geo:location _:3e856de3-783f-4f74-9da4-fbe537b1142f;
+     schema:containedInPlace <http://lod.vanderbilt.edu/historyart/site/Longxingsi>;
+     a schema:LandmarksOrHistoricalBuildings.
+
+_:7bf698d8-760a-4737-ac5d-0e234d0b0941
+     rdf:value "1050-1100"@en;
+     a dcterms:PeriodOfTime.
+
+_:3e856de3-783f-4f74-9da4-fbe537b1142f
+     geo:lat "38.14363611";
+     geo:long "114.5765111";
+     dwc:verbatimLatitude "38˚ 08' 37.09\" N (google earth 9/2009)";
+     dwc:verbatimLongitude "144˚ 34' 35.47\" E";
+     a geo:Point.
+
+<http://lod.vanderbilt.edu/historyart/site/Longxingsi.ttl>
+     dc:format "text/turtle";
+     dc:creator "Vanderbilt Department of History of Art";
+     dcterms:references <http://lod.vanderbilt.edu/historyart/site/Longxingsi>;
+     a foaf:Document.
+

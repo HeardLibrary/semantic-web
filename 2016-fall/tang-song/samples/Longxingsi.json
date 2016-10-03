@@ -1,0 +1,145 @@
+{
+"@context": {
+"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+"xsd": "http://www.w3.org/2001/XMLSchema#",
+"dc": "http://purl.org/dc/elements/1.1/",
+"foaf": "http://xmlns.com/foaf/0.1/",
+"dcterms": "http://purl.org/dc/terms/",
+"schema": "http://schema.org/",
+"geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+"dwc": "http://rs.tdwg.org/dwc/terms/",
+"owl": "http://www.w3.org/2002/07/owl#"
+},
+"@graph": [
+{
+"@id": "http://lod.vanderbilt.edu/historyart/site/Longxingsi",
+"rdfs:label": {"@language": "zh-Hans","@value": "隆兴寺"},
+"rdfs:label": {"@language": "zh-Latn-pinyin","@value": "Longxingsi"},
+"dwc:locality": {"@language": "zh-Hans","@value": "河北省正定县"},
+"dcterms:temporal": {"@id": "_:8f2f4519-8929-45f7-8fb2-8be8438dacc9"},
+"@type": "geo:SpatialThing"
+}
+,
+{
+"@id": "_:8f2f4519-8929-45f7-8fb2-8be8438dacc9",
+"rdf:value": {"@language": "zh-Hans","@value": "initially built 586; now 宋 10th-11th century"},
+"@type": "dcterms:PeriodOfTime"
+}
+,
+{
+"@id": "http://lod.vanderbilt.edu/historyart/site/Longxingsi#Tianwangdian",
+"rdfs:label": {"@language": "zh-Latn-pinyin","@value": "Tianwangdian"},
+"rdfs:label": {"@language": "zh-Hans","@value": "天王殿"},
+"rdfs:comment": "late 10th century (982?); modified in 1780. Early mojiao gong similar to Dulesi",
+"rdfs:comment": "zgmscd 105-106",
+"dcterms:temporal": {"@id": "_:c81ec695-ac0e-43f0-931e-df4f4b4a8704"},
+"geo:location": {"@id": "_:3124bcec-4b68-4f0e-9ebf-13b828b2d52d"},
+"schema:containedInPlace": {"@id": "http://lod.vanderbilt.edu/historyart/site/Longxingsi"},
+"@type": "schema:LandmarksOrHistoricalBuildings"
+}
+,
+{
+"@id": "_:c81ec695-ac0e-43f0-931e-df4f4b4a8704",
+"rdf:value": {"@language": "en","@value": "982"},
+"@type": "dcterms:PeriodOfTime"
+}
+,
+{
+"@id": "_:3124bcec-4b68-4f0e-9ebf-13b828b2d52d",
+"geo:lat": "38.14109167",
+"geo:long": "114.5763528",
+"dwc:verbatimLatitude": "38˚ 08' 27.97' N (google earth 9/2009)",
+"dwc:verbatimLongitude": "114˚ 34' 34.88\" E",
+"@type": "geo:Point"
+}
+,
+{
+"@id": "http://lod.vanderbilt.edu/historyart/site/Longxingsi#Monidian",
+"rdfs:label": {"@language": "zh-Latn-pinyin","@value": "Monidian"},
+"rdfs:label": {"@language": "zh-Hans","@value": "摩尼殿"},
+"rdfs:comment": "1052 with angled bracket arms; qinmian ang appears to be recarved",
+"dcterms:temporal": {"@id": "_:cec1642f-6018-4106-8977-5bb322ae4ea0"},
+"geo:location": {"@id": "_:7b875a7f-1080-40a3-b774-0844267b3558"},
+"schema:containedInPlace": {"@id": "http://lod.vanderbilt.edu/historyart/site/Longxingsi"},
+"@type": "schema:LandmarksOrHistoricalBuildings"
+}
+,
+{
+"@id": "_:cec1642f-6018-4106-8977-5bb322ae4ea0",
+"rdf:value": {"@language": "en","@value": "1052"},
+"@type": "dcterms:PeriodOfTime"
+}
+,
+{
+"@id": "_:7b875a7f-1080-40a3-b774-0844267b3558",
+"geo:lat": "38.14256944",
+"geo:long": "114.5762444",
+"dwc:verbatimLatitude": "38˚ 08' 33.25\" N (google earth 9/2009)",
+"dwc:verbatimLongitude": "114˚ 34' 34.48\" E",
+"@type": "geo:Point"
+}
+,
+{
+"@id": "http://lod.vanderbilt.edu/historyart/site/Longxingsi#Revolving_Sutra_Repository",
+"rdfs:label": {"@language": "en","@value": "Revolving Sutra Repository"},
+"rdfs:label": {"@language": "zh-Hans","@value": "轉論藏閣"},
+"rdfs:comment": "upper eaves bracket sets;",
+"rdfs:comment": "2nd half of 11th century; see Qi Yingtao",
+"dcterms:temporal": {"@id": "_:e7793616-0869-44e0-ab12-c49af2cf2dc7"},
+"geo:location": {"@id": "_:edcafdaa-5671-4eef-b63f-eef76e66af55"},
+"schema:containedInPlace": {"@id": "http://lod.vanderbilt.edu/historyart/site/Longxingsi"},
+"@type": "schema:LandmarksOrHistoricalBuildings"
+}
+,
+{
+"@id": "_:e7793616-0869-44e0-ab12-c49af2cf2dc7",
+"rdf:value": {"@language": "en","@value": "1050-1100"},
+"@type": "dcterms:PeriodOfTime"
+}
+,
+{
+"@id": "_:edcafdaa-5671-4eef-b63f-eef76e66af55",
+"geo:lat": "38.14345556",
+"geo:long": "114.5761833",
+"dwc:verbatimLatitude": "38˚ 08' 36.44\" N (google earth 9/2009)",
+"dwc:verbatimLongitude": "114˚ 34' 34.26\" E",
+"@type": "geo:Point"
+}
+,
+{
+"@id": "http://lod.vanderbilt.edu/historyart/site/Longxingsi#Maitreya_Pavilion",
+"rdfs:label": {"@language": "en","@value": "Maitreya Pavilion"},
+"rdfs:label": {"@language": "zh-Hans","@value": "慈氏閣"},
+"rdfs:comment": "upper eaves bracket sets",
+"rdfs:comment": "2nd half of 11th century; see Qi Yingtao",
+"dcterms:temporal": {"@id": "_:0cc028db-c524-47d1-adc4-96ea473dfdd7"},
+"geo:location": {"@id": "_:8d8d63d0-22cc-49b9-8601-a5d4af13d895"},
+"schema:containedInPlace": {"@id": "http://lod.vanderbilt.edu/historyart/site/Longxingsi"},
+"@type": "schema:LandmarksOrHistoricalBuildings"
+}
+,
+{
+"@id": "_:0cc028db-c524-47d1-adc4-96ea473dfdd7",
+"rdf:value": {"@language": "en","@value": "1050-1100"},
+"@type": "dcterms:PeriodOfTime"
+}
+,
+{
+"@id": "_:8d8d63d0-22cc-49b9-8601-a5d4af13d895",
+"geo:lat": "38.14363611",
+"geo:long": "114.5765111",
+"dwc:verbatimLatitude": "38˚ 08' 37.09\" N (google earth 9/2009)",
+"dwc:verbatimLongitude": "144˚ 34' 35.47\" E",
+"@type": "geo:Point"
+}
+,
+{
+"@id": "http://lod.vanderbilt.edu/historyart/site/Longxingsi.json",
+"dc:format": "application/json",
+"dc:creator": "Vanderbilt Department of History of Art",
+"dcterms:references": {"@id": "http://lod.vanderbilt.edu/historyart/site/Longxingsi"},
+"@type": "foaf:Document"
+}
+]
+}

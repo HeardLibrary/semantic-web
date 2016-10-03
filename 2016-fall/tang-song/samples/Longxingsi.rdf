@@ -1,0 +1,128 @@
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:foaf="http://xmlns.com/foaf/0.1/"
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:schema="http://schema.org/"
+xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+>
+<rdf:Description rdf:about="http://lod.vanderbilt.edu/historyart/site/Longxingsi">
+     <rdfs:label xml:lang="zh-Hans">隆兴寺</rdfs:label>
+     <rdfs:label xml:lang="zh-Latn-pinyin">Longxingsi</rdfs:label>
+     <dwc:locality xml:lang="zh-Hans">河北省正定县</dwc:locality>
+     <dcterms:temporal rdf:nodeID="Ud3a897d5-09d4-4cc4-ae3e-3a92558b2d1c"/>
+     <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="Ud3a897d5-09d4-4cc4-ae3e-3a92558b2d1c">
+     <rdf:value xml:lang="zh-Hans">initially built 586; now 宋 10th-11th century</rdf:value>
+     <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.vanderbilt.edu/historyart/site/Longxingsi#Tianwangdian">
+     <rdfs:label xml:lang="zh-Latn-pinyin">Tianwangdian</rdfs:label>
+     <rdfs:label xml:lang="zh-Hans">天王殿</rdfs:label>
+     <rdfs:comment>late 10th century (982?); modified in 1780. Early mojiao gong similar to Dulesi</rdfs:comment>
+     <rdfs:comment>zgmscd 105-106</rdfs:comment>
+     <dcterms:temporal rdf:nodeID="U992eb001-1e53-4bce-b44e-401972bc8e6a"/>
+     <geo:location rdf:nodeID="U6c82374b-1600-46eb-90bb-b8d256bf7318"/>
+     <schema:containedInPlace rdf:resource="http://lod.vanderbilt.edu/historyart/site/Longxingsi"/>
+     <rdf:type rdf:resource="http://schema.org/LandmarksOrHistoricalBuildings"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="U992eb001-1e53-4bce-b44e-401972bc8e6a">
+     <rdf:value xml:lang="en">982</rdf:value>
+     <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="U6c82374b-1600-46eb-90bb-b8d256bf7318">
+     <geo:lat>38.14109167</geo:lat>
+     <geo:long>114.5763528</geo:long>
+     <dwc:verbatimLatitude>38˚ 08' 27.97' N (google earth 9/2009)</dwc:verbatimLatitude>
+     <dwc:verbatimLongitude>114˚ 34' 34.88" E</dwc:verbatimLongitude>
+     <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.vanderbilt.edu/historyart/site/Longxingsi#Monidian">
+     <rdfs:label xml:lang="zh-Latn-pinyin">Monidian</rdfs:label>
+     <rdfs:label xml:lang="zh-Hans">摩尼殿</rdfs:label>
+     <rdfs:comment>1052 with angled bracket arms; qinmian ang appears to be recarved</rdfs:comment>
+     <dcterms:temporal rdf:nodeID="U4e204d82-d27a-4535-90ef-bad7af757247"/>
+     <geo:location rdf:nodeID="U981b0f4e-5085-4303-9b84-3c32db301e11"/>
+     <schema:containedInPlace rdf:resource="http://lod.vanderbilt.edu/historyart/site/Longxingsi"/>
+     <rdf:type rdf:resource="http://schema.org/LandmarksOrHistoricalBuildings"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="U4e204d82-d27a-4535-90ef-bad7af757247">
+     <rdf:value xml:lang="en">1052</rdf:value>
+     <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="U981b0f4e-5085-4303-9b84-3c32db301e11">
+     <geo:lat>38.14256944</geo:lat>
+     <geo:long>114.5762444</geo:long>
+     <dwc:verbatimLatitude>38˚ 08' 33.25" N (google earth 9/2009)</dwc:verbatimLatitude>
+     <dwc:verbatimLongitude>114˚ 34' 34.48" E</dwc:verbatimLongitude>
+     <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.vanderbilt.edu/historyart/site/Longxingsi#Revolving_Sutra_Repository">
+     <rdfs:label xml:lang="en">Revolving Sutra Repository</rdfs:label>
+     <rdfs:label xml:lang="zh-Hans">轉論藏閣</rdfs:label>
+     <rdfs:comment>upper eaves bracket sets;</rdfs:comment>
+     <rdfs:comment>2nd half of 11th century; see Qi Yingtao</rdfs:comment>
+     <dcterms:temporal rdf:nodeID="U65ae7d4c-905d-4237-b202-ae991ffd07ac"/>
+     <geo:location rdf:nodeID="U9c45e182-a8ef-4a51-8bea-aeb9b57ba6f9"/>
+     <schema:containedInPlace rdf:resource="http://lod.vanderbilt.edu/historyart/site/Longxingsi"/>
+     <rdf:type rdf:resource="http://schema.org/LandmarksOrHistoricalBuildings"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="U65ae7d4c-905d-4237-b202-ae991ffd07ac">
+     <rdf:value xml:lang="en">1050-1100</rdf:value>
+     <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="U9c45e182-a8ef-4a51-8bea-aeb9b57ba6f9">
+     <geo:lat>38.14345556</geo:lat>
+     <geo:long>114.5761833</geo:long>
+     <dwc:verbatimLatitude>38˚ 08' 36.44" N (google earth 9/2009)</dwc:verbatimLatitude>
+     <dwc:verbatimLongitude>114˚ 34' 34.26" E</dwc:verbatimLongitude>
+     <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.vanderbilt.edu/historyart/site/Longxingsi#Maitreya_Pavilion">
+     <rdfs:label xml:lang="en">Maitreya Pavilion</rdfs:label>
+     <rdfs:label xml:lang="zh-Hans">慈氏閣</rdfs:label>
+     <rdfs:comment>upper eaves bracket sets</rdfs:comment>
+     <rdfs:comment>2nd half of 11th century; see Qi Yingtao</rdfs:comment>
+     <dcterms:temporal rdf:nodeID="Ud66a030a-916d-445c-b73a-b2733e9593d5"/>
+     <geo:location rdf:nodeID="Ua1bb918c-2509-4fdf-803e-d7e9159292fd"/>
+     <schema:containedInPlace rdf:resource="http://lod.vanderbilt.edu/historyart/site/Longxingsi"/>
+     <rdf:type rdf:resource="http://schema.org/LandmarksOrHistoricalBuildings"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="Ud66a030a-916d-445c-b73a-b2733e9593d5">
+     <rdf:value xml:lang="en">1050-1100</rdf:value>
+     <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="Ua1bb918c-2509-4fdf-803e-d7e9159292fd">
+     <geo:lat>38.14363611</geo:lat>
+     <geo:long>114.5765111</geo:long>
+     <dwc:verbatimLatitude>38˚ 08' 37.09" N (google earth 9/2009)</dwc:verbatimLatitude>
+     <dwc:verbatimLongitude>144˚ 34' 35.47" E</dwc:verbatimLongitude>
+     <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://lod.vanderbilt.edu/historyart/site/Longxingsi.rdf">
+     <dc:format>application/rdf+xml</dc:format>
+     <dc:creator>Vanderbilt Department of History of Art</dc:creator>
+     <dcterms:references rdf:resource="http://lod.vanderbilt.edu/historyart/site/Longxingsi"/>
+     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+</rdf:Description>
+
+</rdf:RDF>

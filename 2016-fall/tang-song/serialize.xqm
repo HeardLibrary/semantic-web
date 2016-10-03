@@ -3,24 +3,26 @@ module namespace serialize = 'http://bioimages.vanderbilt.edu/xqm/serialize';
 import module namespace propvalue = 'http://bioimages.vanderbilt.edu/xqm/propvalue' at 'https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/propvalue.xqm'; (: can substitute local directory if you need to mess with it :)
 (:--------------------------------------------------------------------------------------------------:)
 
-declare function serialize:main($id,$serialization)
+declare function serialize:main($id,$serialization,$repoPath,$pcRepoLocation,$singleOrDump)
 {
 (: will use a variation on this if outputting to a file
-let $localFilesFolderPC := "c:\github\semantic-web\2016-fall\tang-song" :)
+let $localFilesFolderPC := "c:\github\semantic-web\2016-fall\tang-song\" :)
 
 let $localFilesFolderUnix := 
   if (fn:substring(file:current-dir(),1,2) = "C:") 
   then 
     (: the computer is a PC with a C: drive, subsitute your path here :)
-    "file:///c:/github/semantic-web/2016-fall/tang-song/"
+    "file:///"||$pcRepoLocation||$repoPath
   else
     (: its a Mac with the query running from a repo located at the default under the user directory :)
-    file:current-dir() || "/Repositories/semantic-web/2016-fall/tang-song/"
+    file:current-dir() || "/Repositories/"||$repoPath
 
 let $metadataDoc := file:read-text($localFilesFolderUnix || 'metadata.csv')
 (: at some point if files are stable enough, they could be loaded from the GitHub repo like this:
 let $metadataDoc := http:send-request(<http:request method='get' href='https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/code/metadata.csv'/>)[2] :)
 let $xmlMetadata := csv:parse($metadataDoc, map { 'header' : true(),'separator' : "," })
+let $constantsDoc := file:read-text(concat($localFilesFolderUnix, 'constants.csv'))
+let $xmlConstants := csv:parse($constantsDoc, map { 'header' : true(),'separator' : "," })
 let $columnIndexDoc := file:read-text(concat($localFilesFolderUnix, 'metadata-column-mappings.csv'))
 let $xmlColumnIndex := csv:parse($columnIndexDoc, map { 'header' : true(),'separator' : "," })
 let $namespaceDoc := file:read-text(concat($localFilesFolderUnix,'namespace.csv'))
@@ -34,6 +36,8 @@ let $namespaces := $xmlNamespace/csv/record
 let $columnInfo := $xmlColumnIndex/csv/record
 let $classes := $xmlClasses/csv/record
 let $linkedClasses := $xmlLinkedClasses/csv/record
+let $constants := $xmlConstants/csv/record
+let $domainRoot := $constants//domainRoot/text()
 
 let $linkedMetadata :=
       for $class in $linkedClasses
@@ -70,13 +74,29 @@ return (
     (: the namespace abbreviations only needs to be generated once for the entire document :)
     serialize:list-namespaces($namespaces,$serialization),
     string-join( 
-      (: each record in the database must be checked for a match to the requested URI. To output every record, delet or comment out the WHERE statement :)
-      for $record in $xmlMetadata/csv/record
-      where $record/iri/text()=concat("http://lod.vanderbilt.edu/historyart/site/",$id)
-      let $baseIRI := $record/iri/text()
-      let $modified := $record/modified/text()
-      return 
-        ( 
+      if ($singleOrDump = "dump")
+      then
+        (: this case outputs every record in the database :)
+        for $record in $xmlMetadata/csv/record
+        let $baseIRI := $domainRoot||$record/iri_local_name/text()
+        let $modified := $record/modified/text()
+        return serialize:generate-a-record($record,$linkedMetadata,$baseIRI,$domainRoot,$modified,$classes,$columnInfo,$serialization,$namespaces,$constants)
+      else
+        (: for a single record, each record in the database must be checked for a match to the requested URI :)
+        for $record in $xmlMetadata/csv/record
+        where $record/iri_local_name/text()=$id
+        let $baseIRI := $domainRoot||$record/iri_local_name/text()
+        let $modified := $record/modified/text()
+        return serialize:generate-a-record($record,$linkedMetadata,$baseIRI,$domainRoot,$modified,$classes,$columnInfo,$serialization,$namespaces,$constants)      
+      ),
+    serialize:close-container($serialization) 
+    ) 
+  )
+};
+
+declare function serialize:generate-a-record($record,$linkedMetadata,$baseIRI,$domainRoot,$modified,$classes,$columnInfo,$serialization,$namespaces,$constants)
+{
+        
           (: Generate unabbreviated URIs and blank node identifiers. This must be done for every record separately since the UUIDs generated for the blank node identifiers must be the same within a record, but differ among records. :)
           
           let $IRIs := serialize:construct-iri($baseIRI,$classes) 
@@ -97,7 +117,7 @@ return (
             let $linkedClassType := $linkedClass/class/text()
             
             for $linkedClassRecord in $linkedClass/metadata/record
-            where $baseIRI="http://lod.vanderbilt.edu/historyart/site/"||$linkedClassRecord/*[local-name()=$linkColumn]/text()
+            where $baseIRI=$domainRoot||$linkedClassRecord/*[local-name()=$linkColumn]/text()
             (: generate an IRI for the instance of the linked class based on the convention for that class :)
             let $linkedClassIRI := $baseIRI||"#"||$linkedClassRecord/*[local-name()=$suffix1]/text()||$linkCharacters||$linkedClassRecord/*[local-name()=$suffix2]/text()
             let $linkedIRIs := serialize:construct-iri($linkedClassIRI,$linkedClass/classes/record)
@@ -109,25 +129,21 @@ return (
           ,
           
           (: The document description is done once for each record. :)
-          serialize:describe-document($baseIRI,$modified,$serialization,$namespaces)
-        )
-      ),
-    serialize:close-container($serialization) 
-    ) 
-  )
+          serialize:describe-document($baseIRI,$modified,$serialization,$namespaces,$constants)
+        
 };
 
 (:--------------------------------------------------------------------------------------------------:)
 
-declare function serialize:describe-document($baseIRI,$modified,$serialization,$namespaces)
+declare function serialize:describe-document($baseIRI,$modified,$serialization,$namespaces,$constants)
 {
-  let $type := "foaf:Document"
+  let $type := $constants//documentClass/text()
   let $suffix := propvalue:extension($serialization)
   let $iri := concat($baseIRI,$suffix)
   return concat(
     propvalue:subject($iri,$serialization),
     propvalue:plain-literal("dc:format",propvalue:media-type($serialization),$serialization),
-    propvalue:plain-literal("dc:creator","Vanderbilt Department of History of Art",$serialization),
+    propvalue:plain-literal("dc:creator",$constants//creator/text(),$serialization),
     propvalue:iri("dcterms:references",$baseIRI,$serialization,$namespaces),
     if ($modified)
     then propvalue:datatyped-literal("dcterms:modified",$modified,"http://www.w3.org/2001/XMLSchema#dateTime",$serialization,$namespaces)
