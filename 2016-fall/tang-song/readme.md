@@ -12,7 +12,7 @@ In the CSV table named metadata.csv, the rows represent data associated with a p
 
 Each cell in the table represents the value of the property represented by the column for the instance represented by the row.  An RDF triple is formed from the subject IRI for the row, a predicate associated with the column property, and an object that is the value of the cell at the intersection of the column and row.  The entire row represents an RDF graph of metadata associated with the resource represented by the row.
 
-![](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/metadata-table.png)
+![](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/one-one-classes.png)
 
 Fig. 2. Example table of classes represented by a row in the metadata table.
 
