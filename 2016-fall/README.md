@@ -25,6 +25,20 @@ Implementation notes:
 2. **Preventing OpenOffice Calc from messing with strings** If you have downloaded OpenOffice to use for editing the CSV files (recommended over using Excel), the default settings include some AutoCorrect options that mess with the characters in the file, for example replacing regular double quotes with "smart quotes".  I recommend turning all AutoCorrect options off.  Go to the Tools menu and select AutoCorrect Options... .  Under the Options and Localized Options tab, uncheck every box, then click OK.  
 
 3. **Setting the local directory in the script** In order to be able to see the effects of modifications to the metadata on the output data, the Xquery script needs to know where to find the CSV files are that you downloaded from GitHub.  There are two ways to take care of this.  One is to figure out what the path is to your fork of the Semantic Web GitHub repo.  Another option is to copy the tang-song folder containing the files from the GitHub repo to some place for which you know the path (e.g. your home directory on a Mac, or some subdirectory of the C: drive on a PC).  In either case, after figuring out the path of the 2016-fall/tang-song/ directory, using BaseX open the serialize.xqm file in the 2016-fall/tang-song/ directory, find line 10, and change the value in quotes of $localFilesFolderUnix to the path of the tang-song directory.  If you are having problems with this, fixing it will be one of the first things that we will do at the meeting on Monday.
+---
+Oct. 4 meeting: Continuing with subsections of section 2.3, with specific reference to Tracy's Chinese buildings data.  Be sure to check out [the list of Linked Data datasets and vocabularies compiled by the W3C](http://www.w3.org/2005/Incubator/lld/XGR-lld-vocabdataset/), which lists many of the most authoritative vocabularies.  We will talk about ontologies and SKOS.
+
+Implementation notes:
+
+1. There are numerous changes to both the data files and the Xquery scripts.  So you should update your local fork of the repo.
+
+2. It is no longer necessary to hard-code anything in the serialze.xqm file or use a different version of the file for Macs and PCs.  Load test-serialize.xq into BaseX, then set the five arguments of the serialize:main() function to appropriate values.  Mac users should be able to start with the defaults.  PC users will have to put the path to the top-level folder of their GitHub fork in the fourth argument.  Changing the last argument from "single" to "dump" will cause the script to generate RDF for the entire database.  Other implementation-specific settings can be made by changing values in the constants.csv file (e.g. the base IRI to be used).
+
+3. There are now two separate CSV metadata tables: one for the temple sites and the other for buildings at those sites.  More about this at the meeting.  
+
+4. There are directions on how to set up all of the files necessary to generate RDF from any CSV files [here](tang-song/readme.md).  It may be easiest to hack the existing tang-song CSV files so that you get the column headers right.
+
+5. I uploaded RDF/XML, RDF/Turtle, and JSON-LD sample files in a [sample](tang/song/samples) directory.  You can try calling the raw versions of the files from RawGit using Postman to see how it gives the correct Content-Type header, e.g. try https://rawgit.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/samples/Longxingsi.ttl .  
 
 ---
 Some tools:
@@ -36,6 +50,8 @@ Some tools:
 [LODLive for graph visualization](http://en.lodlive.it/)
 
 [W3C RDF validator; generates a graphical display, but only accepts RDF/XML as an input (convert using RDF Translator, then paste in)](https://www.w3.org/RDF/Validator/)
+
+[RawGit to serve GitHub RAW files with correct Content-Type headers](http://rawgit.com/)
 
 ---
 Things to investigate:
