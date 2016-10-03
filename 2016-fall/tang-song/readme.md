@@ -4,7 +4,7 @@ The purpose of the scripts is to allow data in "flat" CSV tables to be converted
 
 ## Data that can be represented in a single CSV table
 
-![](image/metadata-table.png)
+![](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/metadata-table.png)
 
 Fig. 1. Example metadata table for Chinese religious sites.
 
@@ -12,13 +12,13 @@ In the CSV table named metadata.csv, the rows represent data associated with a p
 
 Each cell in the table represents the value of the property represented by the column for the instance represented by the row.  An RDF triple is formed from the subject IRI for the row, a predicate associated with the column property, and an object that is the value of the cell at the intersection of the column and row.  The entire row represents an RDF graph of metadata associated with the resource represented by the row.
 
-![](image/metadata-table.png)
+![](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/metadata-table.png)
 
 Fig. 2. Example table of classes represented by a row in the metadata table.
 
 It is possible that all of the properties represented by the columns in the metadata.csv table are properties of the root class described by the table (the religious sites in the example).  However, some properties (such as the description of dynasties represented at the site) aren't really properties of the site, but rather of another class that is associated with the root class.  In the example, each site has a one-to-one association with a particular period of time over which buildings on the site were constructed.  A second table, classes.csv, lists all of the classes  linked in a one-to-one relationship in the metadata.csv table.  The id column in this table indicates how the subject IRI for the row should be modified to form an identifier for the instance of the linked class.  The string in the id column is appended to the subject IRI as a fragment identifier (hash).  If there is no desire to mint an IRI for the instance of the associated class, it can be a blank node.  Each class whose instances are represented by a blank node must be identified by a different string following "```:_```".
 
-![](image/column-mappings.png)
+![](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/column-mappings.png)
 
 Fig. 3. Example mappings from the Chinese religious site metadata table to RDF graph
 
@@ -50,7 +50,7 @@ In this example, each religious site may be linked to one or more buildings that
 
 However, it might be preferable to use the single dereferenceable IRI for the site along with fragment identifiers to distinguish the various buildings and photographs associated with the site.  Then if, for example, a building hash IRI were dereferenced, the client would also retrieve all of the metadata about the site, other buildings at the site, and all photographs associated with the site in a single file.  
 
-![](image/linked-classes.png)
+![](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/linked-classes.png)
 
 Fig. 4. Many-to-one relationships between buildings and photos of a Chinese religious site.
 
