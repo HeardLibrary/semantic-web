@@ -249,7 +249,15 @@ declare function serialize:property-value-pairs($IRIs,$columnInfo,$record,$type,
      case "plain" return propvalue:plain-literal($columnType/predicate/text(),$column//text(),$serialization)
      case "datatype" return propvalue:datatyped-literal($columnType/predicate/text(),$column//text(),$columnType/attribute/text(),$serialization,$namespaces)
      case "language" return propvalue:language-tagged-literal($columnType/predicate/text(),$column//text(),$columnType/attribute/text(),$serialization)
-     case "iri" return propvalue:iri($columnType/predicate/text(),$column//text(),$serialization,$namespaces)
+     case "iri" return 
+       (:: check whether the value column in the mapping table has anything in it :)
+       if ($columnType/value/text())
+       then
+         (: something is there. Construct the IRI by concatenating what's in the value column, the column content, and what's in the attribute column :)
+         propvalue:iri($columnType/predicate/text(),$columnType/value/text()||$column//text()||$columnType/attribute/text(),$serialization,$namespaces)
+       else
+         (: nothing is there.  The column either contains a full IRI or an abbreviated one :)
+         propvalue:iri($columnType/predicate/text(),$column//text(),$serialization,$namespaces)
      default return ""
 ,
 
