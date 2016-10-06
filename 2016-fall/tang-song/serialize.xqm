@@ -3,7 +3,7 @@ module namespace serialize = 'http://bioimages.vanderbilt.edu/xqm/serialize';
 import module namespace propvalue = 'http://bioimages.vanderbilt.edu/xqm/propvalue' at 'https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/propvalue.xqm'; (: can substitute local directory if you need to mess with it :)
 (:--------------------------------------------------------------------------------------------------:)
 
-declare function serialize:main($id,$serialization,$repoPath,$pcRepoLocation,$singleOrDump,$print)
+declare function serialize:main($id,$serialization,$repoPath,$pcRepoLocation,$singleOrDump,$outputToFile)
 {
 (: will use a variation on this if outputting to a file
 let $localFilesFolderPC := "c:\github\semantic-web\2016-fall\tang-song\" :)
@@ -71,13 +71,17 @@ let $linkedMetadata :=
   
 (: The main function returns a single string formed by concatenating all of the assembled pieces of the document :)
 return 
-  if ($print="true")
+  if ($outputToFile="true")
   then
-    (file:create-dir($outputDirectory), file:write($outputDirectory||$id,
+    (: Creates the output directory specified in the constants.csv file if it doesn't already exist.  Then writes into a file having the name passed via the $id parameter concatenated with an appropriate file extension. uses default UTF-8 encoding :)
+    (file:create-dir($outputDirectory), file:write-text($outputDirectory||$id||propvalue:extension($serialization),
       serialize:generate-entire-document($id,$linkedMetadata,$xmlMetadata,$domainRoot,$classes,$columnInfo,$serialization,$namespaces,$constants,$singleOrDump)
-                                                  )
+                                                  ),
+    (: put this in the Result window so that the user can tell that something happened :)
+    "Completed file write of "||$id||propvalue:extension($serialization)||" at "||fn:current-dateTime()
     )
   else
+    (: simply output the string to the Result window :)
     serialize:generate-entire-document($id,$linkedMetadata,$xmlMetadata,$domainRoot,$classes,$columnInfo,$serialization,$namespaces,$constants,$singleOrDump)
 };
 
