@@ -3,7 +3,7 @@ module namespace serialize = 'http://bioimages.vanderbilt.edu/xqm/serialize';
 import module namespace propvalue = 'http://bioimages.vanderbilt.edu/xqm/propvalue' at 'https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/propvalue.xqm'; (: can substitute local directory if you need to mess with it :)
 (:--------------------------------------------------------------------------------------------------:)
 
-declare function serialize:main($id,$serialization,$repoPath,$pcRepoLocation,$singleOrDump)
+declare function serialize:main($id,$serialization,$repoPath,$pcRepoLocation,$singleOrDump,$print)
 {
 (: will use a variation on this if outputting to a file
 let $localFilesFolderPC := "c:\github\semantic-web\2016-fall\tang-song\" :)
@@ -38,6 +38,7 @@ let $classes := $xmlClasses/csv/record
 let $linkedClasses := $xmlLinkedClasses/csv/record
 let $constants := $xmlConstants/csv/record
 let $domainRoot := $constants//domainRoot/text()
+let $outputDirectory := $constants//outputDirectory/text()
 
 let $linkedMetadata :=
       for $class in $linkedClasses
@@ -69,29 +70,40 @@ let $linkedMetadata :=
        )
   
 (: The main function returns a single string formed by concatenating all of the assembled pieces of the document :)
-return (
-  concat( 
-    (: the namespace abbreviations only needs to be generated once for the entire document :)
-    serialize:list-namespaces($namespaces,$serialization),
-    string-join( 
-      if ($singleOrDump = "dump")
-      then
-        (: this case outputs every record in the database :)
-        for $record in $xmlMetadata/csv/record
-        let $baseIRI := $domainRoot||$record/iri_local_name/text()
-        let $modified := $record/modified/text()
-        return serialize:generate-a-record($record,$linkedMetadata,$baseIRI,$domainRoot,$modified,$classes,$columnInfo,$serialization,$namespaces,$constants)
-      else
-        (: for a single record, each record in the database must be checked for a match to the requested URI :)
-        for $record in $xmlMetadata/csv/record
-        where $record/iri_local_name/text()=$id
-        let $baseIRI := $domainRoot||$record/iri_local_name/text()
-        let $modified := $record/modified/text()
-        return serialize:generate-a-record($record,$linkedMetadata,$baseIRI,$domainRoot,$modified,$classes,$columnInfo,$serialization,$namespaces,$constants)      
-      ),
-    serialize:close-container($serialization) 
-    ) 
-  )
+return 
+  if ($print="true")
+  then
+    (file:create-dir($outputDirectory), file:write($outputDirectory||$id,
+      serialize:generate-entire-document($id,$linkedMetadata,$xmlMetadata,$domainRoot,$classes,$columnInfo,$serialization,$namespaces,$constants,$singleOrDump)
+                                                  )
+    )
+  else
+    serialize:generate-entire-document($id,$linkedMetadata,$xmlMetadata,$domainRoot,$classes,$columnInfo,$serialization,$namespaces,$constants,$singleOrDump)
+};
+
+declare function serialize:generate-entire-document($id,$linkedMetadata,$xmlMetadata,$domainRoot,$classes,$columnInfo,$serialization,$namespaces,$constants,$singleOrDump)
+{
+concat( 
+  (: the namespace abbreviations only needs to be generated once for the entire document :)
+  serialize:list-namespaces($namespaces,$serialization),
+  string-join( 
+    if ($singleOrDump = "dump")
+    then
+      (: this case outputs every record in the database :)
+      for $record in $xmlMetadata/csv/record
+      let $baseIRI := $domainRoot||$record/iri_local_name/text()
+      let $modified := $record/modified/text()
+      return serialize:generate-a-record($record,$linkedMetadata,$baseIRI,$domainRoot,$modified,$classes,$columnInfo,$serialization,$namespaces,$constants)
+    else
+      (: for a single record, each record in the database must be checked for a match to the requested URI :)
+      for $record in $xmlMetadata/csv/record
+      where $record/iri_local_name/text()=$id
+      let $baseIRI := $domainRoot||$record/iri_local_name/text()
+      let $modified := $record/modified/text()
+      return serialize:generate-a-record($record,$linkedMetadata,$baseIRI,$domainRoot,$modified,$classes,$columnInfo,$serialization,$namespaces,$constants)      
+    ),
+  serialize:close-container($serialization) 
+  ) 
 };
 
 declare function serialize:generate-a-record($record,$linkedMetadata,$baseIRI,$domainRoot,$modified,$classes,$columnInfo,$serialization,$namespaces,$constants)
