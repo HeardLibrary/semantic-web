@@ -47,6 +47,7 @@ Oct. 10 meeting: Finishing Chapter 2 and discussing anything that people wanted 
 I found a good paper that describes why SKOS was designed the way it was.  It is Baker et al. 2013. http://dx.doi.org/10.1016/j.websem.2013.05.001 .  I was able to access it through ScienceDirect via the Vanderbilt Library.  There are many technical details in the paper, but I would recommend skimming section 3 (Rationale for SKOS) and reading 4.1 (SKOS concepts and how they differ from OWL classes).  Section 4.1 is important for understanding the implications of modeling something as a class, and instance, or a concept.  All of the Getty Vocabularies model entities as SKOS concepts and this section can help us understand why.
 
 I also highly recommend reading [this blog post](http://efoundations.typepad.com/efoundations/2011/09/things-their-conceptualisations-skos-foaffocus-modelling-choices.html) which provides a excellent narrative account of the development of FOAF and SKOS, with examples from VIAF and elsewhere that might provide us with some examples to follow in our modeling.  Here's [one more short post](http://ontologydesignpatterns.org/wiki/Community:Using_SKOS_Concept) on "Using SKOS Concept" that deals with the question "When should something be an instance of SKOS Concept?"
+
 ---
 Some tools:
 
