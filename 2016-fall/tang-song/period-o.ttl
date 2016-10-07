@@ -1,0 +1,880 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://n2t.net/ark:/99152/p0v#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://n2t.net/ark:/99152/p0fp7wv23z4> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "后汉"@cmn-hans,
+        "後漢"@cmn-hant,
+        "Houhan"@cmn-latn,
+        "Later Han Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Wudai Shiguo, 五代十国" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 开封, latitude: 34.78, longitude: 114.34" ;
+    skos:prefLabel "Later Han Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "950" ;
+            time:hasDateTimeDescription [ time:year "0950"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "947" ;
+            time:hasDateTimeDescription [ time:year "0947"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv2jt9> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "新"@cmn-hans,
+        "新"@cmn-hant,
+        "Xin"@cmn-latn,
+        "Xin Wang Mang Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Han, 汉" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 长安 (陕西西安), latitude: 34.3, longitude: 109.02" ;
+    skos:prefLabel "Xin Wang Mang Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "25" ;
+            time:hasDateTimeDescription [ time:year "0025"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "23" ;
+            time:hasDateTimeDescription [ time:year "0023"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv2mgt> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "秦"@cmn-hans,
+        "Qin"@cmn-latn,
+        "Qin Dynasty"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 咸阳 (陕西咸阳), latitude: 34.33, longitude: 108.71" ;
+    skos:prefLabel "Qin Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "-206" ;
+            time:hasDateTimeDescription [ time:year "-0206"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "-221" ;
+            time:hasDateTimeDescription [ time:year "-0221"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv2s8c> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "明"@cmn-hans,
+        "明"@cmn-hant,
+        "Ming Dynasty"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 應天府  (江苏南京), latitude: 32.05, longitude: 118.76" ;
+    skos:prefLabel "Ming Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "1644" ;
+            time:hasDateTimeDescription [ time:year "1644"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "1368" ;
+            time:hasDateTimeDescription [ time:year "1368"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv4q5d> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "西周"@cmn-hans,
+        "西周"@cmn-hant,
+        "Xizhou"@cmn-latn,
+        "Western Zhou Period"@eng-latn ;
+    skos:editorialNote "Parent period: Zhou, 周" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 洛邑 (河南洛阳), latitude: 34.68, longitude: 112.45" ;
+    skos:prefLabel "Western Zhou Period" ;
+    time:intervalFinishedBy [ skos:prefLabel "-771" ;
+            time:hasDateTimeDescription [ time:year "-0771"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "-1046" ;
+            time:hasDateTimeDescription [ time:year "-1046"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv5c3f> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "东晋 "@cmn-hans,
+        "東晉 "@cmn-hant,
+        "Dongjin"@cmn-latn,
+        "Eastern Jin Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Jin, 晋" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 建康 (江苏南京), latitude: 32.06, longitude: 118.77" ;
+    skos:prefLabel "Eastern Jin Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "420" ;
+            time:hasDateTimeDescription [ time:year "0420"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "317" ;
+            time:hasDateTimeDescription [ time:year "0317"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv5h26> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "五代十国"@cmn-hans,
+        "五代十國"@cmn-hant,
+        "Wudai Shiguo"@cmn-latn,
+        "Five Dynasties and Ten Kingdoms Period"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:prefLabel "Five Dynasties and Ten Kingdoms Period" ;
+    time:intervalFinishedBy [ skos:prefLabel "1279" ;
+            time:hasDateTimeDescription [ time:year "1279"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "907" ;
+            time:hasDateTimeDescription [ time:year "0907"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv699w> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "西夏"@cmn-hans,
+        "西夏"@cmn-hant,
+        "Xixia Dynasty"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 興慶府 (宁夏银川), latitude: 38.5, longitude: 106.2" ;
+    skos:prefLabel "Xixia Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "1227" ;
+            time:hasDateTimeDescription [ time:year "1227"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "1032" ;
+            time:hasDateTimeDescription [ time:year "1032"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv6f2v> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "中华民国"@cmn-hans,
+        "中華民國"@cmn-hant,
+        "Zhonghua Minguo"@cmn-latn,
+        "Republic of China"@eng-latn ;
+    skos:editorialNote "Parent period: Zhonghua Minguo, 中华民国" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 北京, latitude: 39.92, longitude: 116.38" ;
+    skos:prefLabel "Republic of China" ;
+    time:intervalFinishedBy [ skos:prefLabel "1949" ;
+            time:hasDateTimeDescription [ time:year "1949"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "1912" ;
+            time:hasDateTimeDescription [ time:year "1912"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv6h4z> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "北魏"@cmn-hans,
+        "北魏"@cmn-hant,
+        "Beiwei"@cmn-latn,
+        "Northern Wei Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Nanbeichao, 南北朝" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 盛樂 (呼和浩特), latitude: 40.81, longitude: 111.65" ;
+    skos:prefLabel "Northern Wei Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "534" ;
+            time:hasDateTimeDescription [ time:year "0534"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "386" ;
+            time:hasDateTimeDescription [ time:year "0386"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv72wc> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "三国"@cmn-hans,
+        "三國"@cmn-hant,
+        "Sanguo"@cmn-latn,
+        "Three Kingdoms Period"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:prefLabel "Three Kingdoms Period" ;
+    time:intervalFinishedBy [ skos:prefLabel "280" ;
+            time:hasDateTimeDescription [ time:year "0280"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "220" ;
+            time:hasDateTimeDescription [ time:year "0220"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv847g> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "魏"@cmn-hans,
+        "魏"@cmn-hant,
+        "Wei"@cmn-latn,
+        "Wei Kingdom"@eng-latn ;
+    skos:editorialNote "Parent period: Three Kingdoms Period, 三国" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 洛阳 (河南洛阳), latitude: 34.68, longitude: 112.45" ;
+    skos:prefLabel "Wei Kingdom" ;
+    time:intervalFinishedBy [ skos:prefLabel "265" ;
+            time:hasDateTimeDescription [ time:year "0265"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "220" ;
+            time:hasDateTimeDescription [ time:year "0220"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv8644> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "东汉"@cmn-hans,
+        "東漢"@cmn-hant,
+        "Donghan"@cmn-latn,
+        "Eastern Han Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Han, 汉" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 洛阳 (河南洛阳), latitude: 34.68, longitude: 112.45" ;
+    skos:prefLabel "Eastern Han Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "220" ;
+            time:hasDateTimeDescription [ time:year "0220"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "25" ;
+            time:hasDateTimeDescription [ time:year "0025"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv8j8v> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "十国闽"@cmn-hans,
+        "十國閩"@cmn-hant,
+        "Shiguo Min"@cmn-latn,
+        "Min Kingdom"@eng-latn ;
+    skos:editorialNote "Parent period: Shiguo Min, 十国闽" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 北京, latitude: 39.92, longitude: 116.38" ;
+    skos:prefLabel "Min Kingdom" ;
+    time:intervalFinishedBy [ skos:prefLabel "945" ;
+            time:hasDateTimeDescription [ time:year "0945"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "909" ;
+            time:hasDateTimeDescription [ time:year "0909"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv8kjh> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "北齐"@cmn-hans,
+        "北齊"@cmn-hant,
+        "Beiqi"@cmn-latn,
+        "Northern Qi Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Nanbeichao, 南北朝" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 鄴 (河北省临漳县), latitude: 36.34, longitude: 114.6" ;
+    skos:prefLabel "Northern Qi Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "577" ;
+            time:hasDateTimeDescription [ time:year "0577"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "550" ;
+            time:hasDateTimeDescription [ time:year "0550"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv8qv7> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "十国荆南"@cmn-hans,
+        "十國荊南"@cmn-hant,
+        "Shiguo Jingnan"@cmn-latn,
+        "Southern Jing Kingdom"@eng-latn ;
+    skos:editorialNote "Parent period: Shiguo Jingnan, 十国荆南" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 南京, latitude: 32.05, longitude: 118.76" ;
+    skos:prefLabel "Southern Jing Kingdom" ;
+    time:intervalFinishedBy [ skos:prefLabel "963" ;
+            time:hasDateTimeDescription [ time:year "0963"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "925" ;
+            time:hasDateTimeDescription [ time:year "0925"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv8vm6> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "后梁"@cmn-hans,
+        "後梁"@cmn-hant,
+        "Houliang"@cmn-latn,
+        "Later Liang Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Wudai Shiguo, 五代十国" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 西都 (河南洛阳), latitude: 34.68, longitude: 112.45" ;
+    skos:prefLabel "Later Liang Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "923" ;
+            time:hasDateTimeDescription [ time:year "0923"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "907" ;
+            time:hasDateTimeDescription [ time:year "0907"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv99g3> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "东魏"@cmn-hans,
+        "東魏"@cmn-hant,
+        "Dongwei"@cmn-latn,
+        "Eastern Wei Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Nanbeichao, 南北朝" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 鄴 (河北省临漳县), latitude: 36.34, longitude: 114.6" ;
+    skos:prefLabel "Eastern Wei Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "550" ;
+            time:hasDateTimeDescription [ time:year "0550"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "534" ;
+            time:hasDateTimeDescription [ time:year "0534"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv9h4n> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "隋"@cmn-hans,
+        "隋"@cmn-hant,
+        "Sui Dynasty"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 大兴 (陕西西安), latitude: 34.3, longitude: 109.02" ;
+    skos:prefLabel "Sui Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "618" ;
+            time:hasDateTimeDescription [ time:year "0618"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "581" ;
+            time:hasDateTimeDescription [ time:year "0581"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv9m9w> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "十国吴越"@cmn-hans,
+        "十國吳越"@cmn-hant,
+        "Shiguo Wuyue"@cmn-latn,
+        "Wu Yue Kingdom"@eng-latn ;
+    skos:editorialNote "Parent period: Shiguo Wuyue, 十国吴越" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 錢塘 (杭州), latitude: 30.29, longitude: 120.16" ;
+    skos:prefLabel "Wu Yue Kingdom" ;
+    time:intervalFinishedBy [ skos:prefLabel "978" ;
+            time:hasDateTimeDescription [ time:year "0978"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "907" ;
+            time:hasDateTimeDescription [ time:year "0907"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv9s3f> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "汉"@cmn-hans,
+        "漢"@cmn-hant,
+        "Han Dynasties"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:prefLabel "Han Dynasties" ;
+    time:intervalFinishedBy [ skos:prefLabel "220" ;
+            time:hasDateTimeDescription [ time:year "0220"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "-206" ;
+            time:hasDateTimeDescription [ time:year "-0206"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv9x7n> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "南宋"@cmn-hans,
+        "南宋"@cmn-hant,
+        "Nansong"@cmn-latn,
+        "Southern Song"@eng-latn ;
+    skos:editorialNote "Parent period: Song, 宋" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 临安 (杭州), latitude: 30.29, longitude: 120.16" ;
+    skos:prefLabel "Southern Song" ;
+    time:intervalFinishedBy [ skos:prefLabel "1279" ;
+            time:hasDateTimeDescription [ time:year "1279"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "1127" ;
+            time:hasDateTimeDescription [ time:year "1127"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvbdm8> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "宋"@cmn-hans,
+        "宋"@cmn-hant,
+        "Song"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:prefLabel "Song" ;
+    time:intervalFinishedBy [ skos:prefLabel "1279" ;
+            time:hasDateTimeDescription [ time:year "1279"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "960" ;
+            time:hasDateTimeDescription [ time:year "0960"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvbf5n> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "北周"@cmn-hans,
+        "北周"@cmn-hant,
+        "Beizhou"@cmn-latn,
+        "Northern Zhou Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Nanbeichao, 南北朝" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 长安 (陕西西安), latitude: 34.3, longitude: 109.02" ;
+    skos:prefLabel "Northern Zhou Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "581" ;
+            time:hasDateTimeDescription [ time:year "0581"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "557" ;
+            time:hasDateTimeDescription [ time:year "0557"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvbngv> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "东周 "@cmn-hans,
+        "東周 "@cmn-hant,
+        "Dongzhou"@cmn-latn,
+        "Eastern Zhou Period"@eng-latn ;
+    skos:editorialNote "Parent period: Zhou, 周" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 咸阳 (陕西咸阳), latitude: 34.33, longitude: 108.71" ;
+    skos:prefLabel "Eastern Zhou Period" ;
+    time:intervalFinishedBy [ skos:prefLabel "-256" ;
+            time:hasDateTimeDescription [ time:year "-0256"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "-770" ;
+            time:hasDateTimeDescription [ time:year "-0770"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvc6r4> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "夏"@cmn-hans,
+        "夏"@cmn-hant,
+        "Xia"@cmn-latn,
+        "Xia Dynasty"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 安邑 (山西夏县) - 阳翟 (河南禹县), latitude: 35.06, longitude: 111.04" ;
+    skos:prefLabel "Xia Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "-1600" ;
+            time:hasDateTimeDescription [ time:year "-1600"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "-2070" ;
+            time:hasDateTimeDescription [ time:year "-2070"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvcpdr> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "后唐"@cmn-hans,
+        "後唐"@cmn-hant,
+        "Houtang"@cmn-latn,
+        "Later Tang Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Wudai Shiguo, 五代十国" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 洛阳 (河南洛阳), latitude: 34.68, longitude: 112.45" ;
+    skos:prefLabel "Later Tang Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "936" ;
+            time:hasDateTimeDescription [ time:year "0936"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "923" ;
+            time:hasDateTimeDescription [ time:year "0923"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvdf54> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "蜀"@cmn-hans,
+        "蜀"@cmn-hant,
+        "Shu"@cmn-latn,
+        "Shu Kingdom"@eng-latn ;
+    skos:editorialNote "Parent period: Three Kingdoms Period, 三国" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 成都 (四川成都), latitude: 30.66, longitude: 104.06" ;
+    skos:prefLabel "Shu Kingdom" ;
+    time:intervalFinishedBy [ skos:prefLabel "263" ;
+            time:hasDateTimeDescription [ time:year "0263"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "221" ;
+            time:hasDateTimeDescription [ time:year "0221"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvghct> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "后周"@cmn-hans,
+        "後周"@cmn-hant,
+        "Houzhou"@cmn-latn,
+        "Later Zhou Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Wudai Shiguo, 五代十国" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 汴京 (开封), latitude: 34.78, longitude: 114.34" ;
+    skos:prefLabel "Later Zhou Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "960" ;
+            time:hasDateTimeDescription [ time:year "0960"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "951" ;
+            time:hasDateTimeDescription [ time:year "0951"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvh6pd> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "十六国"@cmn-hans,
+        "十六國"@cmn-hant,
+        "Shiliuguo"@cmn-latn,
+        "Sixteen Kingdoms Period"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:prefLabel "Sixteen Kingdoms Period" ;
+    time:intervalFinishedBy [ skos:prefLabel "439" ;
+            time:hasDateTimeDescription [ time:year "0439"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "304" ;
+            time:hasDateTimeDescription [ time:year "0304"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvh6rz> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "南北朝"@cmn-hans,
+        "南北朝"@cmn-hant,
+        "Nanbeichao"@cmn-latn,
+        "Northern and Southern Dynasties Period"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:prefLabel "Northern and Southern Dynasties Period" ;
+    time:intervalFinishedBy [ skos:prefLabel "577" ;
+            time:hasDateTimeDescription [ time:year "0577"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "420" ;
+            time:hasDateTimeDescription [ time:year "0420"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvhzb5> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "刘宋"@cmn-hans,
+        "劉宋"@cmn-hant,
+        "Liusong"@cmn-latn,
+        "Liu Song Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Nanbeichao, 南北朝" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 建康 (江苏南京), latitude: 32.06, longitude: 118.77" ;
+    skos:prefLabel "Liu Song Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "479" ;
+            time:hasDateTimeDescription [ time:year "0479"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "420" ;
+            time:hasDateTimeDescription [ time:year "0420"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvjnjs> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "西魏"@cmn-hans,
+        "西魏"@cmn-hant,
+        "Xiwei"@cmn-latn,
+        "Western Wei Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Nanbeichao, 南北朝" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 长安 (陕西西安), latitude: 34.3, longitude: 109.02" ;
+    skos:prefLabel "Western Wei Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "556" ;
+            time:hasDateTimeDescription [ time:year "0556"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "535" ;
+            time:hasDateTimeDescription [ time:year "0535"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvjvn8> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "北宋"@cmn-hans,
+        "北宋"@cmn-hant,
+        "Beisong"@cmn-latn,
+        "Northern Song"@eng-latn ;
+    skos:editorialNote "Parent period: Song, 宋" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 汴梁 (开封), latitude: 34.78, longitude: 114.34" ;
+    skos:prefLabel "Northern Song" ;
+    time:intervalFinishedBy [ skos:prefLabel "1127" ;
+            time:hasDateTimeDescription [ time:year "1127"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "960" ;
+            time:hasDateTimeDescription [ time:year "0960"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvk97r> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "晋"@cmn-hans,
+        "晉"@cmn-hant,
+        "Jin Dynasty"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:prefLabel "Jin Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "420" ;
+            time:hasDateTimeDescription [ time:year "0420"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "265" ;
+            time:hasDateTimeDescription [ time:year "0265"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvkr75> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "西晋"@cmn-hans,
+        "西晉"@cmn-hant,
+        "Xijin"@cmn-latn,
+        "Western Jin Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Jin, 晋" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 洛阳 (河南洛阳), latitude: 34.68, longitude: 112.45" ;
+    skos:prefLabel "Western Jin Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "316" ;
+            time:hasDateTimeDescription [ time:year "0316"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "265" ;
+            time:hasDateTimeDescription [ time:year "0265"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvm7qm> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "南朝梁"@cmn-hans,
+        "南朝梁"@cmn-hant,
+        "Nanchao Liang"@cmn-latn,
+        "Southern Liang Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Nanbeichao, 南北朝" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 建康 (江苏南京), latitude: 32.06, longitude: 118.77" ;
+    skos:prefLabel "Southern Liang Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "557" ;
+            time:hasDateTimeDescription [ time:year "0557"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "502" ;
+            time:hasDateTimeDescription [ time:year "0502"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvmghn> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "金"@cmn-hans,
+        "金"@cmn-hant,
+        "Jin Dynasty"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 上京会宁府 (黑龙江哈尔滨市阿城区南白城), latitude: 45.52, longitude: 126.97" ;
+    skos:prefLabel "Jin Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "1234" ;
+            time:hasDateTimeDescription [ time:year "1234"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "1115" ;
+            time:hasDateTimeDescription [ time:year "1115"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvmvjs> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "陈"@cmn-hans,
+        "陳"@cmn-hant,
+        "Chen Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Nanbeichao, 南北朝" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 建康 (江苏南京), latitude: 32.06, longitude: 118.77" ;
+    skos:prefLabel "Chen Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "589" ;
+            time:hasDateTimeDescription [ time:year "0589"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "557" ;
+            time:hasDateTimeDescription [ time:year "0557"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvqcws> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "商"@cmn-hans,
+        "商"@cmn-hant,
+        "Shang Dynasty"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 亳 (河南商丘) - 殷 (河南安阳), latitude: 34.44, longitude: 115.65" ;
+    skos:prefLabel "Shang Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "-1046" ;
+            time:hasDateTimeDescription [ time:year "-1046"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "-1600" ;
+            time:hasDateTimeDescription [ time:year "-1600"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvrd4r> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "吴"@cmn-hans,
+        "吳"@cmn-hant,
+        "Wu"@cmn-latn,
+        "Wu Kingdom"@eng-latn ;
+    skos:editorialNote "Parent period: Three Kingdoms Period, 三国" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 建业 (江苏南京), latitude: 32.06, longitude: 118.77" ;
+    skos:prefLabel "Wu Kingdom" ;
+    time:intervalFinishedBy [ skos:prefLabel "280" ;
+            time:hasDateTimeDescription [ time:year "0280"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "222" ;
+            time:hasDateTimeDescription [ time:year "0222"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvrjpj> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "唐"@cmn-hans,
+        "唐"@cmn-hant,
+        "Tang Dynasty"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 长安 (陕西西安), latitude: 34.3, longitude: 109.02" ;
+    skos:prefLabel "Tang Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "907" ;
+            time:hasDateTimeDescription [ time:year "0907"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "618" ;
+            time:hasDateTimeDescription [ time:year "0618"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvsqwt> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "周"@cmn-hans,
+        "周"@cmn-hant,
+        "Zhou Period"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 镐京 (陕西西安), latitude: 34.3, longitude: 109.02" ;
+    skos:prefLabel "Zhou Period" ;
+    time:intervalFinishedBy [ skos:prefLabel "-256" ;
+            time:hasDateTimeDescription [ time:year "-0256"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "-1046" ;
+            time:hasDateTimeDescription [ time:year "-1046"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvsz6q> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "中华人民共和国"@cmn-hans,
+        "中華人民共和國"@cmn-hant,
+        "Zhonghua Renmin Gongheguo"@cmn-latn,
+        "People’s Republic of China"@eng-latn ;
+    skos:editorialNote "Parent period: Zhonghua Renmin Gongheguo, 中华人民共和国" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 北京, latitude: 39.92, longitude: 116.38" ;
+    skos:prefLabel "People’s Republic of China" ;
+    time:intervalFinishedBy [ skos:prefLabel "2016" ;
+            time:hasDateTimeDescription [ time:year "2016"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "1949" ;
+            time:hasDateTimeDescription [ time:year "1949"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvtqp9> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "清"@cmn-hans,
+        "清"@cmn-hant,
+        "Qing Dynasty"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 京师顺天府 (北京), latitude: 39.92, longitude: 116.38" ;
+    skos:prefLabel "Qing Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "1911" ;
+            time:hasDateTimeDescription [ time:year "1911"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "1644" ;
+            time:hasDateTimeDescription [ time:year "1644"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvvdvn> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "南齐"@cmn-hans,
+        "南齊"@cmn-hant,
+        "Nanqi"@cmn-latn,
+        "Southern Qi Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Nanbeichao, 南北朝" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 建康 (江苏南京), latitude: 32.06, longitude: 118.77" ;
+    skos:prefLabel "Southern Qi Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "502" ;
+            time:hasDateTimeDescription [ time:year "0502"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "479" ;
+            time:hasDateTimeDescription [ time:year "0479"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvvrz5> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "元"@cmn-hans,
+        "元"@cmn-hant,
+        "Yuan Dynasty"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 大都  (北京), latitude: 39.92, longitude: 116.38" ;
+    skos:prefLabel "Yuan Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "1388" ;
+            time:hasDateTimeDescription [ time:year "1388"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "1206" ;
+            time:hasDateTimeDescription [ time:year "1206"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvw8zq> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "辽"@cmn-hans,
+        "遼"@cmn-hant,
+        "Liao Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Liao, 辽" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 上京 (内蒙赤峰市巴林左旗), latitude: 44.2, longitude: 119.25" ;
+    skos:prefLabel "Liao Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "1214" ;
+            time:hasDateTimeDescription [ time:year "1214"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "907" ;
+            time:hasDateTimeDescription [ time:year "0907"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvxmqg> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "战国时代"@cmn-hans,
+        "Zhanguo Shidai"@cmn-hant,
+        "戰國時代"@cmn-hant,
+        "Warring States Period"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:prefLabel "Warring States Period" ;
+    time:intervalFinishedBy [ skos:prefLabel "-221" ;
+            time:hasDateTimeDescription [ time:year "-0221"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "-475" ;
+            time:hasDateTimeDescription [ time:year "-0475"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvxnn5> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "春秋时代"@cmn-hans,
+        "春秋時代"@cmn-hant,
+        "Chunqiu Shidai"@cmn-latn,
+        "Spring and Autumn Period"@eng-latn ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:prefLabel "Spring and Autumn Period" ;
+    time:intervalFinishedBy [ skos:prefLabel "-476" ;
+            time:hasDateTimeDescription [ time:year "-0476"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "-770" ;
+            time:hasDateTimeDescription [ time:year "-0770"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvzgmr> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "后晋"@cmn-hans,
+        "後晉"@cmn-hant,
+        "Houjin"@cmn-latn,
+        "Later Jin Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Wudai Shiguo, 五代十国" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 开封, latitude: 34.78, longitude: 114.34" ;
+    skos:prefLabel "Later Jin Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "946" ;
+            time:hasDateTimeDescription [ time:year "0946"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "936" ;
+            time:hasDateTimeDescription [ time:year "0936"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wvzjdh> a skos:Concept ;
+    ns1:spatialCoverageDescription "China" ;
+    dcterms:language "eng-latn" ;
+    dcterms:spatial <http://dbpedia.org/resource/China> ;
+    skos:altLabel "西汉"@cmn-hans,
+        "西漢"@cmn-hant,
+        "Xihan"@cmn-latn,
+        "Western Han Dynasty"@eng-latn ;
+    skos:editorialNote "Parent period: Han, 汉" ;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv> ;
+    skos:note "First capital: 长安 (陕西西安), latitude: 34.3, longitude: 109.02" ;
+    skos:prefLabel "Western Han Dynasty" ;
+    time:intervalFinishedBy [ skos:prefLabel "23" ;
+            time:hasDateTimeDescription [ time:year "0023"^^xsd:gYear ] ] ;
+    time:intervalStartedBy [ skos:prefLabel "-206" ;
+            time:hasDateTimeDescription [ time:year "-0206"^^xsd:gYear ] ] .
+
+<http://n2t.net/ark:/99152/p0fp7wv.json> void:inDataset <http://n2t.net/ark:/99152/p0d> .
+
+<http://dbpedia.org/resource/China> skos:prefLabel "China" .
+
+<http://n2t.net/ark:/99152/p0fp7wv> a skos:ConceptScheme ;
+    dcterms:source [ dcterms:contributor [ foaf:name "" ] ;
+            dcterms:creator [ foaf:name "Merrick Lex Berman" ] ;
+            dcterms:issued "2015"^^xsd:gYear ;
+            dcterms:title "CHGIS: Major Chinese Periods Chronology" ] ;
+    skos:editorialNote """[notes provided by source editor Berman]
+
+sources:
+
+1.http://www.baike.com/wiki/%E4%B8%AD%E5%9B%BD%E5%8E%86%E4%BB%A3%E5%85%AC%E5%85%83%E5%AF%B9%E7%85%A7%E7%AE%80%E8%A1%A8
+
+2.http://zh.wikipedia.org/wiki/%E4%B8%AD%E5%9C%8B%E6%AD%B7%E5%8F%B2%E4%BA%8B%E4%BB%B6%E5%88%97%E8%A1%A8
+
+3.http://ljzlcl.blog.163.com/blog/static/9666123620090433033441/
+
+NOTES:
+
+This table of major Chinese States and Dynasties provides a basic time frame, and includes both the overall periods, as well as specific sub-periods, or in most cases, specific states.
+
+For example, the Northern and Southern Dynasties is listed (420 CE - 577 CE), along with the various states, such as Liu Song, Eastern Wei, and so on that existed during that period.    Note that the overall period is not itself a "state" and has no capital, nor any administration or political history.  It is merely a superset of many states.
+
+By contrast there are Periods, with Sub-periods, such as the Song Dynasty, which was one continuous political entity, but is divided into two very distinct periods, the Northern Song and Southern Song, reflecting the incursion of the Mongols who seized the greater part of the northern area of the Song, and forced the capital to be relocated from Kaifeng to Hangzhou.
+""";
+    foaf:isPrimaryTopicOf <http://n2t.net/ark:/99152/p0fp7wv.json> .
+
