@@ -64,6 +64,8 @@ Some tools:
 ---
 Things to investigate:
 
+[Review of the DCMI Abatract Model](http://wiki.dublincore.org/index.php/Review_of_DCMI_Abstract_Model) (probably too nerdy for general consumption, but I wanted to put this where I could find it again.  It discusses application profiles and description sets.)
+
 [International Image Interoperability Framework] (http://iiif.io/)
 
 [Mirador] (http://projectmirador.org)
