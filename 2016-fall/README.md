@@ -48,6 +48,8 @@ I found a good paper that describes why SKOS was designed the way it was.  It is
 
 I also highly recommend reading [this blog post](http://efoundations.typepad.com/efoundations/2011/09/things-their-conceptualisations-skos-foaffocus-modelling-choices.html) which provides a excellent narrative account of the development of FOAF and SKOS, with examples from VIAF and elsewhere that might provide us with some examples to follow in our modeling.  Here's [one more short post](http://ontologydesignpatterns.org/wiki/Community:Using_SKOS_Concept) on "Using SKOS Concept" that deals with the question "When should something be an instance of SKOS Concept?"
 
+I've been studying the details of the Getty Vocabularies.  Their approach is extremely well thought-out.  We should take a careful look at their [LOD Semantic Representation](http://vocab.getty.edu/doc/) document.  They explain a lot about how they have attempted to follow community best-practices, and document what those practices are.  The section [Concept vs Thing Duality](http://vocab.getty.edu/doc/#Concept_vs_Thing_Duality) explains how they reconcile the use of SKOS with real-world things like people and geographic locations.  
+
 ---
 Some tools:
 
