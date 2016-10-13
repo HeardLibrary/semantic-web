@@ -221,14 +221,14 @@ declare function serialize:describe-resource($IRIs,$columnInfo,$record,$class,$s
 {  
 (: Note: the propvalue:subject function sets up any string necessary to open the container, and the propvalue:type function closes the container :)
   let $type := $class/class/text()
-  let $suffix := $class/id/text()
+  let $id := $class/id/text()
   let $iri := $class/fullId/text()
   return concat(
     propvalue:subject($iri,$serialization),
-    string-join(serialize:property-value-pairs($IRIs,$columnInfo,$record,$type,$serialization,$namespaces)),
+    string-join(serialize:property-value-pairs($IRIs,$columnInfo,$record,$id,$serialization,$namespaces)),
 
 (: make the backlink only for the instance of the primary class in a table :)
-    if (not($suffix))
+    if ($id="$root")
     then $extraTriple
     else ""
     ,
@@ -244,11 +244,11 @@ declare function serialize:describe-resource($IRIs,$columnInfo,$record,$class,$s
 (:--------------------------------------------------------------------------------------------------:)
 
 (: generate sequence of non-type property/value pair strings :)
-declare function serialize:property-value-pairs($IRIs,$columnInfo,$record,$type,$serialization,$namespaces)
+declare function serialize:property-value-pairs($IRIs,$columnInfo,$record,$id,$serialization,$namespaces)
 {
   (: generates property/value pairs that have fixed values :)
   for $columnType in $columnInfo
-  where "$constant" = $columnType/header/text() and $columnType/class/text() = $type
+  where "$constant" = $columnType/header/text() and $columnType/subject_id/text() = $id
   return switch ($columnType/type/text())
      case "plain" return propvalue:plain-literal($columnType/predicate/text(),$columnType/value/text(),$serialization)
      case "datatype" return propvalue:datatyped-literal($columnType/predicate/text(),$columnType/value/text(),$columnType/attribute/text(),$serialization,$namespaces)
@@ -260,7 +260,7 @@ declare function serialize:property-value-pairs($IRIs,$columnInfo,$record,$type,
   (: generates property/value pairs whose values are given in the metadata table :)
   for $column in $record/child::*, $columnType in $columnInfo
   (: The loop only includes columns containing properties associated with the class of the described resource; that column in the record must not be empty :)
-  where fn:local-name($column) = $columnType/header/text() and $columnType/class/text() = $type and $column//text() != ""
+  where fn:local-name($column) = $columnType/header/text() and $columnType/subject_id/text() = $id and $column//text() != ""
   return switch ($columnType/type/text())
      case "plain" return propvalue:plain-literal($columnType/predicate/text(),$column//text(),$serialization)
      case "datatype" return propvalue:datatyped-literal($columnType/predicate/text(),$column//text(),$columnType/attribute/text(),$serialization,$namespaces)
@@ -279,7 +279,7 @@ declare function serialize:property-value-pairs($IRIs,$columnInfo,$record,$type,
 
   (: generates links to associated resources described in the same document :)
   for $columnType in $columnInfo
-  where "$link" = $columnType/header/text() and $columnType/class/text() = $type
+  where "$link" = $columnType/header/text() and $columnType/subject_id/text() = $id
   let $suffix := $columnType/value/text()
   return 
       for $iri in $IRIs
@@ -311,7 +311,10 @@ declare function serialize:construct-iri($baseIRI,$classes)
      <record>{
      if (fn:substring($suffix,1,2)="_:")
      then (<fullId>{concat("_:",random:uuid() ) }</fullId>, $class/id, $class/class )
-     else (<fullId>{concat($baseIRI,$suffix) }</fullId>, $class/id, $class/class )
+     else 
+       if ($suffix="$root")
+       then (<fullId>{$baseIRI}</fullId>, $class/id, $class/class )
+       else (<fullId>{concat($baseIRI,$suffix) }</fullId>, $class/id, $class/class )
    }</record>
 };
 
