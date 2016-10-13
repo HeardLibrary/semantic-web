@@ -10,5 +10,5 @@ geo,http://www.w3.org/2003/01/geo/wgs84_pos#
 dwc,http://rs.tdwg.org/dwc/terms/
 owl,http://www.w3.org/2002/07/owl#
 time,http://www.w3.org/2006/time#
-gn,http://www.geonames.org/ontology# 
+gn,http://www.geonames.org/ontology#
 gvp,http://vocab.getty.edu/ontology#
