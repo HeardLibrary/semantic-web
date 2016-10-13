@@ -71,6 +71,18 @@ With respect to characterizing building and site types, see the [GeoNames Featur
 
 Schema.org defines many types of things as classes.  See the [full hierarchy](http://schema.org/docs/full.html) and information about their [data model](http://schema.org/docs/datamodel.html).  The [normative RDF of their vocabulary](http://schema.org/docs/schema_org_rdfa.html) is in the form of RDFa. To turn it into Turtle, view the page source, then paste it into the [RDF Translator](http://rdf-translator.appspot.com/).  I used some of its terms to mark up geography in Tracy's metadata, as well as terms from the [WGS84 Geo Positioning vocabulary](https://www.w3.org/2003/01/geo/wgs84_pos), a very simple and very well-known vocabulary for that purpose.  
 
+Here are some links that William sent out in an email:
+
+[VRA Core ontology](http://core.vraweb.org/index.html)
+
+[DMLI home page](https://my.vanderbilt.edu/dimli/)
+
+[CSV to VRA Core XML conversion tool](https://github.com/exc-asia-and-europe/csv2xml)
+
+[VRA XML to RDF conversion tool](https://github.com/mixterj/VRA-RDF-Project)
+
+[OWL ontology for VRA Core](https://s3.amazonaws.com/VRA/ontology.html)
+
 ---
 Some tools:
 
