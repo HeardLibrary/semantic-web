@@ -55,6 +55,8 @@ Oct 17 meeting: beginning of Chapter 3 plus talking about SKOS
 
 Here is the [PowerPoint presentation](concept-thing.pdf) to which I will be referring at the meeting.
 
+Here is the [link to current actual graph model for tang-song metadata](tang-song/graph-model.md).
+
 See references above about SKOS.  Here are some more things I've been looking at.  I want to reference them here so that I don't have to leave dozens of browser tabs open forever!
 
 I've added placeholder references to Chinese Dynasties from the [PeriodO Ontology](http://perio.do/technical-overview/) to Tracy's site data. I've had email contact with the authors, and PeriodO does not seem to care about the Concept/Thing duality (see references above).  PeriodO uses the [W3C Time Ontology](https://www.w3.org/TR/owl-time/) to define their historical periods.  Here is the [link to the Chinese Periods Chronology](https://test.perio.do/#/p/Canonical/periodCollections/p0fp7wv/).  The metadata are downloadable as Turtle, although some of it is invalid.  So it's fine to look at but would need cleaning up before using.  I think the JSON-LD is OK.

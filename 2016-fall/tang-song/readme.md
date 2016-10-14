@@ -2,6 +2,8 @@
 
 The purpose of the scripts is to allow data in "flat" CSV tables to be converted to RDF triples in several serializations.  
 
+[Link to current actual graph model for tang-song metadata](graph-model.md).
+
 ## Data that can be represented in a single CSV table
 
 ![](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/metadata-table.png)
