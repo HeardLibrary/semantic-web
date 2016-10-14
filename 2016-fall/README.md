@@ -84,6 +84,7 @@ Here are some links that William sent out in an email:
 [OWL ontology for VRA Core](https://s3.amazonaws.com/VRA/ontology.html)
 
 Here is a link to [the Pelagios Commons](http://commons.pelagios.org/), a community of people building Linked Data gazetteers for historical places.
+
 ---
 Some tools:
 
