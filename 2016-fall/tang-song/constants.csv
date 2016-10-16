@@ -1,2 +1,2 @@
-domainRoot,documentClass,creator,outputDirectory,seperator
+domainRoot,documentClass,creator,outputDirectory,separator
 http://lod.vanderbilt.edu/historyart/site/,foaf:Document,Vanderbilt Department of History of Art,c:\test\output\,","
