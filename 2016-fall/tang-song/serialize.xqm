@@ -17,28 +17,34 @@ let $localFilesFolderUnix :=
     (: its a Mac with the query running from a repo located at the default under the user directory :)
     file:current-dir() || "/Repositories/"||$repoPath
 
-let $metadataDoc := file:read-text($localFilesFolderUnix || 'metadata.csv')
 (: at some point if files are stable enough, they could be loaded from the GitHub repo like this:
 let $metadataDoc := http:send-request(<http:request method='get' href='https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/code/metadata.csv'/>)[2] :)
-let $xmlMetadata := csv:parse($metadataDoc, map { 'header' : true(),'separator' : "," })
 let $constantsDoc := file:read-text(concat($localFilesFolderUnix, 'constants.csv'))
 let $xmlConstants := csv:parse($constantsDoc, map { 'header' : true(),'separator' : "," })
-let $columnIndexDoc := file:read-text(concat($localFilesFolderUnix, 'metadata-column-mappings.csv'))
-let $xmlColumnIndex := csv:parse($columnIndexDoc, map { 'header' : true(),'separator' : "," })
-let $namespaceDoc := file:read-text(concat($localFilesFolderUnix,'namespace.csv'))
-let $xmlNamespace := csv:parse($namespaceDoc, map { 'header' : true(),'separator' : "," })
-let $classesDoc := file:read-text(concat($localFilesFolderUnix,'metadata-classes.csv'))
-let $xmlClasses := csv:parse($classesDoc, map { 'header' : true(),'separator' : "," })
-let $linkedClassesDoc := file:read-text(concat($localFilesFolderUnix,'linked-classes.csv'))
-let $xmlLinkedClasses := csv:parse($linkedClassesDoc, map { 'header' : true(),'separator' : "," })
-
-let $namespaces := $xmlNamespace/csv/record
-let $columnInfo := $xmlColumnIndex/csv/record
-let $classes := $xmlClasses/csv/record
-let $linkedClasses := $xmlLinkedClasses/csv/record
 let $constants := $xmlConstants/csv/record
+
 let $domainRoot := $constants//domainRoot/text()
 let $outputDirectory := $constants//outputDirectory/text()
+let $metadataSeperator := $constants//seperator/text()
+
+let $columnIndexDoc := file:read-text(concat($localFilesFolderUnix, 'metadata-column-mappings.csv'))
+let $xmlColumnIndex := csv:parse($columnIndexDoc, map { 'header' : true(),'separator' : "," })
+let $columnInfo := $xmlColumnIndex/csv/record
+
+let $namespaceDoc := file:read-text(concat($localFilesFolderUnix,'namespace.csv'))
+let $xmlNamespace := csv:parse($namespaceDoc, map { 'header' : true(),'separator' : "," })
+let $namespaces := $xmlNamespace/csv/record
+
+let $classesDoc := file:read-text(concat($localFilesFolderUnix,'metadata-classes.csv'))
+let $xmlClasses := csv:parse($classesDoc, map { 'header' : true(),'separator' : "," })
+let $classes := $xmlClasses/csv/record
+
+let $linkedClassesDoc := file:read-text(concat($localFilesFolderUnix,'linked-classes.csv'))
+let $xmlLinkedClasses := csv:parse($linkedClassesDoc, map { 'header' : true(),'separator' : "," })
+let $linkedClasses := $xmlLinkedClasses/csv/record
+
+let $metadataDoc := file:read-text($localFilesFolderUnix || 'metadata.csv')
+let $xmlMetadata := csv:parse($metadataDoc, map { 'header' : true(),'separator' : $metadataSeperator })
 
 let $linkedMetadata :=
       for $class in $linkedClasses
@@ -47,7 +53,7 @@ let $linkedMetadata :=
       let $classClassesDoc := file:read-text(concat($localFilesFolderUnix,$class/filename/text(),"-classes.csv"))
       let $xmlClassClasses := csv:parse($classClassesDoc, map { 'header' : true(),'separator' : "," })
       let $classMetadataDoc := file:read-text(concat($localFilesFolderUnix,$class/filename/text(),".csv"))
-      let $xmlClassMetadata := csv:parse($classMetadataDoc, map { 'header' : true(),'separator' : "," })
+      let $xmlClassMetadata := csv:parse($classMetadataDoc, map { 'header' : true(),'separator' : $metadataSeperator })
       return
         ( 
         <file>{
