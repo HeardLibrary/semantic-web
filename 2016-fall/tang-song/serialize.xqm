@@ -38,13 +38,14 @@ let $xmlConstants := csv:parse($constantsDoc, map { 'header' : true(),'separator
 let $constants := $xmlConstants/csv/record
 
 let $domainRoot := $constants//domainRoot/text()
+let $coreClassPrefix := $constants//coreClassFilePrefix/text()
 let $outputDirectory := $constants//outputDirectory/text()
 let $metadataSeparator := $constants//separator/text()
 let $baseIriColumn := $constants//baseIriColumn/text()
 let $modifiedColumn := $constants//modifiedColumn/text()
 let $outFileNameAfter := $constants//outFileNameAfter/text()
 
-let $columnIndexDoc := file:read-text(concat($localFilesFolderUnix, 'metadata-column-mappings.csv'))
+let $columnIndexDoc := file:read-text($localFilesFolderUnix||$coreClassPrefix||'-column-mappings.csv')
 let $xmlColumnIndex := csv:parse($columnIndexDoc, map { 'header' : true(),'separator' : "," })
 let $columnInfo := $xmlColumnIndex/csv/record
 
@@ -52,7 +53,7 @@ let $namespaceDoc := file:read-text(concat($localFilesFolderUnix,'namespace.csv'
 let $xmlNamespace := csv:parse($namespaceDoc, map { 'header' : true(),'separator' : "," })
 let $namespaces := $xmlNamespace/csv/record
 
-let $classesDoc := file:read-text(concat($localFilesFolderUnix,'metadata-classes.csv'))
+let $classesDoc := file:read-text($localFilesFolderUnix||$coreClassPrefix||'-classes.csv')
 let $xmlClasses := csv:parse($classesDoc, map { 'header' : true(),'separator' : "," })
 let $classes := $xmlClasses/csv/record
 
@@ -60,7 +61,7 @@ let $linkedClassesDoc := file:read-text(concat($localFilesFolderUnix,'linked-cla
 let $xmlLinkedClasses := csv:parse($linkedClassesDoc, map { 'header' : true(),'separator' : "," })
 let $linkedClasses := $xmlLinkedClasses/csv/record
 
-let $metadataDoc := file:read-text($localFilesFolderUnix || 'metadata.csv')
+let $metadataDoc := file:read-text($localFilesFolderUnix ||$coreClassPrefix||'.csv')
 let $xmlMetadata := csv:parse($metadataDoc, map { 'header' : true(),'separator' : $metadataSeparator })
 
 let $linkedMetadata :=
