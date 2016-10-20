@@ -163,8 +163,14 @@ declare function serialize:generate-a-record($record,$linkedMetadata,$baseIRI,$d
             
             for $linkedClassRecord in $linkedClass/metadata/record
             where $baseIRI=$domainRoot||$linkedClassRecord/*[local-name()=$linkColumn]/text()
-            (: generate an IRI for the instance of the linked class based on the convention for that class :)
-            let $linkedClassIRI := $baseIRI||"#"||$linkedClassRecord/*[local-name()=$suffix1]/text()||$linkCharacters||$linkedClassRecord/*[local-name()=$suffix2]/text()
+            
+            (: generate an IRI or bnode for the instance of the linked class based on the convention for that class :)
+            let $linkedClassIRI := 
+                if (fn:substring($suffix1,1,2)="_:")
+                then 
+                    concat("_:",random:uuid() )
+                else
+                    $baseIRI||"#"||$linkedClassRecord/*[local-name()=$suffix1]/text()||$linkCharacters||$linkedClassRecord/*[local-name()=$suffix2]/text()
             let $linkedIRIs := serialize:construct-iri($linkedClassIRI,$linkedClass/classes/record)
             let $extraTriple := propvalue:iri($linkProperty,$baseIRI,$serialization,$namespaces)
             for $linkedModifiedClass in $linkedIRIs
