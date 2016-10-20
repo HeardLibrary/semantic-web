@@ -67,11 +67,14 @@ let $xmlMetadata := csv:parse($metadataDoc, map { 'header' : true(),'separator' 
 
 let $linkedMetadata :=
       for $class in $linkedClasses
-      let $classMappingDoc := file:read-text(concat($localFilesFolderUnix,$class/filename/text(),"-column-mappings.csv"))
+      let $linkedDoc := $class/filename/text()
+      let $linkedClassPrefix := substring-before($linkedDoc,".")
+
+      let $classMappingDoc := file:read-text(concat($localFilesFolderUnix,$linkedClassPrefix,"-column-mappings.csv"))
       let $xmlClassMapping := csv:parse($classMappingDoc, map { 'header' : true(),'separator' : "," })
-      let $classClassesDoc := file:read-text(concat($localFilesFolderUnix,$class/filename/text(),"-classes.csv"))
+      let $classClassesDoc := file:read-text(concat($localFilesFolderUnix,$linkedClassPrefix,"-classes.csv"))
       let $xmlClassClasses := csv:parse($classClassesDoc, map { 'header' : true(),'separator' : "," })
-      let $classMetadataDoc := file:read-text(concat($localFilesFolderUnix,$class/filename/text(),".csv"))
+      let $classMetadataDoc := file:read-text(concat($localFilesFolderUnix,$linkedDoc))
       let $xmlClassMetadata := csv:parse($classMetadataDoc, map { 'header' : true(),'separator' : $metadataSeparator })
       return
         ( 
