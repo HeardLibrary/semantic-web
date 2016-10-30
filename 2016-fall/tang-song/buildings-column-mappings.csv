@@ -1,6 +1,6 @@
 header,predicate,type,value,attribute,subject_id
-building_name_zh-Latn-pinyin,rdfs:label,language,,zh-Latn-pinyin,$root
-building_name_zh-Hans,rdfs:label,language,,zh-Hans,$root
+building_name_zh-Latn-pinyin,rdfs:label,language,,zh-latn-pinyin,$root
+building_name_zh-Hans,rdfs:label,language,,zh-hans,$root
 building_name_en,rdfs:label,language,,en,$root
 significance,rdfs:comment,plain,,,$root
 notes,rdfs:comment,plain,,,$root
