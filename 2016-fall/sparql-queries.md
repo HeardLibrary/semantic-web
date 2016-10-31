@@ -2,7 +2,7 @@
 
 ![](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/spatial-thing.png)
 
-Above is the part of the graph about a site (yellow bubble).  The full Turtle is below:
+Above is the part of the graph about a site (yellow bubble).  [Click here to see the whole graph diagram at once](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/whole graph.png) The full Turtle is below:
 
 ```
 <http://lod.vanderbilt.edu/historyart/site/Lingyansi>
