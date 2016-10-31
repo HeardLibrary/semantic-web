@@ -88,6 +88,13 @@ Here are some links that William sent out in an email:
 Here is a link to [the Pelagios Commons](http://commons.pelagios.org/), a community of people building Linked Data gazetteers for historical places.
 
 ---
+October 31 Meeting - SPARQL queries on the tang-song RDF that we've created (loaded into the Heard Library SPARQL end point)
+
+[Go to the SPARQL challenge problems](sparql-queries.md)
+
+[Go to the answers to the challenge problems](sparql-answers.md)
+
+---
 Some tools:
 
 [RDF Translator](http://rdf-translator.appspot.com/) Note: this only seems to work correctly with JSON-LD that is in "expanded" form, not "compacted" form. Convert to expanded form at JSON-LD Playground before converting to other serializations.
