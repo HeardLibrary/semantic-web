@@ -2,7 +2,7 @@
 
 ![](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/spatial-thing.png)
 
-Above is the part of the graph about a site (yellow bubble).  [Click here to see the whole graph diagram at once](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/whole graph.png) The full Turtle is below:
+Above is the part of the graph about a site (yellow bubble).  [Click here to see the whole graph diagram at once](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/whole graph.png). The full Turtle is below:
 
 ```
 <http://lod.vanderbilt.edu/historyart/site/Lingyansi>
@@ -104,7 +104,7 @@ Above is the part of the graph where the building (red bubble) is linked to the 
      a schema:LandmarksOrHistoricalBuildings.
 ```
 
-**Challenge Question 5.** Develop a query whose graph pattern links the site to the building, then shows the names of both the building and the site in transliterated Chinese and in simplified Chinese characters (zh-hans).  [Check here for an answer](sparql-answers.md).
+**Challenge Question 5.** Develop a query whose graph pattern links the site to the building, then shows the names of both the building and the site in transliterated Chinese and in simplified Chinese characters (zh-hans).  In the second triple pattern of my answer, I limited the buildings to only those at Longxinsi, but you could show more by leaving that triple pattern out.  [Check here for an answer](sparql-answers.md).
 
 **Challenge Question 6.** Display the latitude and longitude as well.  You can decide which of the site and building labels you want to display with it.  Put
 ```
@@ -124,7 +124,7 @@ after the graph pattern and before "LIMIT 10" to put the sites in alphabetical o
 
 .
 
-Creating a hyperlink to Google Maps to display the location of the buildings at the Longxingsi site.  It's kind of complicated, so you can just paste it in and see what it does if you don't want to take the time to figure it out.
+Below I created a hack of the previous query that creates a hyperlink to Google Maps to display the location of the buildings at the Longxingsi site.  It's kind of complicated, so you can just paste it in and see what it does if you don't want to take the time to figure it out.
 ```
 SELECT DISTINCT ?strippedBuildingLabel (URI(GROUP_CONCAT(CONCAT("http://maps.google.com/maps?output=classic&q=loc:",?lat,",",?long,"&t=h&z=16");SEPARATOR="")) as ?googleMapURI)
 
