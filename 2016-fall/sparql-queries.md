@@ -202,9 +202,9 @@ The diagram above shows how a site is linked to its starting and ending dynasty.
 
 **Question 9.** It would be good to order the sites by the starting date of the site period.  However if you try adding
 ```
-SORT BY ?siteStartDateLabel
+ORDER BY ?siteStartDateLabel
 ```
-you will see that it orders them by the string (1 comes before 9).  You can modify the query to find the starting date datatyped as xsd:gYear.  The SPARQL processor then "knows" that it's a year rather than a string:
+you will see that it orders them by the string (1 comes before 9), not by the actual number of the year.  You can modify the query to find the starting date datatyped as xsd:gYear.  The SPARQL processor then "knows" that it's a year rather than a string:
 
 ```
 SELECT DISTINCT ?strippedSiteLabel ?startDynastyName ?siteStartDateLabel ?endDynastyName ?siteEndDateLabel
