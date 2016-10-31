@@ -88,7 +88,8 @@ LIMIT 10
 ```
 
 ![](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/building-site-link.png)
-Above is the part of the graph where the building is linked to the site.  Below is the Turtle about the building:
+
+Above is the part of the graph where the building (red bubble) is linked to the site (yellow bubble).  Below is the Turtle about the building:
 ```
 <http://lod.vanderbilt.edu/historyart/site/Lingyansi#Pizhita>
      rdfs:label "Pizhita"@zh-latn-pinyin;
@@ -104,3 +105,64 @@ Above is the part of the graph where the building is linked to the site.  Below 
 ```
 
 **Challenge Question 5.** Develop a query whose graph pattern links the site to the building, then shows the names of both the building and the site in transliterated Chinese and in simplified Chinese characters (zh-hans).  [Check here for an answer](sparql-answers.md)
+
+** Challenge Question 6.** Display the latitude and longitude as well.  You can decide which of the site and building labels you want to display with it.  [Check here for an answer](sparql-answers.md) Don't peek below where there are clues !!!
+
+.
+.
+.
+.
+.
+.
+Creating a hyperlink to Google Maps to display the location of the buildings at the Longxingsi site.
+```
+SELECT DISTINCT ?strippedBuildingLabel (URI(GROUP_CONCAT(CONCAT("http://maps.google.com/maps?output=classic&q=loc:",?lat,",",?long,"&t=h&z=16");SEPARATOR="")) as ?googleMapURI)
+
+WHERE {
+?site a geo:SpatialThing.
+?site rdfs:label "Longxingsi"@zh-latn-pinyin.
+?building schema:containedInPlace ?site.
+?building rdfs:label ?buildingLabel.
+FILTER (lang(?buildingLabel)="zh-latn-pinyin")
+BIND (str(?buildingLabel) AS ?strippedBuildingLabel)
+
+?building geo:lat ?lat.
+?building geo:long ?long.
+}
+GROUP BY ?strippedBuildingLabel
+```
+You can click on the link and it will go to the map.
+
+## Linking to the Period-O RDF
+
+I downloaded the [Chinese Dynasty RDF](https://test.perio.do/#/p/Canonical/periodCollections/p0fp7wv/?show_period=p0fp7wvtqp9) from Period-O (http://perio.do/) as Turtle.  It had some serialization errors that I corrected and I also fixed the incorrect language tags.  You can [click here](p0fp7wv.ttl) to look at the whole document.  Here is a part of the RDF for the Qing Dynasty:
+
+![](https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2016-fall/tang-song/images/period-o-graph.png)
+
+Here is what the Turtle looks like for that part of the graph:
+```
+<http://n2t.net/ark:/99152/p0fp7wvtqp9>
+    a skos:Concept;
+    periodo:spatialCoverageDescription "China";
+    dcterms:language "en";
+    dcterms:spatial <http://dbpedia.org/resource/China>;
+    skos:altLabel "清"@zh-hans, "清"@zh-hant, "Qing Dynasty"@en;
+    skos:inScheme <http://n2t.net/ark:/99152/p0fp7wv>;
+    skos:note "First capital: 京师顺天府 (北京), latitude: 39.92, longitude: 116.38";
+    skos:prefLabel "Qing Dynasty";
+    time:intervalFinishedBy [
+      skos:prefLabel "1911";
+      time:hasDateTimeDescription [
+        time:year "1911"^^xsd:gYear
+      ]
+    ];
+    time:intervalStartedBy [
+      skos:prefLabel "1644";
+      time:hasDateTimeDescription [
+        time:year "1644"^^xsd:gYear
+      ]
+    ].
+```
+The corrected Chinese Dynasty RDF has also been loaded into the Heard Library triple store, so we can query it along with the tang-song RDF.
+
+**Question 7.**
