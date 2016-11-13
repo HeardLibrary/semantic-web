@@ -35,6 +35,7 @@ var dynastiesZh = [
 	"清"
 ];
 
+// URIs from the PeriodO ontology http://perio.do/
 var dynastiesURI = [
 	"<http://n2t.net/ark:/99152/p0fp7wvrjpj>",
 	"<http://n2t.net/ark:/99152/p0fp7wv5h26>",
