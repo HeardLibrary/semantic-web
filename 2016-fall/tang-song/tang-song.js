@@ -1,3 +1,12 @@
+// Important note: There is a certain amount of sloppiness that is tolerated by the fact that the jQuery functions
+// that handle the XML returned from AJAX strips off the language tags that the SPARQL endpoint sends in the query
+// results.  This means that handling the results is easier if the language tags aren't desired (which they usually 
+// arent).  However, if they were desired, they would have to be generated and attached to the literals.  Also,
+// if a version of this program were created where the queries requested application/sparql-results+json instead of 
+// XML one would need to pay attention to whether the results included language tags or not.  The current (2016-11) 
+// Heard Library SPARQL endpoint only supports XML results, but in the future cleaner code might result if the 
+// program were converted to using JSON results.
+
 var numResultstoReturn = 50; // the max number of results to return in the SPARQL search query
 var numResultsPerPage = 10; // the number of search results per page, for pagination
 var isoLanguage = 'en';
@@ -38,21 +47,21 @@ var dynastiesURI = [
 	"<http://n2t.net/ark:/99152/p0fp7wvtqp9>"
 ];
 
-function setGenusOptions(isoLanguage) {
+function setProvinceOptions(isoLanguage) {
 	if (isoLanguage=='en') {languageTag='zh-latn-pinyin';}
 	if (isoLanguage=='zh-hans') {languageTag='zh-hans';}
 
-    // start the genus dropdown over with "Any province/任何省份" as the first option
+    // start the province dropdown over with "Any province/任何省份" as the first option
     $("#box1 option:gt(0)").remove();
     $("#box1 option").text("Any province/任何省份");
 
 	// create URI-encoded query string
-        var string = 'SELECT DISTINCT ?genus WHERE {'
+        var string = 'SELECT DISTINCT ?province WHERE {'
                     +'?site <http://www.geonames.org/ontology#featureCode> <http://www.geonames.org/ontology#S.ANS>.'
-                    +'?site <http://rs.tdwg.org/dwc/terms/stateProvince> ?genus.'
-                    +"FILTER (lang(?genus)='"+languageTag+"')"
+                    +'?site <http://rs.tdwg.org/dwc/terms/stateProvince> ?province.'
+                    +"FILTER (lang(?province)='"+languageTag+"')"
                     +'}'
-                    +'ORDER BY ASC(?genus)';
+                    +'ORDER BY ASC(?province)';
 	var encodedQuery = encodeURIComponent(string);
 
         // send query to endpoint
@@ -62,70 +71,63 @@ function setGenusOptions(isoLanguage) {
             headers: {
                 Accept: 'application/sparql-results+xml'
             },
-            success: parseGenusXml
+            success: parseProvinceXml
         });
 
 	}
 
-function setStateOptions(isoLanguage) {
+function setDynastyOptions(isoLanguage) {
+	
+	if (isoLanguage=='en') {languageTag='en';}
+	if (isoLanguage=='zh-hans') {languageTag='zh-hans';}
+	
+        $("#box3 option:gt(0)").remove();
+	for (i=0;i<dynastiesURI.length;i++)
+	    {
+	    if (isoLanguage=='en') {labelValue=dynastiesEn[i];}
+	    if (isoLanguage=='zh-hans') {labelValue=dynastiesZh[i];}
+	    bindingValue=dynastiesURI[i];
+	    $("#box3").append("<option value='"+bindingValue+"'>"+labelValue+'</option>');
+            }
+ 	}
+
+function setSiteOptions(provinceSelection,dynastySelection,isoLanguage) {
 	if (isoLanguage=='en') {languageTag='en';}
 	if (isoLanguage=='zh-hans') {languageTag='zh-hans';}
 
-    // start the genus dropdown over with "Any dynasty/任何一个朝代" as the first option
-    $("#box3 option:gt(0)").remove();
-    $("#box3 option").text("Any dynasty/任何一个朝代");
-
-	// create URI-encoded query string
-        var string = 'SELECT DISTINCT ?state WHERE {'
-                    +'?site <http://www.geonames.org/ontology#featureCode> <http://www.geonames.org/ontology#S.ANS>.'
-                    +'?site <http://purl.org/dc/terms/temporal> ?interval.'
-                    +'?interval <http://www.w3.org/2000/01/rdf-schema#label> ?state.'
-                    +"FILTER (lang(?state)='"+languageTag+"')"
-                    +'}'
-                    +'ORDER BY ASC(?state)';
-	var encodedQuery = encodeURIComponent(string);
-
-        // send query to endpoint
-        $.ajax({
-            type: 'GET',
-            url: 'http://rdf.library.vanderbilt.edu/sparql?query=' + encodedQuery,
-            headers: {
-                Accept: 'application/sparql-results+xml'
-            },
-            success: parseStateXml
-        });
-
-	}
-
-function setSpeciesOptions(provinceSelection,dynastySelection,isoLanguage) {
-	if (isoLanguage=='en') {languageTag='en';}
-	if (isoLanguage=='zh-hans') {languageTag='zh-hans';}
-
-    // start the genus dropdown over with "Any temple/任何寺庙" as the first option
+    // start the site dropdown over with "Any temple/任何寺庙" as the first option
     $("#box2 option:gt(0)").remove();
     $("#box2 option").text("Any temple/任何寺庙");
 
 	// create URI-encoded query string
-	var string = 'SELECT DISTINCT ?species WHERE {'
+	var string = "PREFIX time: <http://www.w3.org/2006/time#>"
+		    +'SELECT DISTINCT ?siteName WHERE {'
                     +'?site <http://www.geonames.org/ontology#featureCode> <http://www.geonames.org/ontology#S.ANS>.'
-        if (provinceSelection != '?genus') 
+        if (provinceSelection != '?province') 
         	{
 	        string = string + '?site <http://rs.tdwg.org/dwc/terms/stateProvince> ?provinceTagged.'
 	            +'BIND (str(?provinceTagged) AS ?province)'
 	            +'FILTER (?province =  '+provinceSelection+')'
 	        }
-	if (dynastySelection != '?state')
+	if (dynastySelection != '?dynasty')
 		{
 	        string = string +'?site <http://purl.org/dc/terms/temporal> ?interval.'
-                    +'?interval <http://www.w3.org/2000/01/rdf-schema#label> ?periodTagged.'
-	            +'BIND (str(?periodTagged) AS ?period)'
-	            +'FILTER (?period =  '+dynastySelection+')'
+                    +'?interval time:intervalStartedBy ?startDynasty.'
+                    +'?interval time:intervalFinishedBy ?endDynasty.'
+                    // target dynasty must be earlier than ?endDynasty
+                    +'?endDynasty time:intervalMetBy* '+dynastySelection+'.'
+                    //target dynasty must be later than ?startDynasty
+                    +dynastySelection+' time:intervalMetBy* ?startDynasty.'
+
+                    // +'?interval <http://www.w3.org/2000/01/rdf-schema#label> ?periodTagged.'
+	           // +'BIND (str(?periodTagged) AS ?period)'
+	           // +'FILTER (?period =  '+dynastySelection+')'
 	        }
                 string = string +'?site <http://www.w3.org/2000/01/rdf-schema#label> ?siteTagged.'
                     +"FILTER (lang(?siteTagged)='"+languageTag+"')"
-	            +'BIND (str(?siteTagged) AS ?species)'
+	            +'BIND (str(?siteTagged) AS ?siteName)'
 	            +'}'
-                +'ORDER BY ASC(?species)';
+                +'ORDER BY ASC(?siteName)';
 
                 var encodedQuery = encodeURIComponent(string);
         // send query to endpoint
@@ -135,11 +137,11 @@ function setSpeciesOptions(provinceSelection,dynastySelection,isoLanguage) {
             headers: {
                 Accept: 'application/sparql-results+xml'
             },
-            success: parseSpeciesXml
+            success: parseSiteXml
         });
 
 	}
-
+/*
 function setCategoryOptions() {
 	// create URI-encoded query string
         var string = "PREFIX Iptc4xmpExt: <http://iptc.org/std/Iptc4xmpExt/2008-02-29/>"+
@@ -163,15 +165,15 @@ function setCategoryOptions() {
         });
 
 	}
-
-function parseGenusXml(xml) {
+*/
+function parseProvinceXml(xml) {
     // done searching, so hide the spinner icon
     $('#searchSpinner').hide();
     //step through each "result" element
     $(xml).find("result").each(function() {
 
-        // pull the "binding" element that has the name attribute of "genus"
-        $(this).find("binding[name='genus']").each(function() {
+        // pull the "binding" element that has the name attribute of "province"
+        $(this).find("binding[name='province']").each(function() {
             bindingValue=$(this).find("literal").text();
             quoteBindingValue='"'+bindingValue+'"';
             $("#box1").append("<option value='"+quoteBindingValue+"'>"+bindingValue+'</option>');
@@ -179,36 +181,21 @@ function parseGenusXml(xml) {
     });
 }
 
-function parseSpeciesXml(xml) {
+function parseSiteXml(xml) {
     // done searching, so hide the spinner icon
     $('#searchSpinner').hide();
     //step through each "result" element
     $(xml).find("result").each(function() {
 
-        // pull the "binding" element that has the name attribute of "species"
-        $(this).find("binding[name='species']").each(function() {
+        // pull the "binding" element that has the name attribute of "siteName"
+        $(this).find("binding[name='siteName']").each(function() {
             bindingValue=$(this).find("literal").text();
             quoteBindingValue='"'+bindingValue+'"';
             $("#box2").append("<option value='"+quoteBindingValue+"'>"+bindingValue+'</option>');
         });
     });
 }
-
-function parseStateXml(xml) {
-    // done searching, so hide the spinner icon
-    $('#searchSpinner').hide();
-    //step through each "result" element
-    $(xml).find("result").each(function() {
-
-        // pull the "binding" element that has the name attribute of "state"
-        $(this).find("binding[name='state']").each(function() {
-            bindingValue=$(this).find("literal").text();
-            quoteBindingValue='"'+bindingValue+'"';
-            $("#box3").append("<option value='"+quoteBindingValue+"'>"+bindingValue+'</option>');
-        });
-    });
-}
-
+/*
 function parseCategoryXml(xml) {
     // done searching, so hide the spinner icon
     $('#searchSpinner').hide();
@@ -223,7 +210,7 @@ function parseCategoryXml(xml) {
         });
     });
 }
-
+*/
 
 $(document).ready(function(){
     // not searching initially, so hide the spinner icon
@@ -234,11 +221,11 @@ $(document).ready(function(){
 			// searching, so show the spinner icon
 			$('#searchSpinner').show();
 			var isoLanguage= $("#box0").val();
-			setGenusOptions(isoLanguage);
-			setStateOptions(isoLanguage);
+			setProvinceOptions(isoLanguage);
+			setDynastyOptions(isoLanguage);
 			var provinceSelection = $("#box1").val();
 			var dynastySelection = $("#box3").val();
-			setSpeciesOptions(provinceSelection,dynastySelection,isoLanguage);
+			setSiteOptions(provinceSelection,dynastySelection,isoLanguage);
 	});
 
 	// fires when there is a change in the province dropdown
@@ -248,7 +235,7 @@ $(document).ready(function(){
 			var isoLanguage= $("#box0").val();
 			var provinceSelection = $("#box1").val();
 			var dynastySelection = $("#box3").val();
-			setSpeciesOptions(provinceSelection,dynastySelection,isoLanguage);
+			setSiteOptions(provinceSelection,dynastySelection,isoLanguage);
 	});
 
 	// fires when there is a change in the dynasty dropdown
@@ -258,77 +245,83 @@ $(document).ready(function(){
 			var isoLanguage= $("#box0").val();
 			var provinceSelection = $("#box1").val();
 			var dynastySelection = $("#box3").val();
-			setSpeciesOptions(provinceSelection,dynastySelection,isoLanguage);
+			setSiteOptions(provinceSelection,dynastySelection,isoLanguage);
 	});
 
-	// execute SPARQL query to get genus values and add them to the select options
-	setGenusOptions(isoLanguage);
-	setStateOptions(isoLanguage);
+	// Main routine: execute SPARQL queries to get values and add them to the select options
+	setProvinceOptions(isoLanguage);
+	setDynastyOptions(isoLanguage);
 	var provinceSelection = $("#box1").val();
 	var dynastySelection = $("#box3").val();
-	setSpeciesOptions(provinceSelection,dynastySelection,isoLanguage);
-	setCategoryOptions();
+	setSiteOptions(provinceSelection,dynastySelection,isoLanguage);
+//	setCategoryOptions();
 
 	// creates a function that's executed when the button is clicked
 	$("#searchButton").click(function(){
-        // searching, so show the spinner icon
-        $('#searchSpinner').show();
+			// searching, so show the spinner icon
+			$('#searchSpinner').show();
+		
+			//pulls data from the input boxes
+			var isoLanguage= $("#box0").val();
+			var provinceSelection = $('#box1').val();
+			var siteSelection = $('#box2').val();
+			var dynastySelection = $('#box3').val();
+//			var category = $('#box4').val();
+			// creates a string that contains the query with the data from the dropdowns
+			// inserted into the right place.  The variable values are already enclosed in quotes as necessary.
+			var query = "SELECT DISTINCT ?siteName ?buildingNameEn ?buildingNameZh ?buildingNameLatn ?lat ?long  WHERE {" +
+				    "?site <http://www.geonames.org/ontology#featureCode> <http://www.geonames.org/ontology#S.ANS>." +
+				    "?site <http://www.w3.org/2000/01/rdf-schema#label> ?siteName.FILTER (lang(?siteName)='zh-latn-pinyin')"
 
-        //pulls data from the input boxes
- 	var isoLanguage= $("#box0").val();
-        var provinceSelection = $('#box1').val();
-        var siteSelection = $('#box2').val();
-        var dynastySelection = $('#box3').val();
-        var category = $('#box4').val();
-        // creates a string that contains the query with the data from the box
-        // inserted into the right place.  The variable values are already enclosed in quotes.
-        var query = "SELECT DISTINCT ?siteName ?buildingNameEn ?buildingNameZh ?buildingNameLatn ?lat ?long  WHERE {" +
-                    "?species <http://www.geonames.org/ontology#featureCode> <http://www.geonames.org/ontology#S.ANS>." +
-                    "?species <http://www.w3.org/2000/01/rdf-schema#label> ?siteName.FILTER (lang(?siteName)='zh-latn-pinyin')"
-        if (siteSelection != '?species') 
-        	{
-        	if (isoLanguage=='en') {languageTag='en';}
-        	if (isoLanguage=='zh-hans') {languageTag='zh-hans';}
-	        query = query + "?species <http://www.w3.org/2000/01/rdf-schema#label> " + siteSelection + "@"+ languageTag + "."
-                }
-	if (dynastySelection != '?state')
-		{
-        	if (isoLanguage=='en') {languageTag='en';}
-        	if (isoLanguage=='zh-hans') {languageTag='zh-hans';}
-                query = query + "?species <http://purl.org/dc/terms/temporal> ?interval." +
-                    "?interval <http://www.w3.org/2000/01/rdf-schema#label> " + dynastySelection + "@" + languageTag + "."
-                }
-        if (provinceSelection != '?genus') 
-        	{
-        	if (isoLanguage=='en') {languageTag='zh-latn-pinyin';}
-        	if (isoLanguage=='zh-hans') {languageTag='zh-hans';}
-	        query = query + "?species <http://rs.tdwg.org/dwc/terms/stateProvince> " + provinceSelection + "@" + languageTag + "."
-                }
-
-	        query = query + "?building <http://schema.org/containedInPlace> ?species." +
-                    "OPTIONAL{?building <http://www.w3.org/2000/01/rdf-schema#label> ?buildingNameEn.FILTER ( lang(?buildingNameEn)='en')}" +
-                    "OPTIONAL{?building <http://www.w3.org/2000/01/rdf-schema#label> ?buildingNameZh.FILTER ( lang(?buildingNameZh)='zh-hans')}" +
-                    "OPTIONAL{?building <http://www.w3.org/2000/01/rdf-schema#label> ?buildingNameLatn.FILTER ( lang(?buildingNameLatn)='zh-latn-pinyin')}" +
-                    "OPTIONAL{?building <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat.}" +
-                    "OPTIONAL{?building <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long.}" +
-                    "}" +
-                    "ORDER BY ASC(?buildingName)" +
-                    "LIMIT " + numResultstoReturn;
-
-        // URL-encodes the query so that it can be appended as a query value
-        var encoded = encodeURIComponent(query)
-
-        // does the AJAX to send the HTTP GET to the Callimachus SPARQL endpoint
-        // then puts the result in the "data" variable
-        $.ajax({
-            type: 'GET',
-            url: 'http://rdf.library.vanderbilt.edu/sparql?query=' + encoded,
-            headers: {
-                Accept: 'application/sparql-results+xml'
-            },
-            success: parseXml
-        });
-    });
+			if (siteSelection != '?site') 
+				{
+				if (isoLanguage=='en') {languageTag='en';}
+				if (isoLanguage=='zh-hans') {languageTag='zh-hans';}
+				query = query + "?site <http://www.w3.org/2000/01/rdf-schema#label> " + siteSelection + "@"+ languageTag + "."
+				}
+		
+			if (dynastySelection != '?dynasty')
+				{
+				query = query + "?site <http://purl.org/dc/terms/temporal> ?interval." +
+				    '?interval time:intervalStartedBy ?startDynasty.'+
+				    '?interval time:intervalFinishedBy ?endDynasty.'+
+				    // target dynasty must be earlier than ?endDynasty
+				    '?endDynasty time:intervalMetBy* '+dynastySelection+'.'+
+				    //target dynasty must be later than ?startDynasty
+				    dynastySelection+' time:intervalMetBy* ?startDynasty.'
+				}
+				
+			if (provinceSelection != '?province') 
+				{
+				if (isoLanguage=='en') {languageTag='zh-latn-pinyin';}
+				if (isoLanguage=='zh-hans') {languageTag='zh-hans';}
+				query = query + "?site <http://rs.tdwg.org/dwc/terms/stateProvince> " + provinceSelection + "@" + languageTag + "."
+				}
+		
+			query = query + "?building <http://schema.org/containedInPlace> ?site." +
+			    "OPTIONAL{?building <http://www.w3.org/2000/01/rdf-schema#label> ?buildingNameEn.FILTER ( lang(?buildingNameEn)='en')}" +
+			    "OPTIONAL{?building <http://www.w3.org/2000/01/rdf-schema#label> ?buildingNameZh.FILTER ( lang(?buildingNameZh)='zh-hans')}" +
+			    "OPTIONAL{?building <http://www.w3.org/2000/01/rdf-schema#label> ?buildingNameLatn.FILTER ( lang(?buildingNameLatn)='zh-latn-pinyin')}" +
+			    "OPTIONAL{?building <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat.}" +
+			    "OPTIONAL{?building <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long.}" +
+			    "}" +
+			    "ORDER BY ASC(?buildingName)" +
+			    "LIMIT " + numResultstoReturn;
+	
+			// URL-encodes the query so that it can be appended as a query value
+			var encoded = encodeURIComponent(query)
+		
+			// does the AJAX to send the HTTP GET to the Callimachus SPARQL endpoint
+			// then puts the result in the "data" variable
+			$.ajax({
+			    type: 'GET',
+			    url: 'http://rdf.library.vanderbilt.edu/sparql?query=' + encoded,
+			    headers: {
+				Accept: 'application/sparql-results+xml'
+			    },
+			    success: parseXml
+			});
+		    });
 });
 
 // converts nodes of an XML object to text. See http://tech.pro/tutorial/877/xml-parsing-with-jquery
@@ -337,7 +330,6 @@ function parseXml(xml) {
     // done searching, so hide the spinner icon
     $('#searchSpinner').hide();
 
-    
     // tell the user how many results we found
     var numResults = $(xml).find("result").length;
     if (numResults < 1) {
@@ -371,7 +363,7 @@ function parseXml(xml) {
 
             // pull the "binding" element that has the name attribute of "buildingNameEn"
             $(this).find("binding[name='buildingNameEn']").each(function() {
-                tableRow=tableRow+"("+$(this).find("literal").text() + ")";
+                tableRow=tableRow+"("+$(this).find("literal").text() + ") ";
             });
             
             latitude = "";
@@ -387,12 +379,12 @@ function parseXml(xml) {
             });
             tableRow = tableRow + '</strong>'
             if (latitude!="") {
-            tableRow = tableRow + '<a target="top" href="http://maps.google.com/maps?output=classic&amp;q=loc:'+ latitude + ',';
-            tableRow = tableRow + longitude +'&amp;t=h&amp;z=16">Open location in map application</a><br/>';
-            tableRow = tableRow + '<img src="http://maps.googleapis.com/maps/api/staticmap?center='+latitude+','+longitude+'&amp;zoom=11&amp;size=300x300&amp;markers=color:green%7C'+latitude+','+longitude+'&amp;sensor=false"/>'
-            tableRow = tableRow + '<img src="http://maps.googleapis.com/maps/api/staticmap?center='+latitude+','+longitude+'&amp;maptype=hybrid&amp;zoom=18&amp;size=300x300&amp;markers=color:green%7C'+latitude+','+longitude+'&amp;sensor=false"/>'
-           
-            }
+		    tableRow = tableRow + '<a target="top" href="http://maps.google.com/maps?output=classic&amp;q=loc:'+ latitude + ',';
+		    tableRow = tableRow + longitude +'&amp;t=h&amp;z=16">Open location in map application</a><br/>';
+		    tableRow = tableRow + '<img src="http://maps.googleapis.com/maps/api/staticmap?center='+latitude+','+longitude+'&amp;zoom=11&amp;size=300x300&amp;markers=color:green%7C'+latitude+','+longitude+'&amp;sensor=false"/>'
+		    tableRow = tableRow + '<img src="http://maps.googleapis.com/maps/api/staticmap?center='+latitude+','+longitude+'&amp;maptype=hybrid&amp;zoom=18&amp;size=300x300&amp;markers=color:green%7C'+latitude+','+longitude+'&amp;sensor=false"/>'
+		   
+		    }
             tableRow = tableRow + "</td></tr>"
             table += tableRow;
         });
