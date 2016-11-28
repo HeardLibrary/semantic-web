@@ -37,15 +37,15 @@ var dynastiesZh = [
 
 // URIs from the PeriodO ontology http://perio.do/
 var dynastiesURI = [
-	"<https://n2t.net/ark:/99152/p0fp7wvrjpj>",
-	"<https://n2t.net/ark:/99152/p0fp7wv5h26>",
-	"<https://n2t.net/ark:/99152/p0fp7wvjvn8>",
-	"<https://n2t.net/ark:/99152/p0fp7wv9x7n>",
-	"<https://n2t.net/ark:/99152/p0fp7wvw8zq>",
-	"<https://n2t.net/ark:/99152/p0fp7wvmghn>",
-	"<https://n2t.net/ark:/99152/p0fp7wvvrz5>",
-	"<https://n2t.net/ark:/99152/p0fp7wv2s8c>",
-	"<https://n2t.net/ark:/99152/p0fp7wvtqp9>"
+	"<http://n2t.net/ark:/99152/p0fp7wvrjpj>",
+	"<http://n2t.net/ark:/99152/p0fp7wv5h26>",
+	"<http://n2t.net/ark:/99152/p0fp7wvjvn8>",
+	"<http://n2t.net/ark:/99152/p0fp7wv9x7n>",
+	"<http://n2t.net/ark:/99152/p0fp7wvw8zq>",
+	"<http://n2t.net/ark:/99152/p0fp7wvmghn>",
+	"<http://n2t.net/ark:/99152/p0fp7wvvrz5>",
+	"<http://n2t.net/ark:/99152/p0fp7wv2s8c>",
+	"<http://n2t.net/ark:/99152/p0fp7wvtqp9>"
 ];
 
 function setProvinceOptions(isoLanguage) {
@@ -58,8 +58,8 @@ function setProvinceOptions(isoLanguage) {
 
 	// create URI-encoded query string
         var string = 'SELECT DISTINCT ?province WHERE {'
-                    +'?site <https://www.geonames.org/ontology#featureCode> <https://www.geonames.org/ontology#S.ANS>.'
-                    +'?site <https://rs.tdwg.org/dwc/terms/stateProvince> ?province.'
+                    +'?site <http://www.geonames.org/ontology#featureCode> <http://www.geonames.org/ontology#S.ANS>.'
+                    +'?site <http://rs.tdwg.org/dwc/terms/stateProvince> ?province.'
                     +"FILTER (lang(?province)='"+languageTag+"')"
                     +'}'
                     +'ORDER BY ASC(?province)';
@@ -68,7 +68,7 @@ function setProvinceOptions(isoLanguage) {
         // send query to endpoint
         $.ajax({
             type: 'GET',
-            url: 'https://rdf.library.vanderbilt.edu/sparql?query=' + encodedQuery,
+            url: '//rdf.library.vanderbilt.edu/sparql?query=' + encodedQuery,
             headers: {
                 Accept: 'application/sparql-results+xml'
             },
@@ -101,18 +101,18 @@ function setSiteOptions(provinceSelection,dynastySelection,isoLanguage) {
     $("#box2 option").text("Any temple/任何寺庙");
 
 	// create URI-encoded query string
-	var string = "PREFIX time: <https://www.w3.org/2006/time#>"
+	var string = "PREFIX time: <http://www.w3.org/2006/time#>"
 		    +'SELECT DISTINCT ?siteName WHERE {'
-                    +'?site <https://www.geonames.org/ontology#featureCode> <http://www.geonames.org/ontology#S.ANS>.'
+                    +'?site <http://www.geonames.org/ontology#featureCode> <http://www.geonames.org/ontology#S.ANS>.'
         if (provinceSelection != '?province') 
         	{
-	        string = string + '?site <https://rs.tdwg.org/dwc/terms/stateProvince> ?provinceTagged.'
+	        string = string + '?site <http://rs.tdwg.org/dwc/terms/stateProvince> ?provinceTagged.'
 	            +'BIND (str(?provinceTagged) AS ?province)'
 	            +'FILTER (?province =  '+provinceSelection+')'
 	        }
 	if (dynastySelection != '?dynasty')
 		{
-	        string = string +'?site <https://purl.org/dc/terms/temporal> ?interval.'
+	        string = string +'?site <http://purl.org/dc/terms/temporal> ?interval.'
                     +'?interval time:intervalStartedBy ?startDynasty.'
                     +'?interval time:intervalFinishedBy ?endDynasty.'
                     // target dynasty must be earlier than ?endDynasty
@@ -124,7 +124,7 @@ function setSiteOptions(provinceSelection,dynastySelection,isoLanguage) {
 	           // +'BIND (str(?periodTagged) AS ?period)'
 	           // +'FILTER (?period =  '+dynastySelection+')'
 	        }
-                string = string +'?site <https://www.w3.org/2000/01/rdf-schema#label> ?siteTagged.'
+                string = string +'?site <http://www.w3.org/2000/01/rdf-schema#label> ?siteTagged.'
                     +"FILTER (lang(?siteTagged)='"+languageTag+"')"
 	            +'BIND (str(?siteTagged) AS ?siteName)'
 	            +'}'
@@ -134,7 +134,7 @@ function setSiteOptions(provinceSelection,dynastySelection,isoLanguage) {
         // send query to endpoint
         $.ajax({
             type: 'GET',
-            url: 'https://rdf.library.vanderbilt.edu/sparql?query=' + encodedQuery,
+            url: 'http://rdf.library.vanderbilt.edu/sparql?query=' + encodedQuery,
             headers: {
                 Accept: 'application/sparql-results+xml'
             },
@@ -296,12 +296,12 @@ $(document).ready(function(){
 				query = query + "?site <http://rs.tdwg.org/dwc/terms/stateProvince> " + provinceSelection + "@" + languageTag + "."
 				}
 		
-			query = query + "?building <https://schema.org/containedInPlace> ?site." +
-			    "OPTIONAL{?building <https://www.w3.org/2000/01/rdf-schema#label> ?buildingNameEn.FILTER ( lang(?buildingNameEn)='en')}" +
-			    "OPTIONAL{?building <https://www.w3.org/2000/01/rdf-schema#label> ?buildingNameZh.FILTER ( lang(?buildingNameZh)='zh-hans')}" +
-			    "OPTIONAL{?building <https://www.w3.org/2000/01/rdf-schema#label> ?buildingNameLatn.FILTER ( lang(?buildingNameLatn)='zh-latn-pinyin')}" +
-			    "OPTIONAL{?building <https://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat.}" +
-			    "OPTIONAL{?building <https://www.w3.org/2003/01/geo/wgs84_pos#long> ?long.}" +
+			query = query + "?building <http://schema.org/containedInPlace> ?site." +
+			    "OPTIONAL{?building <http://www.w3.org/2000/01/rdf-schema#label> ?buildingNameEn.FILTER ( lang(?buildingNameEn)='en')}" +
+			    "OPTIONAL{?building <http://www.w3.org/2000/01/rdf-schema#label> ?buildingNameZh.FILTER ( lang(?buildingNameZh)='zh-hans')}" +
+			    "OPTIONAL{?building <http://www.w3.org/2000/01/rdf-schema#label> ?buildingNameLatn.FILTER ( lang(?buildingNameLatn)='zh-latn-pinyin')}" +
+			    "OPTIONAL{?building <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat.}" +
+			    "OPTIONAL{?building <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long.}" +
 			    "}" +
 			    "ORDER BY ASC(?buildingName)" +
 			    "LIMIT " + numResultstoReturn;
@@ -313,7 +313,7 @@ $(document).ready(function(){
 			// then puts the result in the "data" variable
 			$.ajax({
 			    type: 'GET',
-			    url: 'https://rdf.library.vanderbilt.edu/sparql?query=' + encoded,
+			    url: 'http://rdf.library.vanderbilt.edu/sparql?query=' + encoded,
 			    headers: {
 				Accept: 'application/sparql-results+xml'
 			    },
