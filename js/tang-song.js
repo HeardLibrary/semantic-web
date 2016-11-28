@@ -68,7 +68,7 @@ function setProvinceOptions(isoLanguage) {
         // send query to endpoint
         $.ajax({
             type: 'GET',
-            url: 'http://rdf.library.vanderbilt.edu/sparql?query=' + encodedQuery,
+            url: 'https://rdf.library.vanderbilt.edu/sparql?query=' + encodedQuery,
             headers: {
                 Accept: 'application/sparql-results+xml'
             },
