@@ -68,7 +68,11 @@ function setProvinceOptions(isoLanguage) {
         // send query to endpoint
         $.ajax({
             type: 'GET',
+<<<<<<< HEAD
             url: 'http://rdf.library.vanderbilt.edu/sparql?query=' + encodedQuery,
+=======
+            url: '//rdf.library.vanderbilt.edu/sparql?query=' + encodedQuery,
+>>>>>>> origin/gh-pages
             headers: {
                 Accept: 'application/sparql-results+xml'
             },
@@ -389,4 +393,8 @@ function parseXml(xml) {
 
         $("#div1").append(table);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/gh-pages
