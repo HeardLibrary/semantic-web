@@ -1,2 +1,2 @@
-# xquery-working-group
-XQuery Working Group at the Vanderbilt University Library
+# Semantic Web Working Group
+Semantic Web Working Group at the Vanderbilt University Library
