@@ -1,0 +1,6 @@
+"id","class","notes"
+"$root","dcterms:PhysicalResource","This is the class for the vases, or instead crm:E22_Man-Made_Object ?"
+"_:1","crm:E46_Section_Definition","Class for side A, maybe instead crm:E19_Physical_Object ?,kerameikos.org class"
+"_:2","crm:E46_Section_Definition","class for side B, same as _:1 (whatever we decide)"
+"_:3","crm:E38_Image","class for the scene on side A, could be dctype:StillImage"
+"_:4","crm:E38_Image","class for the scene on side B, same as _:3 (whatever we decide)"

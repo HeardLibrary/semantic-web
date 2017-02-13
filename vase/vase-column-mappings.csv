@@ -1,0 +1,16 @@
+"header","predicate","type","value","attribute","subject_id","alternatives"
+"TRENDALL_ID","dcterms:identifier","plain",,,"$root",
+"TRENDALL_ID","crm:P48_has_preferred_identifier","plain",,,"$root","is this a URI-identified or blank-node resource vs. literal?"
+"POTTER ","dc:creator","plain",,,"$root",
+"PAINTER","dc:creator","plain",,,"$root",
+"$link","crm:P59_has_section","iri","_:1",,"$root",
+"$link","geo:location","iri","_:1",,"_:3","crm:P65_shows_visual_item but subject is a man-made thing not an area or gemotrey"
+"$link","crm:P59_has_section","iri","_:2",,"$root",
+"$link","geo:location","iri","_:2",,"_:4",
+"MEDIUM","dc:format","plain",,,"$root","dcterms:medium would be better but the range can't be a literal"
+"COLLECTION_NAME","dwc:collectionCode","plain",,,"$root",
+"LOCATION_COUNTRY ","dwc:country","plain",,,"$root","vcard:country-name, but assumes it's part of a structured address"
+"LOCATION_CITY ","dwc:municipality","plain",,,"$root","vcard:locality (see above)"
+"SCENE_TYPE_A","dcterms:subject","iri",,,"_:3","not sure about this; could link to a SKOS concept"
+"SIDE_A_PERFORMERS ","P138_represents","iri",,,"_:3","P62_depicts requires the subject to be a physical man-made thing"
+"SIDE_A_PERFORMERS ","foaf:depicts","iri",,,"_:3",
