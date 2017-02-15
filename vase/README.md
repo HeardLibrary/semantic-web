@@ -51,9 +51,41 @@ Kerameikos.org (http://kerameikos.org/) is a collaborative LOD project for defin
 
 [Ontology in Turtle](http://kerameikos.org/ontology.ttl)
 
+[Descriptive paper at http://dx.doi.org/10.5281/zenodo.258046](http://dx.doi.org/10.5281/zenodo.258046)
+
 [Example datasets](http://kerameikos.org/datasets)
 
-[Descriptive paper at http://dx.doi.org/10.5281/zenodo.258046](http://dx.doi.org/10.5281/zenodo.258046)
+Here's one of the examples turned into Turtle and cleaned up:
+```
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix kon: <http://kerameikos.org/ontology#>.
+@prefix void: <http://rdfs.org/ns/void#>.
+
+<http://collection.britishmuseum.org/id/object/GAA8055> a crm:E22_Man-Made_Object;
+     kon:hasShape <http://collection.britishmuseum.org/id/thesauri/x105177>;
+     dcterms:identifier "1836,0224.79";
+     dcterms:title "trefoil-mouth oinochoe by The Achilles Painter"@en;
+     void:inDataset <http://www.britishmuseum.org/>;
+     crm:P108i_was_produced_by _:1;
+     crm:P32_used_general_technique <http://collection.britishmuseum.org/id/thesauri/x14796>;
+     crm:P45_consists_of <http://collection.britishmuseum.org/id/thesauri/x41443>;
+     crm:P50_has_current_keeper <http://kerameikos.org/id/british_museum>;
+     foaf:depiction <http://www.britishmuseum.org/collectionimages/AN00492/AN00492888_001_l.jpg>.
+
+_:1 a crm:E12_Production ;
+    crm:P7_took_place_at <http://collection.britishmuseum.org/id/place/x30950> ;
+    crm:P14_carried_out_by <http://collection.britishmuseum.org/id/person-institution/57106> ;
+    crm:P4_has_time-span _:2.
+
+_:2 a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "-0460"^^xsd:gYear ;
+    crm:P82b_end_of_the_end "-0430"^^xsd:gYear.
+```
 
 ## Preliminary drafts of mapping files
 
