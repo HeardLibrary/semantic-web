@@ -1,7 +1,7 @@
 "header","predicate","type","value","attribute","subject_id","alternatives"
 "TRENDALL_ID","dcterms:identifier","plain",,,"$root",
 "TRENDALL_ID","crm:P48_has_preferred_identifier","plain",,,"$root","is this a URI-identified or blank-node resource vs. literal?"
-"POTTER ","dc:creator","plain",,,"$root",
+"POTTER ","dc:creator","plain",,,"$root","see British museum example for use of crm:P108i (clunky)"
 "PAINTER","dc:creator","plain",,,"$root",
 "$link","crm:P59_has_section","iri","_:1",,"$root",
 "$link","geo:location","iri","_:1",,"_:3","crm:P65_shows_visual_item but subject is a man-made thing not an area or gemotrey"
@@ -14,3 +14,4 @@
 "SCENE_TYPE_A","dcterms:subject","iri",,,"_:3","not sure about this; could link to a SKOS concept"
 "SIDE_A_PERFORMERS ","P138_represents","iri",,,"_:3","P62_depicts requires the subject to be a physical man-made thing"
 "SIDE_A_PERFORMERS ","foaf:depicts","iri",,,"_:3",
+"TECHNIQUE","crm:P32_used_general_technique ","iri",,,"$root","The value needs to be an IRI, so that would involve minting a controlled vocabulary with IRIs for the techniques if there isn't one already.  "
