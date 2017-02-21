@@ -10,6 +10,8 @@
 var numResultstoReturn = 50; // the max number of results to return in the SPARQL search query
 var numResultsPerPage = 10; // the number of search results per page, for pagination
 var isoLanguage = 'en';
+var imageHtmlBlob = '';
+var done = 'no'
 
 var dynastiesEn = [
 	"Tang",
@@ -213,6 +215,51 @@ function parseCategoryXml(xml) {
 }
 */
 
+function getImages(buildingURI,tableRow) {
+
+	// create URI-encoded query string
+        var string = 'PREFIX ac: <http://rs.tdwg.org/ac/terms/>'
+                    +'PREFIX foaf: <http://xmlns.com/foaf/0.1/>'
+                    +'SELECT DISTINCT ?thumbURL ?gqURL WHERE {'
+                    +"?image foaf:depicts <"+buildingURI+">."
+                    +'?image ac:hasServiceAccessPoint ?thumbSap.'
+                    +'?thumbSap ac:variant ac:Thumbnail.'
+                    +'?thumbSap ac:accessURI ?thumbURL.'
+                    +'?image ac:hasServiceAccessPoint ?gqSap.'
+                    +'?gqSap ac:variant ac:GoodQuality.'
+                    +'?gqSap ac:accessURI ?gqURL.'
+                    +'}';
+	var encodedQuery = encodeURIComponent(string);
+        // send query to endpoint
+        $.ajax({
+            type: 'GET',
+            url: 'http://rdf.library.vanderbilt.edu/sparql?query=' + encodedQuery,
+            headers: {
+                Accept: 'application/sparql-results+xml'
+            },
+//            success: parseImageXml
+        })
+        .done(function(xml){
+	    //step through each "result" element
+	    $(xml).find("result").each(function() {
+	
+		// pull the "binding" element that has the name attribute of "gqURL"
+		$(this).find("binding[name='gqURL']").each(function() {
+		    tableRow=tableRow+"<a target='_blank' href='"+$(this).find("uri").text() + "'>";
+		});
+	
+		// pull the "binding" element that has the name attribute of "thumbURL"
+		$(this).find("binding[name='thumbURL']").each(function() {
+		    tableRow=tableRow+"<img src='"+$(this).find("uri").text() + "'></a> ";
+		});     
+	    });
+	tableRow=tableRow+"<br/><br/></div>"
+	$("#div1").append(tableRow);
+	});
+        
+}
+
+
 $(document).ready(function(){
     // not searching initially, so hide the spinner icon
     $('#searchSpinner').hide();
@@ -270,7 +317,7 @@ $(document).ready(function(){
 //			var category = $('#box4').val();
 			// creates a string that contains the query with the data from the dropdowns
 			// inserted into the right place.  The variable values are already enclosed in quotes as necessary.
-			var query = "SELECT DISTINCT ?siteName ?buildingNameEn ?buildingNameZh ?buildingNameLatn ?lat ?long  WHERE {" +
+			var query = "SELECT DISTINCT ?siteName ?building ?buildingNameEn ?buildingNameZh ?buildingNameLatn ?lat ?long  WHERE {" +
 				    "?site <http://www.geonames.org/ontology#featureCode> <http://www.geonames.org/ontology#S.ANS>." +
 				    "?site <http://www.w3.org/2000/01/rdf-schema#label> ?siteName.FILTER (lang(?siteName)='zh-latn-pinyin')"
 
@@ -339,13 +386,10 @@ function parseXml(xml) {
     else {
         $("#div1").html("<h4 class=\"text-success\">Found "+numResults+" buildings</h4>");
 
-        // Had to change the way the table is constructed due to the issue outlined here: http://stackoverflow.com/questions/8084687/jquery-appended-table-adds-closing-tag-at-the-end-of-the-text-automatically-why
-        var table = "<table class=\"table table-hover\">";
-
         //step through each "result" element
         $(xml).find("result").each(function() {
 
-            tableRow="<tr><td class=\"text-center\">";
+            tableRow="<div>";
 
             // pull the "binding" element that has the name attribute of "siteName"
             $(this).find("binding[name='siteName']").each(function() {
@@ -378,18 +422,25 @@ function parseXml(xml) {
             $(this).find("binding[name='long']").each(function() {
                 longitude=$(this).find("literal").text();
             });
-            tableRow = tableRow + '</strong>'
+            tableRow = tableRow + '</strong><br/>'
             if (latitude!="") {
 		    tableRow = tableRow + '<a target="top" href="http://maps.google.com/maps?output=classic&amp;q=loc:'+ latitude + ',';
 		    tableRow = tableRow + longitude +'&amp;t=h&amp;z=16">Open location in map application</a><br/>';
 		    tableRow = tableRow + '<img src="http://maps.googleapis.com/maps/api/staticmap?center='+latitude+','+longitude+'&amp;zoom=11&amp;size=300x300&amp;markers=color:green%7C'+latitude+','+longitude+'&amp;sensor=false"/>'
-		    tableRow = tableRow + '<img src="http://maps.googleapis.com/maps/api/staticmap?center='+latitude+','+longitude+'&amp;maptype=hybrid&amp;zoom=18&amp;size=300x300&amp;markers=color:green%7C'+latitude+','+longitude+'&amp;sensor=false"/>'
+		    tableRow = tableRow + '<img src="http://maps.googleapis.com/maps/api/staticmap?center='+latitude+','+longitude+'&amp;maptype=hybrid&amp;zoom=18&amp;size=300x300&amp;markers=color:green%7C'+latitude+','+longitude+'&amp;sensor=false"/><br/>'
 		   
 		    }
-            tableRow = tableRow + "</td></tr>"
-            table += tableRow;
+
+		    // pull the "binding" element that has the name attribute of "building"
+            $(this).find("binding[name='building']").each(function() {
+                buildingURI=$(this).find("uri").text();
+            });
+            
+            // the getBuildings function queries the endpoint for image tnumbnails and good quality accessURIs, then inserts the blob into the div
+            getImages(buildingURI,tableRow);
+
         });
 
-        $("#div1").append(table);
+
     }
 }

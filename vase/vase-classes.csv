@@ -4,3 +4,6 @@
 "_:2","crm:E46_Section_Definition","class for side B, same as _:1 (whatever we decide)"
 "_:3","crm:E38_Image","class for the scene on side A, could be dctype:StillImage"
 "_:4","crm:E38_Image","class for the scene on side B, same as _:3 (whatever we decide)"
+"_:5","dcterms:PeriodOfTime","the range of dates of the creation of the vase"
+"_:6","crm:E12_Production","see Kerameikos example"
+"_:7","crm:E52_Time-Span","see Kerameikos example"
