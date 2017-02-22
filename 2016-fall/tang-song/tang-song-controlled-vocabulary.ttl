@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcmitype: <http://purl.org/dc/dcmitype/>.
+@prefix dcam: <http://purl.org/dc/dcam/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix temple: <http://lod.vanderbilt.edu/temple/>.
+
+temple: a skos:ConceptScheme;
+     rdfs:label "Chinese Temple Controlled Vocabulary"@en;
+     dcterms:title "Chinese Temple Controlled Vocabulary"@en;
+     rdfs:comment "This is a controlled vocabulary whose IRIs are intended to be used as values to categorize architectural features of Chinese temples."@en;
+     skos:note "This is a controlled vocabulary whose IRIs are intended to be used as values to categorize architectural features of Chinese temples."@en;
+     dc:publisher "Vanderbilt something"@en.
+     
+     temple:ct_angled_bracket_arm skos:definition "An angled bracket arm for a column top."@en;
+           rdfs:comment "An angled bracket arm for a column top."@en;
+           rdfs:label "column top angled bracket arm"@en;
+           skos:prefLabel "column top angled bracket arm"@en;
+           skos:prefLabel "zhutou puzuo xiegong"@zh-latn-pinyin;
+           # not really the label in Chinese characters:
+           skos:prefLabel "藏经殿"@zh-hans;
+           skos:inScheme temple:;
+           rdfs:isDefinedBy temple:;
+           a skos:Concept.
+           
