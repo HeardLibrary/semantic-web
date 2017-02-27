@@ -40,6 +40,7 @@ apulianscene: a skos:ConceptScheme;
            rdfs:comment "A dining Dionysiac scene."@en;
            rdf:value "DINING (DIONYSIAC)";
            rdfs:label "Dining (Dionysiac)"@en;
+           skos:prefLabel "Dining (Dionysiac)"@en;
            skos:broader apulianscene:dionysiac;
            skos:inScheme apulianscene:;
            rdfs:isDefinedBy apulianscene:;
