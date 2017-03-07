@@ -45,4 +45,33 @@ apulianscene: a skos:ConceptScheme;
            skos:inScheme apulianscene:;
            rdfs:isDefinedBy apulianscene:;
            a skos:Concept.
+
+     apulianscene:diningDionysiac skos:definition "A dining Dionysiac scene."@en;
+           rdfs:comment "A dining Dionysiac scene."@en;
+           rdf:value "DINING (DIONYSIAC)";
+           rdfs:label "Dining (Dionysiac)"@en;
+           skos:prefLabel "Dining (Dionysiac)"@en;
+           skos:broader apulianscene:dionysiac;
+           skos:inScheme apulianscene:;
+           rdfs:isDefinedBy apulianscene:;
+           a skos:Concept.
+           
+     apulianscene:processionDionysiac skos:definition "A procession Dionysiac scene."@en;
+           rdfs:comment "A procession Dionysiac scene."@en;
+           rdf:value "PROCESSION (DIONYSIAC)";
+           rdfs:label "Procession (Dionysiac)"@en;
+           skos:prefLabel "Procession (Dionysiac)"@en;
+           skos:broader apulianscene:dionysiac;
+           skos:inScheme apulianscene:;
+           rdfs:isDefinedBy apulianscene:;
+           a skos:Concept.
+                apulianscene:standingDionysiac skos:definition "A standing Dionysiac scene."@en;
+           rdfs:comment "A standing Dionysiac scene."@en;
+           rdf:value "STANDING (DIONYSIAC)";
+           rdfs:label "Standing (Dionysiac)"@en;
+           skos:prefLabel "Standing (Dionysiac)"@en;
+           skos:broader apulianscene:dionysiac;
+           skos:inScheme apulianscene:;
+           rdfs:isDefinedBy apulianscene:;
+           a skos:Concept.
            
