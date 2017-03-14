@@ -9,6 +9,10 @@ Here's the preliminary data model that we are working with:
 
 ![](IMAG1752.jpg)
 
+## Controlled Vocabularies and SKOS
+
+[PowerPoint from March 13](skos-thesaurus.pptx)
+
 ## vocabularies
 
 **CIDOC CRM**
