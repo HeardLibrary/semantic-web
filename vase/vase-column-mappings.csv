@@ -16,7 +16,7 @@
 "$link","crm:P4_has_time-span","iri","_:7",,"_:6","see Kerameikos example"
 "START_DATE","crm:P82a_begin_of_the_begin","datatype",,"xsd:gYear","_:7","see Kerameikos example"
 "END_DATE","crm:P82b_end_of_the_end ","datatype",,"xsd:gYear","_:7","see Kerameikos example"
-"scene_type_a_cv","dcterms:subject","iri","http://lod.vanderbilt.edu/apulian/scene/",,"_:3","not sure about this; could link to a SKOS concept"
+"scene_type_a_cv","dc:subject","plain",,,"_:3","not sure about this; could link to a SKOS concept"
 "SIDE_A_PERFORMERS ","P138_represents","iri",,,"_:3","P62_depicts requires the subject to be a physical man-made thing"
 "SIDE_A_PERFORMERS ","foaf:depicts","iri",,,"_:3",
 "CAT_DESCRIPTION_A","dcterms:description","language",,"en","_:3",
@@ -25,7 +25,7 @@
 "START_DATE","gvp:estStart","datatype",,"xsd:gYear","_:5","See http://vocab.getty.edu/doc/#Estimated_Dates for CIDOC-CRM approach"
 "END_DATE","gvp:estEnd","datatype",,"xsd:gYear","_:5","if we want to use time ontology, see temple model"
 "$link","dc:date","iri","_:5",,"$root","dcterms:created is a literal so can't use; dc:date possible; see Kerameikos for CIDOC-CRM example"
-"SCENE_TYPE_B","dcterms:subject","iri","http://example.org/",,"_:4","not sure about this; could link to a SKOS concept"
+"SCENE_TYPE_B","dc:subject","plain",,,"_:4","not sure about this; could link to a SKOS concept"
 "SIDE_B_PERFORMERS ","P138_represents","iri",,,"_:4","P62_depicts requires the subject to be a physical man-made thing"
 "SIDE_B_PERFORMERS ","foaf:depicts","iri",,,"_:4",
 "CAT_DESCRIPTION_B","dcterms:description","language",,"en","_:4",

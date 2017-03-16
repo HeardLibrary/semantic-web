@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcmitype: <http://purl.org/dc/dcmitype/>.
+@prefix dcam: <http://purl.org/dc/dcam/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix apulianscene: <http://lod.vanderbilt.edu/apulian/scene/>.
+
+apulianscene: a skos:ConceptScheme;
+     rdfs:label "Apulian Vase Controlled Vocabulary"@en;
+     dcterms:title "Apulian Vase Controlled Vocabulary"@en;
+     rdfs:comment "This is a controlled vocabulary whose IRIs are intended to be used as values to categorize aspects of Apulian vases."@en;
+     skos:note "This is a controlled vocabulary whose IRIs are intended to be used as values to categorize aspects of Apulian vases."@en;
+     skos:hasTopConcept apulianscene:Adornment,
+                        apulianscene:Apollo,
+                        apulianscene:Arming,
+                        apulianscene:Attendant,
+                        apulianscene:Battle,
+                        apulianscene:Consort,
+                        apulianscene:Couple,
+                        apulianscene:Courtship,
+                        apulianscene:Dancing,
+                        apulianscene:Departure,
+                        apulianscene:Dining,
+                        apulianscene:Dionysiac,
+                        apulianscene:Domestic,
+                        apulianscene:Eros,
+                        apulianscene:Floral,
+                        apulianscene:Funerary,
+                        apulianscene:Head,
+                        apulianscene:Herm,
+                        apulianscene:Hunt,
+                        apulianscene:MantleFigures,
+                        apulianscene:Music,
+                        apulianscene:Mythological,
+                        apulianscene:Nike,
+                        apulianscene:NoDecoration,
+                        apulianscene:NoPhoto,
+                        apulianscene:Nuptial,
+                        apulianscene:Palaestra,
+                        apulianscene:Palmette,
+                        apulianscene:Procession,
+                        apulianscene:Pursuit,
+                        apulianscene:Q,
+                        apulianscene:Religious,
+                        apulianscene:SingleFigure,
+                        apulianscene:Standing,
+                        apulianscene:Theater;
+     dc:publisher "Vanderbilt something"@en.
+
