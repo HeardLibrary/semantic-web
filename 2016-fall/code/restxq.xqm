@@ -40,6 +40,9 @@ declare function page:determine-type-flag($extension)
 (: Function to return a representation of a resource or all resources :)
 declare function page:return-representation($response-media-type,$local-id,$flag,$outtype)
 {
+if(serialize:find($local-id,"guid-o-matic/","c:/github/"))
+then 
+  (
   <rest:response>
     <output:serialization-parameters>
       <output:media-type value='{$response-media-type}'/>
@@ -48,6 +51,14 @@ declare function page:return-representation($response-media-type,$local-id,$flag
   if ($flag = "html")
   then page:handle-html($local-id)
   else serialize:main($local-id,$flag,"guid-o-matic/","c:/github/",$outtype,"false")
+  )
+else
+  <rest:response>
+    <http:response status="404" message="Not found.">
+      <http:header name="Content-Language" value="en"/>
+      <http:header name="Content-Type" value="text/html; charset=utf-8"/>
+    </http:response>
+  </rest:response>
 };
 
 (: Placeholder function to return a web page :)
