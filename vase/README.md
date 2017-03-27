@@ -13,6 +13,10 @@ Here's the preliminary data model that we are working with:
 
 [PowerPoint from March 13](skos-thesaurus.pptx)
 
+## Running SPARQL queries on the vase dataset and the scene controlled vocabulary; named graphs
+
+[PowerPoint from March 27](named-graphs.pptx)
+
 ## vocabularies
 
 **CIDOC CRM**
