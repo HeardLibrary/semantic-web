@@ -17,6 +17,10 @@ Here's the preliminary data model that we are working with:
 
 [PowerPoint from March 27](named-graphs.pptx)
 
+## Ways to discover data by following your nose, or acquiring metadata about an entire dataset
+
+[PowerPoint from April 3](discovering-data.pptx)
+
 ## vocabularies
 
 **CIDOC CRM**
