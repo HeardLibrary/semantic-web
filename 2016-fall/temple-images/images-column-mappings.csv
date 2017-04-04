@@ -25,4 +25,4 @@
 "$constant","dc:format","plain","image/jpeg",,"_:2"
 "$constant","ac:variantLiteral","plain","Thumbnail",,"_:2"
 "$constant","ac:variant","iri","ac:Thumbnail",,"_:2"
-"link","foaf:depicts","iri","http://lod.vanderbilt.edu/historyart/site/",,"$root"
+"foaf_depicts","foaf:depicts","iri","http://tcadrt.app.vanderbilt.edu/",,"$root"
