@@ -1,0 +1,6 @@
+"header","predicate","type","value","attribute","subject_id","alternatives"
+"side_identifier","geo:location","iri","http://lod.vanderbilt.edu/vase/",,"$root","crm:P65_shows_visual_item but subject is a man-made thing not an area or gemotrey"
+"SCENE_TYPE","dc:subject","plain",,,"$root",
+"SIDE_DETAILS","rdfs:comment","language",,"en","$root",
+"CAT_DESCRIPTION","dcterms:description","language",,"en","$root",
+"scene_identifier","dcterms:identifier","plain",,,"$root",

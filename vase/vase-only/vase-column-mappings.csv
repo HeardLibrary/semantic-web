@@ -1,0 +1,22 @@
+"header","predicate","type","value","attribute","subject_id","alternatives"
+"TRENDALL_ID","dcterms:identifier","plain",,,"$root",
+"TRENDALL_ID","crm:P48_has_preferred_identifier","plain",,,"$root","is this a URI-identified or blank-node resource vs. literal?"
+"POTTER ","dc:creator","plain",,,"$root","see British museum example for use of crm:P108i (clunky)"
+"PAINTER","dc:creator","plain",,,"$root",
+"$link","crm:P59_has_section","iri","#a",,"$root",
+"$link","crm:P59_has_section","iri","#b",,"$root",
+"SIDE_A_COMPOSITION","rdfs:comment","plain",,,"#a",
+"SIDE_B_COMPOSITION","rdfs:comment","plain",,,"#b",
+"MEDIUM","dc:format","plain",,,"$root","dcterms:medium would be better but the range can't be a literal"
+"COLLECTION_NAME","dwc:collectionCode","plain",,,"$root",
+"COLLECTION_ID","dwc:catalogNumber","plain",,,"$root",
+"LOCATION_COUNTRY ","dwc:country","plain",,,"$root","vcard:country-name, but assumes it's part of a structured address"
+"LOCATION_CITY ","dwc:municipality","plain",,,"$root","vcard:locality (see above)"
+"$link","crm:P108i_was_produced_by","iri","_:6",,"$root","see Kerameikos example"
+"$link","crm:P4_has_time-span","iri","_:7",,"_:6","see Kerameikos example"
+"START_DATE","crm:P82a_begin_of_the_begin","datatype",,"xsd:gYear","_:7","see Kerameikos example"
+"END_DATE","crm:P82b_end_of_the_end ","datatype",,"xsd:gYear","_:7","see Kerameikos example"
+"TECHNIQUE","crm:P32_used_general_technique ","iri",,,"$root","The value needs to be an IRI, so that would involve minting a controlled vocabulary with IRIs for the techniques if there isn't one already.  "
+"START_DATE","gvp:estStart","datatype",,"xsd:gYear","_:5","See http://vocab.getty.edu/doc/#Estimated_Dates for CIDOC-CRM approach"
+"END_DATE","gvp:estEnd","datatype",,"xsd:gYear","_:5","if we want to use time ontology, see temple model"
+"$link","dc:date","iri","_:5",,"$root","dcterms:created is a literal so can't use; dc:date possible; see Kerameikos for CIDOC-CRM example"

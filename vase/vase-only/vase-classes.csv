@@ -1,0 +1,7 @@
+"id","class","notes"
+"$root","dcterms:PhysicalResource","This is the class for the vases, or instead crm:E22_Man-Made_Object ?"
+"#a","crm:E46_Section_Definition","Class for side A, maybe instead crm:E19_Physical_Object ?,kerameikos.org class"
+"#b","crm:E46_Section_Definition","class for side B, same as _:1 (whatever we decide)"
+"_:5","dcterms:PeriodOfTime","the range of dates of the creation of the vase"
+"_:6","crm:E12_Production","see Kerameikos example"
+"_:7","crm:E52_Time-Span","see Kerameikos example"
