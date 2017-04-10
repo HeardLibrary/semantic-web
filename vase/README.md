@@ -21,6 +21,10 @@ Here's the preliminary data model that we are working with:
 
 [PowerPoint from April 3](discovering-data.pptx)
 
+## Building web apps using RDF data
+
+[PowerPoint from April 10](web-apps.pptx)
+
 ## vocabularies
 
 **CIDOC CRM**
