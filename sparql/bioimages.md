@@ -7,11 +7,18 @@ The Bioimages dataset is relatively mature and has been in production for a numb
 
 The dataset currently loaded is the 2017-06-11 release (https://doi.org/10.5281/zenodo.806034).
 
+See [this page](https://github.com/HeardLibrary/semantic-web/blob/master/learning-sparql/learning-sparql-ch3-part1-answers.md) for more examples of complex queries of Bioimages data.
+
 ## Named graphs in the endpoint (URIs do not dereference)
 
-### http://bioimages.vanderbilt.edu/organisms
+### Organisms graph http://bioimages.vanderbilt.edu/organisms
 
 This graph describes organisms, their identifications, and their occurrences (including time and location).
+
+**Graph model:**
+![organism graph](media/bioimages-organism-graph.png)
+
+Organism-related resources described in this graph are outlined in violet.
 
 **CURIEs (namespaces) used:**
 ```
@@ -29,11 +36,6 @@ PREFIX xmp: <http://ns.adobe.com/xap/1.0/>
 PREFIX txn: <http://lod.taxonconcept.org/ontology/txn.owl#>
 PREFIX blocal: <http://bioimages.vanderbilt.edu/rdf/local#>
 ```
-**Graph model:**
-![organism graph](media/bioimages-organism-graph.png)
-
-Organism-related resources described in this graph are outlined in violet.
-
 **Sample queries:**
 
 Find states where occurrences of bears (genus="Ursus") were documented and list the common name of the species:
@@ -67,7 +69,14 @@ WHERE {
       }
 ```
 
-### http://bioimages.vanderbilt.edu/images
+### Images graph http://bioimages.vanderbilt.edu/images
+
+This graph describes images and their variants (thumbnails, web-quality images, original images, etc.) known as Service Access Points.
+
+**Graph model:**
+![image graph](media/bioimages-image-graph.png)
+
+Image-related resources described in this graph are outlined in violet.
 
 **CURIEs (namespaces) used:**
 ```
@@ -94,11 +103,6 @@ PREFIX photoshop: <http://ns.adobe.com/photoshop/1.0/>
 PREFIX mbank: <http://www.morphbank.net/schema/morphbank#>
 PREFIX blocal: <http://bioimages.vanderbilt.edu/rdf/local#>
 ```
-
-**Graph model:**
-![image graph](media/bioimages-image-graph.png)
-
-Image-related resources described in this graph are outlined in violet.
 
 **Sample queries:**
 
@@ -140,7 +144,12 @@ WHERE {
 ORDER BY ?time
 ```
 
-### http://bioimages.vanderbilt.edu/people
+### People graph http://bioimages.vanderbilt.edu/people
+
+This graph describes agents in general, including people and groups of which they are members.
+
+**Graph model:**
+![people graph](media/bioimages-agents-graph.png)
 
 **CURIEs (namespaces) used:**
 ```
@@ -154,9 +163,6 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX xmp: <http://ns.adobe.com/xap/1.0/>
 ```
-**Graph model:**
-![people graph](media/bioimages-agents-graph.png)
-
 **Sample queries:**
 
 List names of people who have created images and give their location:
@@ -207,7 +213,12 @@ WHERE {
 ORDER BY ?name
 ```
 
-### http://bioimages.vanderbilt.edu/specimens
+### Specimens graph http://bioimages.vanderbilt.edu/specimens
+
+Bioimages contains information about relatively few specimens.  They are generally secondary forms of evidence for occurrences documented in the database.
+
+**Graph model:**
+![specimen graph](media/bioimages-specimen-graph.png)
 
 **CURIEs (namespaces) used:**
 ```
@@ -221,9 +232,6 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ```
-**Graph model:**
-![specimen graph](media/bioimages-specimen-graph.png)
-
 **Sample queries:**
 
 This query lists the collector, species, and locality of specimens:
@@ -266,7 +274,12 @@ WHERE {
       }
 ```
 
-### http://bioimages.vanderbilt.edu/places
+### Places graph http://bioimages.vanderbilt.edu/places
+
+Bioimages distinguishes between Locations (geographic points usually described by specific geocoordinates) and Places (described geographic features).  The places in this graph were extracted from GeoNames (http://www.geonames.org/) based on dwciri:inDescribedPlace links from organism locations.
+
+**Graph model:**
+![places graph](media/bioimages-places-graph.png)
 
 **CURIEs (namespaces) used:**
 ```
@@ -279,10 +292,6 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX gn: <http://www.geonames.org/ontology#>
 PREFIX wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 ```
-**Graph model:**
-![places graph](media/bioimages-places-graph.png)
-
-The places in this graph were extracted from GeoNames (http://www.geonames.org/) based on dwciri:inDescribedPlace links from organism locations.
 
 **Sample queries:**
 
