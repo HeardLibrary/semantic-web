@@ -231,7 +231,7 @@ SELECT DISTINCT ?label WHERE {
   }
 ```
 
-Find any dynasty that occurred before the Jin Dynasty. This query uses SPARQL 1.1 property paths (indicated by the "+" after time:intervalMetBy):
+Find any dynasty that occurred before the Jin Dynasty. This query uses [SPARQL 1.1 property paths](https://www.w3.org/TR/sparql11-query/#propertypaths) (indicated by the "+" after time:intervalMetBy):
 ```
 PREFIX time: <http://www.w3.org/2006/time#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -243,7 +243,7 @@ SELECT DISTINCT ?label WHERE {
   }
 ```
 
-This query uses SPARQL 1.1 property paths (indicated by the "\*" after time:intervalMetBy) to constrain starting and ending dynasties of an interval to include the Yuan dynasty.  It then finds sites whose construction intervals meet this constraint.  Note that it does not take into consideration whether a particular site actually falls into a geographic region that was under the control of the constraining dynasty.  It only uses the temporal order of the dynasties shown in the diagram above.
+This query uses [SPARQL 1.1 property paths](https://www.w3.org/TR/sparql11-query/#propertypaths) (indicated by the "\*" after time:intervalMetBy) to constrain starting and ending dynasties of an interval to include the Yuan dynasty.  It then finds sites whose construction intervals meet this constraint.  Note that it does not take into consideration whether a particular site actually falls into a geographic region that was under the control of the constraining dynasty.  It only uses the temporal order of the dynasties shown in the diagram above.
 
 ```
 PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -264,3 +264,7 @@ SELECT DISTINCT ?name WHERE {
   }
 ORDER BY ?name
 ```
+
+[back to the User Guide](README.md)
+
+[go to the SPARQL query interface](https://sparql.vanderbilt.edu/#query)
