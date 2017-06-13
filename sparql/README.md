@@ -14,7 +14,7 @@ The pages linked below contain descriptions of graphs included in the database. 
 | Project | Project URL | Status* | Description |
 | ------- | ----------- | ------ | ----------- |
 | [Bioimages](bioimages.md) | http://bioimages.vanderbilt.edu | stable | Image collection and biodiversity database |
-| [Traditional Chinese Architecture Digital Research Tool](tcadrt.md) | http://tcadrt.org | testing | Tool |
+| [Traditional Chinese Architecture Digital Research Tool](tcadrt.md) | http://tcadrt.org | testing | Tool for exploring the architecture of historical Chinese religious buildings|
 
 \* Status descriptions:
 
