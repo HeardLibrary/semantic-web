@@ -1,9 +1,13 @@
 # Bioiamges graph model
 **Vanderbilt University Semantic Web Working Group**
 
+[back to the User Guide](README.md)
+
+[go to the SPARQL query interface](https://sparql.vanderbilt.edu/#query)
+
 ## Status
 
-The Bioimages dataset is relatively mature and has been in production for a number of years.  The graph model is based on a published model ([http://dx.doi.org/10.3233/SW-150203](http://www.semantic-web-journal.net/content/darwin-sw-darwin-core-based-terms-expressing-biodiversity-data-rdf-1)) as well as [TDWG](http://www.tdwg.org/) international biodiversity informatics standards, so it can be considered relatively stable.  See [this page](http://bioimages.vanderbilt.edu/pages/standards.htm) for details.
+The Bioimages (http://bioimages.vanderbilt.edu) dataset is relatively mature and has been in production for a number of years.  The graph model is based on a published model ([http://dx.doi.org/10.3233/SW-150203](http://www.semantic-web-journal.net/content/darwin-sw-darwin-core-based-terms-expressing-biodiversity-data-rdf-1)) as well as [TDWG](http://www.tdwg.org/) international biodiversity informatics standards, so it can be considered relatively stable.  See [this page](http://bioimages.vanderbilt.edu/pages/standards.htm) for details.
 
 The dataset currently loaded is the 2017-06-11 release (https://doi.org/10.5281/zenodo.806034).
 
@@ -330,3 +334,7 @@ This graph contains several vocabularies referenced in the RDF:
 **Standardized organism views** (http://bioimages.vanderbilt.edu/rdf/stdview) Described at: http://bioimages.vanderbilt.edu/pages/std-views.htm and http://www.cals.ncsu.edu/plantbiology/ncsc/vulpia/pdf/Baskauf_&_Kirchoff_Digital_Plant_Images.pdf (published paper) and http://baskauf.blogspot.com/2016/03/controlled-values-for-subject-category.html (blog post)
 
 **Bioimages local properties**: (http://bioimages.vanderbilt.edu/rdf/local)
+
+[back to the User Guide](README.md)
+
+[go to the SPARQL query interface](https://sparql.vanderbilt.edu/#query)

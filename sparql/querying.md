@@ -1,6 +1,10 @@
 # Querying the SPARQL endpoint
 **Vanderbilt University Semantic Web Working Group**
 
+[back to the User Guide](README.md)
+
+[go to the SPARQL query interface](https://sparql.vanderbilt.edu/#query)
+
 ## Querying using the paste-in box
 
 The [graphical query interface](https://sparql.vanderbilt.edu) contains a text box into which you can paste standard SPARQL queries. If the query is successful, the results will appear in a text table below the paste-in box.  Previous queries can also be re-loaded by clicking on the Query link at the bottom of the page.  Here is an example query that you can run:
@@ -47,3 +51,19 @@ application/sparql-results+xml
 Many programming languages have functions for performing HTTP interactions (e.g. AJAX) with a remote server - see the language documentation to find out how.  For an example using jQuery and Javascript, see [this blog post](http://baskauf.blogspot.com/2016/11/sparql-based-web-app-to-find-chinese.html).
 
 The API also supports SPARQL Update commands via POST, but requires authentication.  Unless you are associated with our working group, you won't be doing this, though.
+
+## Named graphs
+
+The triples stored in the graph database are organized in named graphs.  If no graph is specified in the query, the query will be run on all of the triples in the database.  In some cases this may have undesirable consequences since similar types of data may exist across the various datasets loaded in the triplestore.  It may be possible to restrict the results to the desired portion of the data in the store by careful query construction.  If this is not possible, one may use the various GRAPH related commands in SPARQL 1.1 to restrict the results to particular named graphs.  To discover all of the named graphs in the store, use this query:
+
+```
+SELECT DISTINCT ?g WHERE {
+  GRAPH ?g {?s ?p ?o}
+  }
+```
+
+We are trying to avoid loading triples into the store that are not associated with a named graph.  You can learn about the content and models underlying the graphs by viewing the project descriptions linked from the [landing page](README.md) of this user guide.  For technical details of how Blazegraph handles named graphs, refer to [this blog post](http://baskauf.blogspot.com/2017/02/sparql-weirdness-of-unnamed-graphs.html).
+
+[back to the User Guide](README.md)
+
+[go to the SPARQL query interface](https://sparql.vanderbilt.edu/#query)
