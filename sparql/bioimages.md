@@ -9,7 +9,7 @@ The dataset currently loaded is the 2017-06-11 release (https://doi.org/10.5281/
 
 See [this page](https://github.com/HeardLibrary/semantic-web/blob/master/learning-sparql/learning-sparql-ch3-part1-answers.md) for more examples of complex queries of Bioimages data.
 
-## Named graphs in the endpoint (URIs do not dereference)
+## Named graphs in the triple store (URIs do not dereference)
 
 ### Organisms graph http://bioimages.vanderbilt.edu/organisms
 
@@ -38,7 +38,7 @@ PREFIX blocal: <http://bioimages.vanderbilt.edu/rdf/local#>
 ```
 **Sample queries:**
 
-Find states where occurrences of bears (genus="Ursus") were documented and list the common name of the species:
+Find states where occurrences of bears (genus="*Ursus*") were documented and list the common name of the species:
 ```
 PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
 PREFIX dsw: <http://purl.org/dsw/>
