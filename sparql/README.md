@@ -17,6 +17,7 @@ The pages linked in the Project column below contain descriptions of graphs incl
 | ------- | ----------- | ------ | ----------- |
 | [Bioimages](bioimages.md) | http://bioimages.vanderbilt.edu | stable | Image collection and biodiversity database |
 | [Traditional Chinese Architecture Digital Research Tool](tcadrt.md) | http://tcadrt.org | testing | Tool for exploring the architecture of historical Chinese religious buildings|
+| [Ancient Italian Vases](vase.md) | https://github.com/HeardLibrary/semantic-web/tree/master/vase | experimental | Cultural Heritage Dataset to explore Music and Vase-Painting |
 
 \* Status descriptions:
 
