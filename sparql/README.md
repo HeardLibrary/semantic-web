@@ -7,7 +7,7 @@
 
 There are two ways you can interact with our graph database using the W3C [SPARQL Query Language](https://www.w3.org/TR/sparql11-overview/).  If you are a human, you can use the GUI query form at [https://sparql.vanderbilt.edu](https://sparql.vanderbilt.edu/#query) to submit queries by typing or pasting them into a box.  If you are a machine, you can use HTTP GET to interact with the endpoint at https://sparql.vanderbilt.edu/sparql.  
 
-For more details, see the [querying information page](querying.md).
+For more details, see the [querying information page](querying.md).  If you are interested in what it would take to set up an endpoint like this one, see the [setup information page](setup.md).
 
 ## How can I know enough about the graphs in the triplestore to construct queries?
 
@@ -17,13 +17,13 @@ The pages linked in the Project column below contain descriptions of graphs incl
 | ------- | ----------- | ------ | ----------- |
 | [Bioimages](bioimages.md) | http://bioimages.vanderbilt.edu | stable | Image collection and biodiversity database |
 | [Traditional Chinese Architecture Digital Research Tool](tcadrt.md) | http://tcadrt.org | testing | Tool for exploring the architecture of historical Chinese religious buildings|
-| [Ancient Italian Vases](vase.md) | https://github.com/HeardLibrary/semantic-web/tree/master/vase | experimental | Cultural Heritage Dataset to explore Music and Vase-Painting |
+| [Ancient Italian Vases](vase.md) | https://github.com/HeardLibrary/semantic-web/tree/master/vase | experimental | Cultural heritage dataset to explore music and vase-painting |
 
 \* Status descriptions:
 
 Stable = graph model unlikely to change significantly; probably safe to use API calls in applications
 
-Testing = graph model somewhat settled but subject to change; check for changes if your API calls stop Working
+Testing = graph model somewhat settled but subject to change; check for changes if your API calls stop working
 
 Experimental = graph model under construction; don't expect any sort of stability
 
