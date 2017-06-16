@@ -125,7 +125,7 @@ WHERE {
       }
 ```
 
-This query extends the query above into the organism graph. Find images taken by the Stream Team. List the taxonomy of the organism, dateTime taken, and the URLs from which web-quality images can be downloaded:
+This query extends the query above into the organism graph. Find images taken by the Stream Team. List the taxonomy of the organism, dateTime taken, and the URLs from which high-quality images can be downloaded:
 ```
 PREFIX ac: <http://rs.tdwg.org/ac/terms/>
 PREFIX dcterms: <http://purl.org/dc/terms/>

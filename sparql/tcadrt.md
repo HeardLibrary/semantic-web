@@ -82,7 +82,7 @@ SELECT DISTINCT ?chineseName ?englishName WHERE {
 
 This graph describes sites that contain structures.  There may be one to many structures within a site.  Sites are typed as schema:Place and geo:SpatialThing .
 
-As with structures, sites are linked to resources describing the place and time associated with the site. The site is not considered a point location (as is a structure within the site), but is a spatial thing that is located near standardized places or features. Thus the site may be linked to resources described by the [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vocabularies/tgn/) or GeoNames (http://www.geonames.org/). The time over which the entire complex was constructed is modeled as an instance of time:ProperInterval as well as dcterms:PeriodOfTime.  This period is described according to the W3C Time Ontology, with the start and end of the period indicated by links to standard [PeriodO](http://perio.do/) URIs.
+As with structures, sites are linked to resources describing the place and time associated with the site. The site is not considered a point location (as is a structure within the site), but is a spatial thing that is located near standardized places or features. Thus the site may be linked to resources described by the [Getty Thesaurus of Geographic Names](http://www.getty.edu/research/tools/vocabularies/tgn/) or GeoNames (http://www.geonames.org/). The time over which the entire complex was constructed is modeled as an instance of time:ProperInterval as well as dcterms:PeriodOfTime.  This period is described according to the W3C Time Ontology, with the start and end of the period indicated by links to standardized [PeriodO](http://perio.do/) URIs.
 
 **Graph model:**
 
@@ -118,7 +118,7 @@ SELECT DISTINCT ?pinyinName WHERE {
   FILTER (lang(?pinyinName)="zh-latn-pinyin")
   }
 ```
-Note that this query does not restrict the results to places that are traditional Chinese architecture sites.  Any other schema:Place in the triplestore found in Fujian would be returned.
+Note that this query does not restrict the results to places that are traditional Chinese architecture sites.  Any other schema:Place in the triplestore located in Fujian would be returned.
 
 Building on the previous query, list the dynasties over which sites in Shanxi province were constructed:
 ```
@@ -146,7 +146,7 @@ The images are currently retrieved from Flickr.  In the future, images will be l
 
 **Sample query:**
 
-Find buildings contained in the Baitai Monastery, then find the images that depict it.  List the building names and the Flickr access URIs for the thumbnails of the images:
+Find buildings contained in the Baitai Monastery, then find the images that depict the building.  List the building names and the Flickr access URIs for the thumbnails of the images:
 ```
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <http://schema.org/>
@@ -167,7 +167,7 @@ ORDER BY ?building
 
 ### Dynasties timeline graph http://tcadrt.org/timeline
 
-This graph includes the data from the [PeriodO Ontology](http://perio.do/) about Chinese dynasties.  These data are from the particular dataset http://n2t.net/ark:/99152/p0fp7wv about Chinese dynasties.  The data were munged from the JSON-LD a bit to correct some errors.  The resulting file converted to RDF/Turtle is [here](https://github.com/HeardLibrary/semantic-web/blob/master/2016-fall/tang-song/period-o.ttl).  There are still some issues with this file.  The English labels are the values of skos:prefLabel (without language tags) while the alternate (incorrectly language-tagged) labels are skos:altLabel values.  The labels are not explicitly values of rdfs:label (although this is entailed).
+This graph includes the data from the [PeriodO Ontology](http://perio.do/) about Chinese dynasties.  These data are from the particular dataset http://n2t.net/ark:/99152/p0fp7wv about Chinese dynasties.  The data taken from the JSON-LD were munged a bit to correct some errors.  The resulting file converted to RDF/Turtle is [here](https://github.com/HeardLibrary/semantic-web/blob/master/2016-fall/tang-song/period-o.ttl).  There are still some issues with this file.  The English labels are the values of skos:prefLabel (without language tags) while the alternate (incorrectly language-tagged) labels are skos:altLabel values.  The labels are not explicitly values of rdfs:label (although that relationship is entailed).
 
 **Model:**
 
@@ -243,7 +243,7 @@ SELECT DISTINCT ?label WHERE {
   }
 ```
 
-This query uses [SPARQL 1.1 property paths](https://www.w3.org/TR/sparql11-query/#propertypaths) (indicated by the "\*" after time:intervalMetBy) to constrain starting and ending dynasties of an interval to include the Yuan dynasty.  It then finds sites whose construction intervals meet this constraint.  Note that it does not take into consideration whether a particular site actually falls into a geographic region that was under the control of the constraining dynasty.  It only uses the temporal order of the dynasties shown in the diagram above.
+The following query uses [SPARQL 1.1 property paths](https://www.w3.org/TR/sparql11-query/#propertypaths) (indicated by the "\*" after time:intervalMetBy) to constrain starting and ending dynasties of an interval to include the Yuan dynasty.  It then finds sites whose construction intervals meet this constraint.  Note that it does not take into consideration whether a particular site actually falls into a geographic region that was under the control of the constraining dynasty.  It only uses the temporal order of the dynasties shown in the diagram above.
 
 ```
 PREFIX dcterms: <http://purl.org/dc/terms/>
