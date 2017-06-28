@@ -106,7 +106,7 @@ PREFIX apulianscene: <http://lod.vanderbilt.edu/apulian/scene/>
 ```
 **Sample queries:**
 
-List the top-level concepts in the scheme and their defintions:
+List the top-level concepts in the scheme and their definitions:
 ```
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX apulianscene: <http://lod.vanderbilt.edu/apulian/scene/>
