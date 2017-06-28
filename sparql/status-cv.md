@@ -11,7 +11,7 @@ Note: None of the URIs of controlled values described in this graph dereference,
 
 In June 2017, an Invasive Organism Observation Information Task Group was in the formative stages under [Biodiversity Information Standards](http://www.tdwg.org/) (TDWG).  The purpose of this group is to develop controlled vocabularies for [Darwin Core](http://rs.tdwg.org/dwc/) terms or proposed terms related to the status of organisms in an area (origin, pathways, occurrence status, and degree of establishment).  One goal of the group is to produce controlled vocabularies that are in conformance with the [TDWG Standards Documentation Specification](https://github.com/tdwg/vocab/blob/master/sds/documentation-specification.md) (SDS), particularly with respect making the vocabulary metadata available in machine-readable form in accordance with Section 4.5.4 of the specification.
 
-Currently, there is a single experimental vocabulary that would serve as a controlled vocabulary for analogues of the Darwin Core term occurrenceStatus.  The URIs defined in the vocabulary would serve as values for the term dwciri:occurrenceStatus and verbatum string values could be values for the term dwc:occurrenceStatus.  See the [Darwin Core RDF Guide, Section 2.5](http://rs.tdwg.org/dwc/terms/guides/rdf/index.htm#2.5_Terms_in_the_dwciri:_namespace) for more about the distinction between dwc: and dwciri: terms.
+Currently, the triplestore contains a single experimental vocabulary that would serve as a controlled vocabulary for analogues of the Darwin Core term occurrenceStatus.  The URIs defined in the vocabulary would serve as values for the term dwciri:occurrenceStatus and verbatum string values could be values for the term dwc:occurrenceStatus.  See the [Darwin Core RDF Guide, Section 2.5](http://rs.tdwg.org/dwc/terms/guides/rdf/index.htm#2.5_Terms_in_the_dwciri:_namespace) for more about the distinction between dwc: and dwciri: terms.
 
 The data in this graph are part of an effort to demonstrate how the machine-readable metadata can be generated, managed, and exposed for use by the biodiversity informatics community.  
 
@@ -27,11 +27,11 @@ The controlled vocabulary is a small SKOS concept scheme containing nine concept
 - presence uncertain
 - absent
 
-"extinct post 1500" has the broader concept extinct.
+The lower level concept "extinct post 1500" has the broader concept "extinct".
 
 There are two "housekeeping concepts" that would not normally be assigned as a status by providers, but that might be assigned by aggregators, or after a data-cleaning operation:
 - no value given (where a record did not include a value)
-- inappropriate (where a record includes a value inappropriate for the occurrenceStatus term)
+- inappropriate (where a record includes a value inappropriate for the occurrenceStatus property)
 
 
 
@@ -45,13 +45,13 @@ Some entity that represents a taxon in some geographic area is linked to one of 
 
 Each term in the controlled vocabulary (i.e. concept in the concept scheme) has a number of literal-value properties associated with it.  
 
-Within the vocabulary standard itself, the term will have an English language-tagged label linked by both rdfs:label and skos:prefLabel.  It will have an English language-tagged normative definition linked by both rdfs:comment and skos:definition.  It will also have a preferred string value that may be used in spreadsheets as the value of dwc:occurrenceStatus.  This string value is linked to the term by rdf:value.  These properties are managed in accordance with the TDWG [Vocabulary Maintenance Specification](https://github.com/tdwg/vocab/blob/master/vms/maintenance-specification.md) (VMS).
+Within the vocabulary standard itself, the term will have an English language-tagged label linked by both rdfs:label and skos:prefLabel.  It will have an English language-tagged normative definition linked by both rdfs:comment and skos:definition.  It will also have a preferred string value that may be used in spreadsheets as the value of dwc:occurrenceStatus.  This string value is linked to the term by rdf:value.  These properties will be managed in accordance with the TDWG [Vocabulary Maintenance Specification](https://github.com/tdwg/vocab/blob/master/vms/maintenance-specification.md) (VMS).
 
 Documented separately from the vocabulary standard, the term will have any number of translations in non-English languages. It is NOT required that these translations be managed in accordance with the VMS.  The translations consist of a label in the target language linked by skos:prefLabel and a definition in the target language linked by skos:definition.
 
 A third data source links each controlled vocabulary term with all string values that are known to have been used to represent that concept.  Those values may be verbatim values of dwc:occurrenceStatus that have been determined to correspond to the controlled vocabulary term during data cleaning operations.  These non-preferred string values are linked to the term by skos:hiddenLabel.  
 
-See [this blog post](http://baskauf.blogspot.com/2017/05/using-tdwg-standards-documentation.html) for more about this management strategy.
+The three data sources can be maintained separately under different management regimes.  As each source is updated, it would be loaded into the triplestore so that the most up-to-date merged dataset would always be available.  See [this blog post](http://baskauf.blogspot.com/2017/05/using-tdwg-standards-documentation.html) for more about this management strategy.
 
 **CURIEs (namespaces) used:**
 ```
