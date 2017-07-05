@@ -129,7 +129,7 @@ You can test this query by pasting it into the box at https://sparql.vanderbilt.
 
 ### API call to retrieve all known "dirty" string values for all terms
 
-Using a [URL Encoder](https://meyerweb.com/eric/tools/dencoder/), to encode the query, here is the GET URI necessary to retrieve the data:
+Using a [URL Encoder](https://meyerweb.com/eric/tools/dencoder/) to encode the query, here is the GET URI necessary to retrieve the data:
 ```
 https://sparql.vanderbilt.edu/sparql?query=PREFIX%20skos%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20DISTINCT%20%3Fterm%20%3Fvalue%20where%20%7B%0A%3Fterm%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23isDefinedBy%3E%20%3Chttp%3A%2F%2Frs.tdwg.org%2Fcv%2Fstatus%2F%3E.%0A%7B%3Fterm%20skos%3AprefLabel%20%3FlangLabel.FILTER%20(str(%3FlangLabel)%20%3D%20%3Fvalue)%7D%0AUNION%0A%7B%3Fterm%20skos%3AhiddenLabel%20%3Fvalue.%20%7D%0AUNION%0A%7B%3Fterm%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23value%3E%20%3Fvalue.%20%7D%0A%7D
 ```
