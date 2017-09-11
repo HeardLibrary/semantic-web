@@ -1,0 +1,8 @@
+header,predicate,type,value,attribute,subject_id
+creator,dcterms:creator,iri,,,$root
+articleTitle,rdfs:label,language,,en,$root
+articleTitle,dcterms:title,language,,en,$root
+pubDate,dcterms:date,plain,,,$root
+volume,bibo:volume,plain,,,$root
+startPage,bibo:pageStart,plain,,,$root
+endPage,bibo:pageEnd,plain,,,$root

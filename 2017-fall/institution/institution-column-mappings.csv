@@ -1,0 +1,14 @@
+header,predicate,type,value,attribute,subject_id
+label,rdfs:label,plain,,,$root
+type,rdf:type,iri,http://www.grid.ac/ontology/,,$root
+establishedYear,grid:establishedYear,datatype,,xsd:gYear,$root
+hasWikidataId,grid:hasWikidataId,iri,,,$root
+wikipediaPage,grid:wikipediaPage,iri,,,$root
+altLabel,skos:altLabel,plain,,,$root
+homepage,foaf:homepage,iri,,,$root
+cityName,grid:cityName,plain,,,$root
+countryCode,grid:countryCode,plain,,,$root
+countryName,grid:countryName,plain,,,$root
+latitude,geo:lat,datatype,,xsd:float,$root
+longitude,geo:long,datatype,,xsd:float,$root
+geonamesCity,grid:hasGeonamesCity,iri,,,$root
