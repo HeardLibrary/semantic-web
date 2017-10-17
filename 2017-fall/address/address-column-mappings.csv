@@ -1,0 +1,7 @@
+"header","predicate","type","value","attribute","subject_id"
+"DisplayName2","rdfs:label","plain",,,"$root"
+"City","grid:cityName","plain",,,"$root"
+"BeginDate","grid:establishedYear","datatype",,"xsd:gYear","$root"
+"ConstituentID","ex:hasConstituent","iri","http://pic.nypl.org/constituents/",,"$root"
+"State","iptc:ProvinceState","plain",,,"$root"
+"Remarks","geo:lat_long","plain",,,"$root"

@@ -1,0 +1,7 @@
+"header","predicate","type","value","attribute","subject_id"
+"DisplayName","foaf:name","plain",,,"$root"
+"DisplayDate","dcterms:description","plain",,,"$root"
+"DisplayName","rdfs:label","plain",,,"$root"
+"TextEntry","rdfs:comment","language",,"en","$root"
+"BeginDate","gvp:estStart","datatype",,"xsd:gYear","$root"
+"EndDate","gvp:estEnd","datatype",,"xsd:gYear","$root"
