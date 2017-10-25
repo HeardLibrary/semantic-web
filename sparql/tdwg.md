@@ -24,8 +24,11 @@ The raw metadata used to generate the graph is located at https://github.com/tdw
 
 ![graph model for TDWG standards components](media/tdwg-standard-graph-model.png)
 
-Some  
+The basic graph model for TDWG standards components is hierarchical.
 
+![version model for TDWG standards components](media/tdwg-version-graph-model.png)
+
+Each resource has one or more versions that capture the state of that resource at a particular moment in time. Versions generally have the same properties of the resources that they are versions of, except that they have dcterms:issued dates rather than dcterms:created and dcterms:modified dates.
 
 **CURIEs (namespaces) used:**
 ```
