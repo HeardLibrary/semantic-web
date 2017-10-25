@@ -20,16 +20,11 @@ There are currently about 31 000 triples in the graph.
 The raw metadata used to generate the graph is located at https://github.com/tdwg/rs.tdwg.org.  A general description of the metadata model and patterns used for IRIs that identify resources are described in [that repo's README](https://github.com/tdwg/rs.tdwg.org/blob/master/README.md).
 
 
-
-# Beyond this point is under construction and contains irrelevant information that is being used as a template.
-
-
 **Graph model:**
 
-![concept scheme graph](media/cv-graph.png)
+![graph model for TDWG standards components](media/tdwg-standard-graph-model.png)
 
 Some  
-
 
 
 **CURIEs (namespaces) used:**
@@ -44,6 +39,9 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX vann: <http://purl.org/vocab/vann/>
 PREFIX tdwgutility: <http://rs.tdwg.org/dwc/terms/attributes/>
 ```
+# Beyond this point is under construction and contains irrelevant information that is being used as a template.
+
+
 **Sample queries:**
 
 List the terms in the controlled vocabulary and give their label and definition in Spanish.  To retrieve labels and definitions in other languages, replace 'es' with 'pt', 'en', 'zh-hans', 'zh-hant', or 'de'.  (A web application that uses a variant of this query to make a multilingual pick list is [here](http://bioimages.vanderbilt.edu/pick-list.html?de) and is described [here](http://baskauf.blogspot.com/2017/05/using-tdwg-standards-documentation.html).)
