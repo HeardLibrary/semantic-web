@@ -17,7 +17,7 @@ The [Standards Documentation Specification](https://github.com/tdwg/vocab/blob/m
 
 There are currently about 31 000 triples in the graph.  
 
-The raw metadata used to generate the graph is located at https://github.com/tdwg/rs.tdwg.org.  A general description of the metadata model and patterns used for IRIs that identify resources are described [here](https://github.com/tdwg/rs.tdwg.org/blob/master/README.md).
+The raw metadata used to generate the graph is located at https://github.com/tdwg/rs.tdwg.org.  A general description of the metadata model and patterns used for IRIs that identify resources are described in [that repo's README](https://github.com/tdwg/rs.tdwg.org/blob/master/README.md).
 
 
 
@@ -28,7 +28,7 @@ The raw metadata used to generate the graph is located at https://github.com/tdw
 
 ![concept scheme graph](media/cv-graph.png)
 
-Some entity that represents a taxon in some geographic area is linked to one of the terms in the controlled vocabulary (i.e. one of the concepts) via a dwciri:occurrenceStatus link.  The link could be directly to one of the top concepts in the scheme, or (as shown here) to the one narrow concept in the scheme.  In that case, it would be implied (but not entailed) that the entity is also linked to the concept that is broader than the narrow concept.  
+Some  
 
 
 
@@ -36,11 +36,13 @@ Some entity that represents a taxon in some geographic area is linked to one of 
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX vann: <http://purl.org/vocab/vann/>
-PREFIX cvstatus: <http://rs.tdwg.org/cv/status/>
+PREFIX tdwgutility: <http://rs.tdwg.org/dwc/terms/attributes/>
 ```
 **Sample queries:**
 
