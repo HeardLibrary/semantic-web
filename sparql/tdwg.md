@@ -15,10 +15,30 @@ The [Standards Documentation Specification](https://github.com/tdwg/vocab/blob/m
 
 ### TDWG standards metadata graph http://rs.tdwg.org/
 
-There are currently about 31 000 triples in the graph.  
+There are about 22 000 triples in the graph.  It includes metadata about present and past standards of TDWG, including those that are deprecated.  It does not include pre-standard vocabularies or ancillary metada (described below).
 
 The raw metadata used to generate the graph is located at https://github.com/tdwg/rs.tdwg.org.  A general description of the metadata model and patterns used for IRIs that identify resources are described in [that repo's README](https://github.com/tdwg/rs.tdwg.org/blob/master/README.md).
 
+The following raw metadata sources are used to generate this graph:
+- ac-borrowed
+- audubon
+- audubon-versions
+- dc-for-dwc
+- dc-for-dwc-versions
+- dcterms-for-dwc
+- dcterms-for-dwc-versions
+- dwctype
+- dwctype-versions
+- iri
+- iri-versions
+- standards
+- standards-versions
+- term-lists
+- term-lists-versions
+- terms
+- terms-versions
+- vocabularies
+- vocabularies-versions
 
 **Graph model:**
 
@@ -45,9 +65,29 @@ PREFIX vann: <http://purl.org/vocab/vann/>
 PREFIX tdwgutility: <http://rs.tdwg.org/dwc/terms/attributes/>
 ```
 
+### Obsolete metadata graph http://tdwg.org/obsolete
+
+There are about 7000 triples in the graph.  This graph includes metadata about resources that were never part of any standard, but that might be of historical interest.  For example, pre-standard versions of Darwin Core are included here.  The structure and properties of these metadata are generally the same as described for the http://rs.tdwg.org/ graph.
+
+The following raw metadata sources from https://github.com/tdwg/rs.tdwg.org are used to generate this graph:
+- curatorial
+- curatorial-versions
+- dwc-obsolete
+- dwc-obsolete-versions
+- dwcore
+- dwcore-versions
+- geospatial
+- geospatial-versions
+
 ### Ancillary metadata graph http://tdwg.org/ancillary
 
-In order to segregate metadata about resources that are part of TDWG standards from ancillary metadata that make assertions about those resources but are NOT part of any standard, the ancillary metadata is included in a separate graph.
+There are about 2700 triples in the graph.  In order to segregate metadata about resources that are part of TDWG standards from ancillary metadata that make assertions about those resources but are NOT part of any standard, the ancillary metadata is included in a separate graph.
+
+The following raw metadata sources from https://github.com/tdwg/rs.tdwg.org are used to generate this graph:
+- decisions
+- dwc-translations
+- utility
+- utility-versions
 
 ![ancillary metadata related to a term](media/tdwg-translations.png)
 
@@ -56,9 +96,9 @@ For example, the standards documentation specification recommends that each voca
 Both English and non-English preferred labels can be values of skos:prefLabel, and both English and non-English definitions can be values of skos:definition.  The SKOS specification requires that there be no more than one skos:prefLabel value for each language tag.
 
 
-**Sample queries:**
+## Sample queries:
 
-List currently recommended class terms in the basic Darwin Core vocabulary.  Note that the SPARQL property path * modifier was used to allow any number of isPartOf links.
+List currently recommended class terms in the basic Darwin Core vocabulary.  The default graph is defined to include only the named graph http://rs.tdwg.org/ to prevent possible matches with other metadata in the triplestore that is irrelevant.  Note that the SPARQL property path * modifier was used to allow any number of isPartOf links.
 ```
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -77,7 +117,7 @@ WHERE {
 ORDER BY ASC(?label)
 ```
 
-List the currently recommended terms in the core Darwin Core term list and give their label and definition in Spanish.  To retrieve labels and definitions in simplified Chinese characters, replace 'es' with'zh-hans'.  
+List the currently recommended terms in the core Darwin Core term list and give their label and definition in Spanish.  Notice that the ancillary metadata graph (http://tdwg.org/ancillary) must be included in the default graph with the standards metadata graph (http://rs.tdwg.org/) in order to make the translations available.  To retrieve labels and definitions in simplified Chinese characters, replace 'es' with'zh-hans'.  
 ```
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -91,8 +131,8 @@ WHERE {
   MINUS {?term owl:deprecated "true"^^xsd:boolean.}
   ?term skos:prefLabel ?label.
   ?term skos:definition ?def.
-  FILTER (lang(?label)='zh-hans')
-  FILTER (lang(?def)='zh-hans')
+  FILTER (lang(?label)='es')
+  FILTER (lang(?def)='es')
 }
 ORDER BY ASC(?term)
 ```
