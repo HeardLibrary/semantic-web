@@ -24,11 +24,13 @@ The raw metadata used to generate the graph is located at https://github.com/tdw
 
 ![graph model for TDWG standards components](media/tdwg-standard-graph-model.png)
 
-The basic graph model for TDWG standards components is hierarchical.
+The basic graph model for TDWG standards components is hierarchical.  Each resource is related to resources higher in the hierarchy by dcterms:isPartOf and to resources lower in the hierarchy by dcterms:hasPart.
 
 ![version model for TDWG standards components](media/tdwg-version-graph-model.png)
 
-Each resource has one or more versions that capture the state of that resource at a particular moment in time. Versions generally have the same properties of the resources that they are versions of, except that they have dcterms:issued dates rather than dcterms:created and dcterms:modified dates.
+Each resource has one or more versions that capture the state of that resource at a particular moment in time. Versions generally have the same properties of the resources that they are versions of, except that they have dcterms:issued dates rather than dcterms:created and dcterms:modified dates.  Versions are related to later versions by dcterms:isReplacedBy and to earlier versions by dcterms:replaces.  
+
+The Standards Documentation Specification also differentiates between components as abstract entities and their concrete representations, which may be in various formats or serializations.  However, this has not yet been implemented in the dataset.
 
 **CURIEs (namespaces) used:**
 ```
@@ -42,39 +44,57 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX vann: <http://purl.org/vocab/vann/>
 PREFIX tdwgutility: <http://rs.tdwg.org/dwc/terms/attributes/>
 ```
-# Beyond this point is under construction and contains irrelevant information that is being used as a template.
+
+### Ancillary metadata graph http://tdwg.org/ancillary
+
+In order to segregate metadata about resources that are part of TDWG standards from ancillary metadata that make assertions about those resources but are NOT part of any standard, the ancillary metadata is included in a separate graph.
+
+![ancillary metadata related to a term](media/tdwg-translations.png)
+
+For example, the standards documentation specification recommends that each vocabulary term have a label that is an English language-tagged literal value of rdfs:label and a definition that is an English language-tagged value of rdfs:comment.  Labels and definitions may be provided in other languages, but to simplify their management, those non-English metadata should be asserted outside of the standard itself.  The English and non-English metadata can be combined by merging the TDWG standards metadata graph and the ancillary metadata graph (e.g. by using two FROM clauses in a SPARQL query).
+
+Both English and non-English preferred labels can be values of skos:prefLabel, and both English and non-English definitions can be values of skos:definition.  The SKOS specification requires that there be no more than one skos:prefLabel value for each language tag.
 
 
 **Sample queries:**
 
-List the terms in the controlled vocabulary and give their label and definition in Spanish.  To retrieve labels and definitions in other languages, replace 'es' with 'pt', 'en', 'zh-hans', 'zh-hant', or 'de'.  (A web application that uses a variant of this query to make a multilingual pick list is [here](http://bioimages.vanderbilt.edu/pick-list.html?de) and is described [here](http://baskauf.blogspot.com/2017/05/using-tdwg-standards-documentation.html).)
+List currently recommended class terms in the basic Darwin Core vocabulary.  Note that the SPARQL property path * modifier was used to allow any number of isPartOf links.
 ```
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX cvstatus: <http://rs.tdwg.org/cv/status/>
-SELECT DISTINCT ?term ?label ?def WHERE {
-?term rdfs:isDefinedBy cvstatus:.
-?term skos:prefLabel ?label.
-?term skos:definition ?def.
-FILTER (lang(?label)='es')
-FILTER (lang(?def)='es')
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT ?term ?label ?def
+FROM <http://rs.tdwg.org/>
+WHERE {
+  ?term dcterms:isPartOf* <http://rs.tdwg.org/dwc/>.
+  ?term a rdfs:Class.
+  MINUS {?term owl:deprecated "true"^^xsd:boolean.}
+  ?term rdfs:label ?label.
+  ?term rdfs:comment ?def.
 }
 ORDER BY ASC(?label)
 ```
 
-Determine which controlled vocabulary term has been associated with the string "Común" as a label.  The query checks the normative string values of terms (value of rdf:value), all language tagged preferred labels of terms (values of skos:prefLabel), and all string variants known to have been used with terms (values of skos:hiddenLabel).  (A web application that uses a variant of this query to perform data cleaning is [here](http://bioimages.vanderbilt.edu/clean.html) and is described [here](http://baskauf.blogspot.com/2017/05/using-tdwg-standards-documentation.html).)
+List the currently recommended terms in the core Darwin Core term list and give their label and definition in Spanish.  To retrieve labels and definitions in simplified Chinese characters, replace 'es' with'zh-hans'.  
 ```
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX cvstatus: <http://rs.tdwg.org/cv/status/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-SELECT DISTINCT ?term where {
-?term rdfs:isDefinedBy cvstatus:.
- {?term skos:prefLabel ?langLabel.FILTER (str(?langLabel) = 'Común')}
-UNION
- {?term skos:hiddenLabel 'Común'. }
-UNION
- {?term rdf:value 'Común'. }
+
+SELECT DISTINCT ?term ?label ?def
+FROM <http://rs.tdwg.org/>
+FROM <http://tdwg.org/ancillary>
+WHERE {
+  ?term rdfs:isDefinedBy <http://rs.tdwg.org/dwc/terms/>.
+  MINUS {?term owl:deprecated "true"^^xsd:boolean.}
+  ?term skos:prefLabel ?label.
+  ?term skos:definition ?def.
+  FILTER (lang(?label)='zh-hans')
+  FILTER (lang(?def)='zh-hans')
 }
+ORDER BY ASC(?term)
 ```
 
 ## Using the SPARQL endpoint as an API
@@ -90,6 +110,9 @@ The overall GET URL looks like this:
 ```
 https://sparql.vanderbilt.edu/sparql?query=PREFIX%20rdf%3A%20%3Chttp%3A%2F ...
 ```
+
+# Beyond this point is under construction and contains irrelevant information that is being used as a template.
+
 
 ### Example query to retrieve all known "dirty" string values for all terms.
 
