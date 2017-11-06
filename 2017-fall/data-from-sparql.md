@@ -1,4 +1,6 @@
-# Acquiring Data using SPARQL - 2017-11-06
+# Acquiring Data using SPARQL
+
+Notes for the 2017-11-06 meeting
 
 ##SWWG SPARQL endpoint
 
