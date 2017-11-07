@@ -2,15 +2,17 @@
 
 Notes for the 2017-11-06 meeting
 
-##SWWG SPARQL endpoint
+## SWWG SPARQL endpoint
 
 human form interface: http://sparql.vanderbilt.edu/
 
 machine endpoint URI: http://sparql.vanderbilt.edu/sparql
 
+![](http.png)
+
 ## Download Postman
 
-Download and install Postman, a client for making HTTP requests and retrieving the responses.  It's available for Mac, PC, and Linux.  It used to be a Chrome plugin, but now is a standalone application.  If you've previously used the Chrome plugin, I recommend that you disable it and download the standalone application because it has greater capabilities.  
+Download and install Postman, a client for making HTTP requests and retrieving the responses (see diagram above for the request and response interactions).  It's available for Mac, PC, and Linux.  It used to be a Chrome plugin, but now is a standalone application.  If you've previously used the Chrome plugin, I recommend that you disable it and download the standalone application because it has greater capabilities.  
 
 https://www.getpostman.com/
 
@@ -37,6 +39,8 @@ WHERE {
 ```
 
 It's a minor modification of one we did earlier (https://gist.github.com/baskaufs/56e1b35480fd53757ca41dc138f934a8).  You can try it by pasting it in the human-readable form interface.  It should produce 52 results.
+
+![](sparql-http.png)
 
 ## Making a query using HTTP POST
 
@@ -177,7 +181,92 @@ In the Wikidata human interface, the results are shown in a subject, predicate, 
 
 ### Web page (Javascript/jQuery)
 
-For an example showing how to retrieve data using Javascript/jQuery and use it in a web page, see "Step 6" of http://baskauf.blogspot.com/2017/07/how-and-why-we-set-up-sparql-endpoint.html
+This example uses a very simple query that asks for the preferred label for a controlled vocabulary term:
+
+```
+SELECT DISTINCT ?label WHERE {
+<http://rs.tdwg.org/cv/status/extant> <http://www.w3.org/2004/02/skos/core#prefLabel> ?label.
+}
+```
+The web page is at http://bioimages.vanderbilt.edu/lang-labels.html. The web page calls some JavaScript that makes the query to the endpoint: http://bioimages.vanderbilt.edu/lang-labels.js
+
+The key part of the JavaScript is this:
+
+```
+// does the AJAX to send the HTTP GET to the Vanderbilt SPARQL endpoint
+// then puts the result in the "returnedJson" variable
+$.ajax({
+    type: 'GET',
+    url: 'https://sparql.vanderbilt.edu/sparql?query=' + encoded,
+    headers: {
+  Accept: 'application/sparql-results+json'
+    },
+    success: function(returnedJson) {
+        var value="";
+
+        for (i = 0; i < returnedJson.results.bindings.length; i++) {
+        // Note that dot notation can't be used for the xml:lang key since it can't be a valid Javascript name, so bracket notation is used instead.
+        value = value + "<p>" + returnedJson.results.bindings[i].label["xml:lang"] + " " + returnedJson.results.bindings[i].label.value + "</p>";
+        }
+```
+You can see that the AJAX part of the code does the actual HTTP communication by a GET request with an appropriate Accept: header.  The response JSON feeds into a function that pulls data from it and creates a string to be injected into the HTML as a <p> element.
+
+The JSON that comes back looks like this:
+```
+{
+  "head" : {
+    "vars" : [ "label" ]
+  },
+  "results" : {
+    "bindings" : [ {
+      "label" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "extant"
+      }
+    }, {
+      "label" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "vorhanden "
+      }
+    }, {
+      "label" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "existente"
+      }
+    }, {
+      "label" : {
+        "xml:lang" : "pt",
+        "type" : "literal",
+        "value" : "presente"
+      }
+    }, {
+      "label" : {
+        "xml:lang" : "zh-hans",
+        "type" : "literal",
+        "value" : "现存"
+      }
+    }, {
+      "label" : {
+        "xml:lang" : "zh-hant",
+        "type" : "literal",
+        "value" : "現存"
+      }
+    } ]
+  }
+}
+```
+It is super-simple to refer to a particular value in the JSON using this XPath-like expression:
+```
+returnedJson.results.bindings[i].label.value
+```
+where [i] is one of the array elements for a language variant.
+
+
+For more details, see http://baskauf.blogspot.com/2017/07/how-and-why-we-set-up-sparql-endpoint.html
+
 
 ### XQuery
 
@@ -215,3 +304,49 @@ let $response := local:query-endpoint($endpoint,$query)
 for $result in $response[2]/sparql/results/result
 return ("Name: "||$result/binding[@name="name"]/literal/text()||"  Start date: "||$result/binding[@name="startDate"]/literal/text() )
 ```
+
+The actual HTTP interaction occurs in the local:query-endpoint() function, which sets up the encoded URI, then sends the request using the http:send-request() function.
+
+The response XML looks like this:
+
+```<?xml version='1.0' encoding='UTF-8'?>
+<sparql xmlns='http://www.w3.org/2005/sparql-results#'>
+    <head>
+        <variable name='name'/>
+        <variable name='startDate'/>
+    </head>
+    <results>
+        <result>
+            <binding name='name'>
+                <literal>Gabriel Orozco</literal>
+            </binding>
+            <binding name='startDate'>
+                <literal datatype='http://www.w3.org/2001/XMLSchema#gYear'>1962</literal>
+            </binding>
+        </result>
+        <result>
+            <binding name='name'>
+                <literal>Aimé Dupont</literal>
+            </binding>
+            <binding name='startDate'>
+                <literal datatype='http://www.w3.org/2001/XMLSchema#gYear'>1842</literal>
+            </binding>
+        </result>
+        ...
+        <result>
+            <binding name='name'>
+                <literal>Reginald Marsh</literal>
+            </binding>
+            <binding name='startDate'>
+                <literal datatype='http://www.w3.org/2001/XMLSchema#gYear'>1898</literal>
+            </binding>
+        </result>
+    </results>
+</sparql>
+```
+
+The result data are accessed in the last part of the query using the XPath expression
+```
+$response[2]/sparql/results/result/binding[@name="name"]/literal/text()
+```
+broken into two pieces in order to perform the FOR expression.
