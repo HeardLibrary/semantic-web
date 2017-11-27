@@ -1,0 +1,532 @@
+﻿@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ulan: <http://vocab.getty.edu/ulan/> .
+@prefix gvp: <http://vocab.getty.edu/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix hint: <http://www.bigdata.com/queryHints#> .
+@prefix bd: <http://www.bigdata.com/rdf#> .
+@prefix bds: <http://www.bigdata.com/rdf/search#> .
+
+<http://pic.nypl.org/constituents/1862> rdfs:seeAlso ulan:500036763 ;
+	ex:birth "1850"^^xsd:gYear ;
+	ex:death "1950"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1887> rdfs:seeAlso ulan:500344825 ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "1900"^^xsd:gYear ;
+	rdfs:seeAlso ulan:500127366 ;
+	ex:birth "1937"^^xsd:gYear ;
+	ex:death "2037"^^xsd:gYear ;
+	rdfs:seeAlso ulan:500033931 ;
+	ex:birth "1926"^^xsd:gYear ;
+	ex:death "1976"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1899> rdfs:seeAlso ulan:500007393 ;
+	ex:birth "1871"^^xsd:gYear ;
+	ex:death "1942"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2080"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2046> rdfs:seeAlso ulan:500346252 ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2080"^^xsd:gYear ;
+	ex:birth "1925"^^xsd:gYear ;
+	ex:death "2045"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2050> rdfs:seeAlso ulan:500037065 ;
+	ex:birth "1906"^^xsd:gYear ;
+	ex:death "1986"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2059> rdfs:seeAlso ulan:500003133 ;
+	ex:birth "1890"^^xsd:gYear ;
+	ex:death "1976"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2104> rdfs:seeAlso ulan:500019907 ;
+	ex:birth "1894"^^xsd:gYear ;
+	ex:death "1985"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2161> rdfs:seeAlso ulan:500004009 ;
+	ex:birth "1944"^^xsd:gYear ;
+	ex:death "2040"^^xsd:gYear ;
+	ex:birth "1850"^^xsd:gYear ;
+	ex:death "2080"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2176> rdfs:seeAlso ulan:500098536 ;
+	ex:birth "1948"^^xsd:gYear ;
+	ex:death "2068"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2181> rdfs:seeAlso ulan:500005043 ;
+	ex:birth "1951"^^xsd:gYear ;
+	ex:death "2105"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2186> rdfs:seeAlso ulan:500118750 ;
+	ex:birth "1949"^^xsd:gYear ;
+	ex:death "2049"^^xsd:gYear , "2069"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2050"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2229> rdfs:seeAlso ulan:500015030 ;
+	ex:birth "1890"^^xsd:gYear ;
+	ex:death "1976"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "0001"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2383> rdfs:seeAlso ulan:500333134 ;
+	ex:birth "1820"^^xsd:gYear ;
+	ex:death "1881"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2514> rdfs:seeAlso ulan:500341441 ;
+	ex:birth "1907"^^xsd:gYear ;
+	ex:death "1990"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2572> rdfs:seeAlso ulan:500026469 ;
+	ex:birth "1760"^^xsd:gYear ;
+	ex:death "1860"^^xsd:gYear ;
+	ex:birth "1770"^^xsd:gYear ;
+	ex:death "1920"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1162> rdfs:seeAlso ulan:500114732 ;
+	ex:birth "1963"^^xsd:gYear ;
+	ex:death "2113"^^xsd:gYear ;
+	ex:birth "1962"^^xsd:gYear ;
+	ex:death "2062"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear , "2080"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/145> rdfs:seeAlso ulan:500047276 ;
+	ex:birth "1950"^^xsd:gYear ;
+	ex:death "2090"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2050"^^xsd:gYear , "2070"^^xsd:gYear , "2080"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1663> rdfs:seeAlso ulan:500027268 ;
+	ex:birth "1821"^^xsd:gYear ;
+	ex:death "1896"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1675> rdfs:seeAlso ulan:500345078 ;
+	ex:birth "1920"^^xsd:gYear ;
+	ex:death "2080"^^xsd:gYear ;
+	rdfs:seeAlso ulan:500022474 ;
+	ex:birth "1928"^^xsd:gYear ;
+	ex:death "2028"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1707> rdfs:seeAlso ulan:500008182 ;
+	ex:birth "1822"^^xsd:gYear ;
+	ex:death "1908"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1709> rdfs:seeAlso ulan:500040747 ;
+	ex:birth "1832"^^xsd:gYear ;
+	ex:death "1911"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1724> rdfs:seeAlso ulan:500118846 ;
+	ex:birth "1808"^^xsd:gYear ;
+	ex:death "1888"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1771> rdfs:seeAlso ulan:500400719 ;
+	ex:birth "0001"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	rdfs:seeAlso ulan:500003752 ;
+	ex:birth "1823"^^xsd:gYear ;
+	ex:death "1892"^^xsd:gYear ;
+	ex:birth "1830"^^xsd:gYear ;
+	rdfs:seeAlso ulan:500041859 ;
+	ex:birth "1770"^^xsd:gYear ;
+	ex:death "1900"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1798> rdfs:seeAlso ulan:500036574 ;
+	ex:birth "1914"^^xsd:gYear ;
+	ex:death "2090"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1941> rdfs:seeAlso ulan:500059803 ;
+	ex:birth "1913"^^xsd:gYear ;
+	ex:death "2009"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1962> rdfs:seeAlso ulan:500330914 ;
+	ex:birth "1926"^^xsd:gYear ;
+	ex:death "1997"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1983> rdfs:seeAlso ulan:500000431 ;
+	ex:birth "1879"^^xsd:gYear ;
+	ex:death "1973"^^xsd:gYear ;
+	ex:birth "0001"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2004> rdfs:seeAlso ulan:500061092 ;
+	ex:birth "1886"^^xsd:gYear ;
+	ex:death "1974"^^xsd:gYear ;
+	ex:birth "1850"^^xsd:gYear ;
+	ex:death "2080"^^xsd:gYear ;
+	rdfs:seeAlso ulan:500341061 ;
+	ex:birth "1922"^^xsd:gYear ;
+	ex:death "2042"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2039> rdfs:seeAlso ulan:500089775 ;
+	ex:birth "1940"^^xsd:gYear ;
+	ex:death "2040"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2080"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2043> rdfs:seeAlso ulan:500000194 ;
+	ex:birth "1908"^^xsd:gYear ;
+	ex:death "1976"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2080"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2079> rdfs:seeAlso ulan:500095793 ;
+	ex:birth "1919"^^xsd:gYear ;
+	ex:death "2009"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2103> rdfs:seeAlso ulan:500101880 ;
+	ex:birth "1921"^^xsd:gYear ;
+	ex:death "1986"^^xsd:gYear , "2021"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2106> rdfs:seeAlso ulan:500116818 ;
+	ex:birth "1923"^^xsd:gYear ;
+	ex:death "2002"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2108> rdfs:seeAlso ulan:500032481 ;
+	ex:birth "1886"^^xsd:gYear ;
+	ex:death "1983"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2157> rdfs:seeAlso ulan:500014550 ;
+	ex:birth "1928"^^xsd:gYear ;
+	ex:death "1984"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2171> rdfs:seeAlso ulan:500333556 ;
+	ex:birth "1918"^^xsd:gYear ;
+	ex:death "2005"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2173> rdfs:seeAlso ulan:500118716 ;
+	ex:birth "1945"^^xsd:gYear ;
+	ex:death "2045"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2080"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2179> rdfs:seeAlso ulan:500059149 ;
+	ex:birth "1953"^^xsd:gYear ;
+	ex:death "2090"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "1950"^^xsd:gYear ;
+	ex:death "2050"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2070"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2182> rdfs:seeAlso ulan:500020019 ;
+	ex:birth "1939"^^xsd:gYear ;
+	ex:death "2039"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear , "2059"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2331> rdfs:seeAlso ulan:500126201 ;
+	ex:birth "1823"^^xsd:gYear ;
+	ex:death "1896"^^xsd:gYear ;
+	ex:birth "1813"^^xsd:gYear , "1821"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2335> rdfs:seeAlso ulan:500019234 ;
+	ex:birth "1824"^^xsd:gYear ;
+	ex:death "1903"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2424> rdfs:seeAlso ulan:500337324 ;
+	ex:birth "1911"^^xsd:gYear ;
+	ex:death "2011"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2486> rdfs:seeAlso ulan:500032312 ;
+	ex:birth "1899"^^xsd:gYear ;
+	ex:death "1968"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2491> rdfs:seeAlso ulan:500012758 ;
+	ex:birth "1923"^^xsd:gYear ;
+	ex:death "1971"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2499> rdfs:seeAlso ulan:500349703 ;
+	ex:birth "1945"^^xsd:gYear ;
+	ex:death "2065"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2529> rdfs:seeAlso ulan:500344047 ;
+	ex:birth "1921"^^xsd:gYear ;
+	ex:death "1985"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2566> rdfs:seeAlso ulan:500081953 ;
+	ex:birth "1954"^^xsd:gYear ;
+	ex:death "1992"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2050"^^xsd:gYear , "2080"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2597> rdfs:seeAlso ulan:500036523 ;
+	ex:birth "1914"^^xsd:gYear ;
+	ex:death "1975"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/520> rdfs:seeAlso ulan:500023840 ;
+	ex:birth "1900"^^xsd:gYear ;
+	ex:death "1992"^^xsd:gYear , "1990"^^xsd:gYear ;
+	ex:birth "1850"^^xsd:gYear ;
+	ex:death "2080"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1087> rdfs:seeAlso ulan:500023210 ;
+	ex:birth "1889"^^xsd:gYear ;
+	ex:death "1953"^^xsd:gYear ;
+	ex:birth "1893"^^xsd:gYear , "0001"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1202> rdfs:seeAlso ulan:500115429 ;
+	ex:birth "1928"^^xsd:gYear ;
+	ex:death "2048"^^xsd:gYear , "2007"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1362> rdfs:seeAlso ulan:500026528 ;
+	ex:birth "0001"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "1936"^^xsd:gYear ;
+	ex:death "1970"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1390> rdfs:seeAlso ulan:500006031 ;
+	ex:birth "1928"^^xsd:gYear ;
+	ex:death "1987"^^xsd:gYear ;
+	ex:birth "0001"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1420> rdfs:seeAlso ulan:500331961 ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "1930"^^xsd:gYear ;
+	ex:death "2090"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1440> rdfs:seeAlso ulan:500003261 ;
+	ex:birth "1882"^^xsd:gYear ;
+	ex:death "1925"^^xsd:gYear ;
+	ex:birth "0001"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1566> rdfs:seeAlso ulan:500016502 ;
+	ex:birth "1927"^^xsd:gYear ;
+	ex:death "2027"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1661> rdfs:seeAlso ulan:500036911 ;
+	ex:birth "1939"^^xsd:gYear ;
+	ex:death "2039"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1669> rdfs:seeAlso ulan:500020631 ;
+	ex:birth "1898"^^xsd:gYear ;
+	ex:death "1991"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1682> rdfs:seeAlso ulan:500033210 ;
+	ex:birth "1922"^^xsd:gYear ;
+	ex:death "1998"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2080"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1686> rdfs:seeAlso ulan:500030913 ;
+	ex:birth "1843"^^xsd:gYear ;
+	ex:death "1942"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2576> rdfs:seeAlso ulan:500115196 ;
+	ex:birth "1821"^^xsd:gYear ;
+	ex:death "1882"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2598> rdfs:seeAlso ulan:500074048 ;
+	ex:birth "1919"^^xsd:gYear ;
+	ex:death "2019"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2678> rdfs:seeAlso ulan:500086093 ;
+	ex:birth "1855"^^xsd:gYear ;
+	ex:death "1955"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1830> rdfs:seeAlso ulan:500037132 ;
+	ex:birth "1944"^^xsd:gYear ;
+	ex:death "2090"^^xsd:gYear , "2064"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/264> rdfs:seeAlso ulan:500331558 ;
+	ex:birth "1947"^^xsd:gYear ;
+	ex:death "2067"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2050"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/377> rdfs:seeAlso ulan:500072149 ;
+	ex:birth "1941"^^xsd:gYear ;
+	ex:death "2011"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/660> rdfs:seeAlso ulan:500031023 ;
+	ex:birth "1940"^^xsd:gYear ;
+	ex:death "2040"^^xsd:gYear , "2060"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/79> rdfs:seeAlso ulan:500024467 ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "1948"^^xsd:gYear ;
+	ex:death "2048"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2050"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1929> rdfs:seeAlso ulan:500012076 ;
+	ex:birth "1903"^^xsd:gYear ;
+	ex:death "1975"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1971> rdfs:seeAlso ulan:500007674 ;
+	ex:birth "1895"^^xsd:gYear ;
+	ex:death "1965"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2005> rdfs:seeAlso ulan:500012210 ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2080"^^xsd:gYear ;
+	ex:birth "1922"^^xsd:gYear ;
+	ex:death "2009"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2014> rdfs:seeAlso ulan:500083984 ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "1940"^^xsd:gYear ;
+	ex:death "2060"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2045> rdfs:seeAlso ulan:500002522 ;
+	ex:birth "1910"^^xsd:gYear ;
+	ex:death "1990"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2087> rdfs:seeAlso ulan:500014771 ;
+	ex:birth "1909"^^xsd:gYear ;
+	ex:death "1993"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2107> rdfs:seeAlso ulan:500103337 ;
+	ex:birth "1941"^^xsd:gYear ;
+	ex:death "2041"^^xsd:gYear , "2061"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2080"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2148> rdfs:seeAlso ulan:500010929 ;
+	ex:birth "1882"^^xsd:gYear ;
+	ex:death "1966"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2175> rdfs:seeAlso ulan:500090589 ;
+	ex:birth "1956"^^xsd:gYear ;
+	ex:death "2076"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2303> rdfs:seeAlso ulan:500099054 ;
+	ex:birth "1886"^^xsd:gYear ;
+	ex:death "1965"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2387> rdfs:seeAlso ulan:500004924 ;
+	ex:birth "1943"^^xsd:gYear ;
+	ex:death "2090"^^xsd:gYear , "2043"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear , "2063"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2411> rdfs:seeAlso ulan:500333959 ;
+	ex:birth "1900"^^xsd:gYear ;
+	ex:death "2080"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2429> rdfs:seeAlso ulan:500036938 ;
+	ex:birth "1903"^^xsd:gYear ;
+	ex:death "1986"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2511> rdfs:seeAlso ulan:500102414 ;
+	ex:birth "1929"^^xsd:gYear ;
+	ex:death "2029"^^xsd:gYear ;
+	ex:birth "1934"^^xsd:gYear ;
+	ex:death "2084"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/2562> rdfs:seeAlso ulan:500334880 ;
+	ex:birth "1915"^^xsd:gYear ;
+	ex:death "1989"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1690> rdfs:seeAlso ulan:500119469 ;
+	ex:birth "1871"^^xsd:gYear ;
+	ex:death "2030"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1718> rdfs:seeAlso ulan:500036759 ;
+	ex:birth "1894"^^xsd:gYear ;
+	ex:death "1983"^^xsd:gYear , "1982"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1726> rdfs:seeAlso ulan:500013773 ;
+	ex:birth "1923"^^xsd:gYear ;
+	ex:death "2004"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1736> rdfs:seeAlso ulan:500037199 ;
+	ex:birth "1844"^^xsd:gYear ;
+	ex:death "1919"^^xsd:gYear , "1964"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1745> rdfs:seeAlso ulan:500356922 ;
+	ex:birth "1956"^^xsd:gYear ;
+	ex:death "2015"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1762> rdfs:seeAlso ulan:500024301 ;
+	ex:birth "1864"^^xsd:gYear ;
+	ex:death "1946"^^xsd:gYear ;
+	ex:birth "1800"^^xsd:gYear ;
+	ex:death "2100"^^xsd:gYear ;
+	ex:birth "1500"^^xsd:gYear ;
+	ex:death "2050"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1790> rdfs:seeAlso ulan:500063714 ;
+	ex:birth "1770"^^xsd:gYear ;
+	ex:death "1930"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1804> rdfs:seeAlso ulan:500115335 ;
+	ex:birth "1945"^^xsd:gYear ;
+	ex:death "1998"^^xsd:gYear ;
+	ex:birth "1944"^^xsd:gYear ;
+	ex:death "2064"^^xsd:gYear .
+
+<http://pic.nypl.org/constituents/1808> rdfs:seeAlso ulan:500036861 ;
+	ex:birth "1949"^^xsd:gYear ;
+	ex:death "2090"^^xsd:gYear , "2069"^^xsd:gYear .
