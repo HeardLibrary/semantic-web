@@ -1,4 +1,4 @@
-# Semantic Web Working Group - fall 2017
+# Semantic Web Working Group - spring 2018
 
 Links for 2018-01-15 meeting:
 
