@@ -7,7 +7,7 @@
 ```
 https://pub.orcid.org/v2.0/search/?q=affiliation-org-name:"Vanderbilt+University"
 ```
-Note 2018-01-22: see https://members.orcid.org/api/tutorial/search-orcid-registry for information about paging to get results beyond 100.  See https://github.com/HeardLibrary/semantic-web/blob/master/2017-fall/data-from-sparql.md#xquery for an example of sending an HTTP request using XQuery - hacking this would probably be the easiest way to get the IDs from all 200+ Vanderbilt people.
+Note 2018-01-22: see https://members.orcid.org/api/tutorial/search-orcid-registry for information about paging to get results beyond 100.  See https://github.com/HeardLibrary/semantic-web/blob/master/2017-fall/data-from-sparql.md#xquery for an example of sending an HTTP request using XQuery - hacking this would probably be the easiest way to get the IDs from all 2000+ Vanderbilt people.
 
 2\. Retrieve RDF data from orcid.org using orcid-get.py program.
 
