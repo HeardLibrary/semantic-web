@@ -3,9 +3,10 @@ declare namespace common="http://www.orcid.org/ns/common";
 
 declare function local:query-endpoint($endpoint,$query)
 {
-(: Assumes default response is XML, if not then figure out how to send an Accept request header :)
+(: Default response is XML, Accept header can be specified explicitly as below.  Use "application/json" for JSON. :)
+let $acceptType := "application/xml"
 let $encoded := $endpoint||"?"||$query
-let $request := <http:request href='{$encoded}' method='get'/>
+let $request := <http:request href='{$encoded}' method='get'><http:header name='Accept' value='{$acceptType}'/></http:request>
 return
   http:send-request($request)
 };
@@ -28,6 +29,6 @@ let $numberOfResults := number(data($response[2]/search:search/@num-found))
 let $pages := ($numberOfResults idiv 100) (: pages are sets of 100 results :)
 
 (: retrieve ORCID IDs one hundred at a time :)
-for $page in (0 to $pages)
+for $page in (0 to $pages)  (: for testing, replace $pages with 0 to get only the first 100 pages :)
   let $start := string(($page * 100) + 1)
   return local:get-hundred($start)
