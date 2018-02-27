@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3/org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix : <https://rawgit.com/HeardLibrary/semantic-web/master/adhoc#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+
+<https://rawgit.com/HeardLibrary/semantic-web/master/adhoc> dc:creator "Steven J. Baskauf";
+                                            dc:description "Ad hoc property terms for the Vanderbilt people project"@en;
+                                            dc:title "Ad hoc terms for Vanderbilt people project";
+                                            dcterms:issued "2018-02-27"^^xsd:date;
+                                            dcterms:modified "2018-02-27"^^xsd:date.
+:status dc:description "The relationship of a person to an institution."@en;
+       rdfs:comment "Values can be 'student' or 'employee'."@en;
+       rdfs:isDefinedBy <https://rawgit.com/HeardLibrary/semantic-web/master/adhoc>;
+       rdfs:label "status"@en;
+       a rdf:Property.
+:identifierSource dc:description "The organization minting the identifier with which a data set is associated."@en;
+       rdfs:comment "Values can be 'orcid' or 'wikidata'."@en;
+       rdfs:isDefinedBy <https://rawgit.com/HeardLibrary/semantic-web/master/adhoc>;
+       rdfs:label "itentifier source"@en;
+       a rdf:Property.
+:employeeStart dc:description "The date an employee started working."@en;
+       rdfs:comment "year, year-month, or full date."@en;
+       rdfs:isDefinedBy <https://rawgit.com/HeardLibrary/semantic-web/master/adhoc>;
+       rdfs:label "employee start date"@en;
+       a rdf:Property.
+:employeeEnd dc:description "The date an employee stopped working."@en;
+       rdfs:comment "year, year-month, or full date."@en;
+       rdfs:isDefinedBy <https://rawgit.com/HeardLibrary/semantic-web/master/adhoc>;
+       rdfs:label "employee end date"@en;
+       a rdf:Property.
+:studentStart dc:description "The date a student started studying at the school."@en;
+       rdfs:comment "year, year-month, or full date."@en;
+       rdfs:isDefinedBy <https://rawgit.com/HeardLibrary/semantic-web/master/adhoc>;
+       rdfs:label "student start date"@en;
+       a rdf:Property.
+:studentEnd dc:description "The date a student stopped studying at the school."@en;
+       rdfs:comment "year, year-month, or full date."@en;
+       rdfs:isDefinedBy <https://rawgit.com/HeardLibrary/semantic-web/master/adhoc>;
+       rdfs:label "student end date"@en;
+       a rdf:Property.
+<https://rawgit.com/HeardLibrary/semantic-web/master/adhoc.ttl> dc:publisher "Vanderbilt Semantic Web Working Group";
+                                                dc:format "text/turtle"^^dcterms:IMT;
+                                                dc:language "en";
+                                                dcterms:description "Document describing ad hoc terms for Vanderbilt people project"@en;
+                                                dcterms:language <http://id.loc.gov/vocabulary/languages/eng>;
+                                                dcterms:modified "2018-02-27"^^xsd:date;
+                                                dcterms:references <https://rawgit.com/HeardLibrary/semantic-web/master/adhoc>;
+                                                a <http://xmlns.com/foaf/0.1/Document>.
