@@ -12,7 +12,7 @@ declare namespace employment = "http://www.orcid.org/ns/employment";
 declare namespace work = "http://www.orcid.org/ns/work";
 declare namespace rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 declare namespace foaf = "http://xmlns.com/foaf/0.1/";
-declare namespace schema = "http://schema.org";
+declare namespace schema = "http://schema.org/";
 declare namespace dcterms = "http://purl.org/dc/terms/";
 
 declare function local:generate-date($institution as xs:string, $orgType as xs:string, $tag1 as xs:string, $tag2 as xs:string, $dateData as node()*) as node()*
@@ -73,6 +73,8 @@ return (file:write("c:\test\orcid\people.rdf",<rdf:RDF>{
       return 
            element rdf:Description { 
                    attribute rdf:about {$orcidURI},
+                   <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person" />,
+                   <rdf:type rdf:resource="http://schema.org/Person" />,
                    <dcterms:identifier>{$orcidID}</dcterms:identifier>,
                    <adhoc:identifierSource>orcid</adhoc:identifierSource>,
                    <foaf:familyName>{$surname}</foaf:familyName>,
