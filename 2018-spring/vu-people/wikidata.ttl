@@ -1,0 +1,1544 @@
+﻿@prefix adhoc: <https://rawgit.com/HeardLibrary/semantic-web/master/adhoc#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix hint: <http://www.bigdata.com/queryHints#> .
+@prefix bd: <http://www.bigdata.com/rdf#> .
+@prefix bds: <http://www.bigdata.com/rdf/search#> .
+@prefix psn: <http://www.wikidata.org/prop/statement/value-normalized/> .
+@prefix pqn: <http://www.wikidata.org/prop/qualifier/value-normalized/> .
+@prefix prn: <http://www.wikidata.org/prop/reference/value-normalized/> .
+@prefix mwapi: <https://www.mediawiki.org/ontology#API/> .
+@prefix gas: <http://www.bigdata.com/rdf/gas#> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wdtn: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix psv: <http://www.wikidata.org/prop/statement/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix pqv: <http://www.wikidata.org/prop/qualifier/value/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix wdno: <http://www.wikidata.org/prop/novalue/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wds: <http://www.wikidata.org/entity/statement/> .
+@prefix wdv: <http://www.wikidata.org/value/> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+@prefix schema: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix geof: <http://www.opengis.net/def/geosparql/function/> .
+@prefix mediawiki: <https://www.mediawiki.org/ontology#> .
+
+wd:Q76807 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Max Delbrück"@en ;
+	foaf:name "Max Delbrück"@en ;
+	foaf:givenName wd:Q16422172 ;
+	schema:givenName wd:Q16422172 ;
+	foaf:familyName wd:Q47516310 ;
+	schema:familyName wd:Q47516310 ;
+	foaf:name "Max Ludwig Henning Delbrück"@en ;
+	dcterms:identifier wd:Q76807 .
+
+wd:Q68118 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Earl Wilbur Sutherland Jr."@en ;
+	foaf:name "Earl Wilbur Sutherland Jr."@en ;
+	foaf:givenName wd:Q8933847 ;
+	schema:givenName wd:Q8933847 ;
+	foaf:name "Earl Wilbur Sutherland"@en ;
+	dcterms:identifier wd:Q68118 .
+
+wd:Q16030377 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Milton W. Humphreys"@en ;
+	foaf:name "Milton W. Humphreys"@en ;
+	foaf:givenName wd:Q16290730 ;
+	schema:givenName wd:Q16290730 ;
+	foaf:name "Milton Wylie Humphreys"@en ;
+	dcterms:identifier wd:Q16030377 .
+
+wd:Q15994214 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Eugene Biel-Bienne"@en ;
+	foaf:name "Eugene Biel-Bienne"@en ;
+	foaf:givenName wd:Q545971 ;
+	schema:givenName wd:Q545971 ;
+	foaf:name "Egon Vitalis Biel"@en ;
+	dcterms:identifier wd:Q15994214 ;
+	foaf:name "Eugene Biel"@en , "Eugene V. Biel-Bienne"@en , "Eugene Vitalis Biel-Bienne"@en , "Eugéne Vitalis Biel-Bienne"@en .
+
+wd:Q38099106 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Clifford B. Anderson"@en ;
+	foaf:name "Clifford B. Anderson"@en ;
+	foaf:givenName wd:Q16542374 ;
+	schema:givenName wd:Q16542374 ;
+	foaf:familyName wd:Q1848748 ;
+	schema:familyName wd:Q1848748 ;
+	foaf:name "Clifford Blake Anderson"@en ;
+	dcterms:identifier wd:Q38099106 ;
+	owl:sameAs "0000-0003-0328-0792" ;
+	rdfs:label "Clifford B. Anderson"@en-ca ;
+	foaf:name "Clifford B. Anderson"@en-ca , "Cliff Anderson"@en ;
+	rdfs:label "Clifford B. Anderson"@en-gb ;
+	foaf:name "Clifford B. Anderson"@en-gb .
+
+wd:Q26233900 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "James Henry Stevenson"@en ;
+	foaf:name "James Henry Stevenson"@en ;
+	foaf:givenName wd:Q677191 ;
+	schema:givenName wd:Q677191 ;
+	foaf:familyName wd:Q424325 ;
+	schema:familyName wd:Q424325 ;
+	foaf:name "J. H. Stevenson"@en ;
+	dcterms:identifier wd:Q26233900 .
+
+wd:Q36004273 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Kristopher J. Preacher"@en ;
+	foaf:name "Kristopher J. Preacher"@en , "Kristopher J Preacher"@en ;
+	dcterms:identifier wd:Q36004273 ;
+	owl:sameAs "0000-0003-4099-3636" .
+
+wd:Q31112 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Bill Frist"@en ;
+	foaf:name "Bill Frist"@en ;
+	foaf:givenName wd:Q18245781 ;
+	schema:givenName wd:Q18245781 ;
+	foaf:name "William Harrison \"Bill\" Frist, Sr."@en ;
+	dcterms:identifier wd:Q31112 ;
+	foaf:name "William Harrison Frist"@en .
+
+wd:Q26233900 foaf:givenName wd:Q1158477 ;
+	schema:givenName wd:Q1158477 .
+
+wd:Q16211927 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Cindy Griffin"@en ;
+	foaf:name "Cindy Griffin"@en ;
+	foaf:givenName wd:Q16275207 ;
+	schema:givenName wd:Q16275207 ;
+	foaf:name "Cindy Anderson"@en ;
+	dcterms:identifier wd:Q16211927 .
+
+wd:Q38099106 foaf:givenName wd:Q19803497 ;
+	schema:givenName wd:Q19803497 .
+
+wd:Q16902110 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Ellen Wright Clayton"@en ;
+	foaf:name "Ellen Wright Clayton"@en ;
+	foaf:givenName wd:Q2235472 ;
+	schema:givenName wd:Q2235472 ;
+	foaf:name "Ellen W Clayton"@en ;
+	dcterms:identifier wd:Q16902110 ;
+	foaf:name "Ellen W. Clayton"@en .
+
+wd:Q3710509 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Daoxing Xia"@en ;
+	foaf:name "Daoxing Xia"@en , "Hsia Tao-hsing"@en ;
+	dcterms:identifier wd:Q3710509 ;
+	foaf:name "Xia Daoxing"@en .
+
+wd:Q6389929 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Kenneth C. Catania"@en ;
+	foaf:name "Kenneth C. Catania"@en ;
+	foaf:givenName wd:Q2492643 ;
+	schema:givenName wd:Q2492643 ;
+	foaf:name "Catania"@en ;
+	dcterms:identifier wd:Q6389929 .
+
+wd:Q5543581 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "George Pullen Jackson"@en ;
+	foaf:name "George Pullen Jackson"@en ;
+	foaf:givenName wd:Q15921732 ;
+	schema:givenName wd:Q15921732 ;
+	foaf:name "George Jackson"@en ;
+	dcterms:identifier wd:Q5543581 .
+
+wd:Q4758596 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Andrew Sledd"@en ;
+	foaf:name "Andrew Sledd"@en ;
+	foaf:givenName wd:Q18042461 ;
+	schema:givenName wd:Q18042461 ;
+	foaf:name "Andrew W. Sledd"@en ;
+	dcterms:identifier wd:Q4758596 ;
+	foaf:name "Andrew Warren Sledd"@en .
+
+wd:Q5916340 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Houston A. Baker, Jr."@en ;
+	foaf:name "Houston A. Baker, Jr."@en , "Houston Baker"@en ;
+	dcterms:identifier wd:Q5916340 .
+
+wd:Q463307 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Bjarni Jónsson"@en ;
+	foaf:name "Bjarni Jónsson"@en ;
+	foaf:givenName wd:Q879369 ;
+	schema:givenName wd:Q879369 ;
+	foaf:name "Bjarni Jonsson"@en ;
+	dcterms:identifier wd:Q463307 .
+
+wd:Q3386829 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Pierre Colas"@en ;
+	foaf:name "Pierre Colas"@en ;
+	foaf:givenName wd:Q2093070 ;
+	schema:givenName wd:Q2093070 ;
+	foaf:name "Pierre Robert Colas"@en ;
+	dcterms:identifier wd:Q3386829 .
+
+wd:Q714162 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "John Seigenthaler"@en-ca ;
+	foaf:name "John Seigenthaler"@en-ca ;
+	foaf:givenName wd:Q4925477 ;
+	schema:givenName wd:Q4925477 ;
+	foaf:name "John Lawrence Seigenthaler"@en ;
+	dcterms:identifier wd:Q714162 ;
+	rdfs:label "John Seigenthaler"@en-gb ;
+	foaf:name "John Seigenthaler"@en-gb .
+
+wd:Q339030 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Michael Kearney"@en ;
+	foaf:name "Michael Kearney"@en ;
+	foaf:givenName wd:Q4927524 ;
+	schema:givenName wd:Q4927524 ;
+	foaf:name "Michael Kevin Kearney"@en ;
+	dcterms:identifier wd:Q339030 .
+
+wd:Q707736 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Taylor Wang"@en ;
+	foaf:name "Taylor Wang"@en ;
+	foaf:givenName wd:Q3981665 ;
+	schema:givenName wd:Q3981665 ;
+	foaf:familyName wd:Q804943 ;
+	schema:familyName wd:Q804943 ;
+	foaf:name "Taylor G. Wang"@en ;
+	dcterms:identifier wd:Q707736 ;
+	rdfs:label "Taylor Wang"@en-ca ;
+	foaf:name "Taylor Wang"@en-ca .
+
+wd:Q3082238 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Tinsley R. Harrison"@en ;
+	foaf:name "Tinsley R. Harrison"@en , "Tinsley Randolph Harrison"@en ;
+	dcterms:identifier wd:Q3082238 .
+
+wd:Q707736 rdfs:label "Taylor Wang"@en-gb ;
+	foaf:name "Taylor Wang"@en-gb .
+
+wd:Q369638 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Vaughan Jones"@en ;
+	foaf:name "Vaughan Jones"@en ;
+	foaf:familyName wd:Q59853 ;
+	schema:familyName wd:Q59853 ;
+	foaf:name "Sir Vaughan Frederick Randal Jones"@en ;
+	dcterms:identifier wd:Q369638 .
+
+wd:Q714162 rdfs:label "John Seigenthaler"@en ;
+	foaf:name "John Seigenthaler"@en .
+
+wd:Q577160 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Albert Arnold Gore"@en ;
+	foaf:name "Albert Arnold Gore"@en ;
+	foaf:givenName wd:Q577011 ;
+	schema:givenName wd:Q577011 ;
+	foaf:familyName wd:Q12018387 ;
+	schema:familyName wd:Q12018387 ;
+	foaf:name "Al Gore"@en ;
+	dcterms:identifier wd:Q577160 .
+
+wd:Q3218045 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Larry Diamond"@en ;
+	foaf:name "Larry Diamond"@en ;
+	foaf:givenName wd:Q18094568 ;
+	schema:givenName wd:Q18094568 ;
+	foaf:name "Larry Jay Diamond"@en ;
+	dcterms:identifier wd:Q3218045 .
+
+wd:Q577160 foaf:name "Albert A. Gore, Sr."@en , "Albert Arnold  Gore, Sr."@en , "Albert Arnold \"Al\" Gore, Sr."@en , "Albert Gore, Sr."@en .
+
+wd:Q1669642 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Robert M. Miura"@en ;
+	foaf:name "Robert M. Miura"@en ;
+	foaf:givenName wd:Q4927937 ;
+	schema:givenName wd:Q4927937 ;
+	foaf:name "Robert Mitsuro Miura"@en ;
+	dcterms:identifier wd:Q1669642 ;
+	foaf:name "Robert Miura"@en .
+
+wd:Q7372683 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Roy Clyde Clark"@en ;
+	foaf:name "Roy Clyde Clark"@en ;
+	foaf:givenName wd:Q2170752 ;
+	schema:givenName wd:Q2170752 ;
+	dcterms:identifier wd:Q7372683 .
+
+wd:Q14816066 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Marilyn Friedman"@en ;
+	foaf:name "Marilyn Friedman"@en ;
+	foaf:givenName wd:Q14920707 ;
+	schema:givenName wd:Q14920707 ;
+	dcterms:identifier wd:Q14816066 .
+
+wd:Q8013435 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "William James Booth"@en ;
+	foaf:name "William James Booth"@en ;
+	foaf:givenName wd:Q12344159 ;
+	schema:givenName wd:Q12344159 ;
+	dcterms:identifier wd:Q8013435 .
+
+wd:Q8017403 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "William Ray Forrester"@en ;
+	foaf:name "William Ray Forrester"@en ;
+	foaf:givenName wd:Q12344159 ;
+	schema:givenName wd:Q12344159 ;
+	dcterms:identifier wd:Q8017403 .
+
+wd:Q7881751 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Umphrey Lee"@en ;
+	foaf:name "Umphrey Lee"@en ;
+	dcterms:identifier wd:Q7881751 .
+
+wd:Q17421986 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "William J. Vaughn"@en ;
+	foaf:name "William J. Vaughn"@en ;
+	foaf:givenName wd:Q12344159 ;
+	schema:givenName wd:Q12344159 ;
+	dcterms:identifier wd:Q17421986 .
+
+wd:Q16066725 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Jesse Lee Cuninggim"@en ;
+	foaf:name "Jesse Lee Cuninggim"@en ;
+	foaf:givenName wd:Q2227398 ;
+	schema:givenName wd:Q2227398 ;
+	dcterms:identifier wd:Q16066725 .
+
+wd:Q16859091 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Albert Micajah Shipp"@en ;
+	foaf:name "Albert Micajah Shipp"@en ;
+	foaf:givenName wd:Q577011 ;
+	schema:givenName wd:Q577011 ;
+	dcterms:identifier wd:Q16859091 .
+
+wd:Q7375925 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Rubel Shelly"@en ;
+	foaf:name "Rubel Shelly"@en ;
+	dcterms:identifier wd:Q7375925 .
+
+wd:Q16859091 foaf:givenName wd:Q30576225 ;
+	schema:givenName wd:Q30576225 .
+
+wd:Q7648347 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Susan Saegert"@en ;
+	foaf:name "Susan Saegert"@en ;
+	foaf:givenName wd:Q14936243 ;
+	schema:givenName wd:Q14936243 ;
+	dcterms:identifier wd:Q7648347 .
+
+wd:Q16122562 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Fernando Segovia"@en ;
+	foaf:name "Fernando Segovia"@en ;
+	foaf:givenName wd:Q18115751 ;
+	schema:givenName wd:Q18115751 ;
+	dcterms:identifier wd:Q16122562 .
+
+wd:Q13561601 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Kathleen Flake"@en ;
+	foaf:name "Kathleen Flake"@en ;
+	foaf:givenName wd:Q16290387 ;
+	schema:givenName wd:Q16290387 ;
+	dcterms:identifier wd:Q13561601 .
+
+wd:Q15441392 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Jay Clayton"@en ;
+	foaf:name "Jay Clayton"@en ;
+	foaf:givenName wd:Q19817029 ;
+	schema:givenName wd:Q19817029 ;
+	dcterms:identifier wd:Q15441392 .
+
+wd:Q16192669 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Daniel M. Fleetwood"@en ;
+	foaf:name "Daniel M. Fleetwood"@en ;
+	foaf:givenName wd:Q14516546 ;
+	schema:givenName wd:Q14516546 ;
+	dcterms:identifier wd:Q16192669 .
+
+wd:Q14492078 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Michael D. Plummer"@en ;
+	foaf:name "Michael D. Plummer"@en ;
+	foaf:givenName wd:Q4927524 ;
+	schema:givenName wd:Q4927524 ;
+	dcterms:identifier wd:Q14492078 .
+
+wd:Q7822271 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Tony Earley"@en ;
+	foaf:name "Tony Earley"@en ;
+	foaf:givenName wd:Q15238167 ;
+	schema:givenName wd:Q15238167 ;
+	dcterms:identifier wd:Q7822271 .
+
+wd:Q7819022 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Tomlinson Fort, Jr."@en ;
+	foaf:name "Tomlinson Fort, Jr."@en ;
+	dcterms:identifier wd:Q7819022 .
+
+wd:Q20638697 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Barbara Hahn"@en ;
+	foaf:name "Barbara Hahn"@en ;
+	foaf:givenName wd:Q153957 ;
+	schema:givenName wd:Q153957 ;
+	dcterms:identifier wd:Q20638697 .
+
+wd:Q21422619 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "E. Inman Fox"@en ;
+	foaf:name "E. Inman Fox"@en ;
+	foaf:givenName wd:Q278835 ;
+	schema:givenName wd:Q278835 ;
+	dcterms:identifier wd:Q21422619 .
+
+wd:Q40230904 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Carwil Bjork-James"@en ;
+	foaf:name "Carwil Bjork-James"@en ;
+	foaf:givenName wd:Q40254554 ;
+	schema:givenName wd:Q40254554 ;
+	dcterms:identifier wd:Q40230904 ;
+	owl:sameAs "0000-0002-4977-0458" ;
+	rdfs:label "Carwil Bjork-James"@en-ca ;
+	foaf:name "Carwil Bjork-James"@en-ca ;
+	rdfs:label "Carwil Bjork-James"@en-gb ;
+	foaf:name "Carwil Bjork-James"@en-gb .
+
+wd:Q11596 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Charlotte Froese Fischer"@en ;
+	foaf:name "Charlotte Froese Fischer"@en ;
+	foaf:givenName wd:Q264002 ;
+	schema:givenName wd:Q264002 ;
+	foaf:familyName wd:Q11231408 ;
+	schema:familyName wd:Q11231408 ;
+	dcterms:identifier wd:Q11596 ;
+	rdfs:label "Charlotte Froese Fischer"@en-ca ;
+	foaf:name "Charlotte Froese Fischer"@en-ca ;
+	rdfs:label "Charlotte Froese Fischer"@en-gb ;
+	foaf:name "Charlotte Froese Fischer"@en-gb .
+
+wd:Q15999349 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Edwin Mims"@en ;
+	foaf:name "Edwin Mims"@en ;
+	foaf:givenName wd:Q240931 ;
+	schema:givenName wd:Q240931 ;
+	dcterms:identifier wd:Q15999349 .
+
+wd:Q15411064 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Patrick DeLeon"@en ;
+	foaf:name "Patrick DeLeon"@en ;
+	foaf:givenName wd:Q18002623 ;
+	schema:givenName wd:Q18002623 ;
+	dcterms:identifier wd:Q15411064 .
+
+wd:Q16823047 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "John Keith Benton"@en ;
+	foaf:name "John Keith Benton"@en ;
+	foaf:givenName wd:Q4925477 ;
+	schema:givenName wd:Q4925477 ;
+	dcterms:identifier wd:Q16823047 .
+
+wd:Q15485753 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Mitchell A. Seligson"@en ;
+	foaf:name "Mitchell A. Seligson"@en ;
+	foaf:givenName wd:Q3859417 ;
+	schema:givenName wd:Q3859417 ;
+	dcterms:identifier wd:Q15485753 .
+
+wd:Q16853994 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "James M. Safford"@en ;
+	foaf:name "James M. Safford"@en ;
+	foaf:givenName wd:Q677191 ;
+	schema:givenName wd:Q677191 ;
+	dcterms:identifier wd:Q16853994 .
+
+wd:Q16886293 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "John V. Van Sickle"@en ;
+	foaf:name "John V. Van Sickle"@en ;
+	foaf:givenName wd:Q4925477 ;
+	schema:givenName wd:Q4925477 ;
+	dcterms:identifier wd:Q16886293 .
+
+wd:Q17155636 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "John D. Boice, Jr."@en ;
+	foaf:name "John D. Boice, Jr."@en ;
+	foaf:givenName wd:Q4925477 ;
+	schema:givenName wd:Q4925477 ;
+	dcterms:identifier wd:Q17155636 .
+
+wd:Q16059322 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Edward Southey Joynes"@en ;
+	foaf:name "Edward Southey Joynes"@en ;
+	foaf:givenName wd:Q278835 ;
+	schema:givenName wd:Q278835 ;
+	dcterms:identifier wd:Q16059322 .
+
+wd:Q21016483 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Oscar Touster"@en ;
+	foaf:name "Oscar Touster"@en ;
+	foaf:givenName wd:Q18145967 ;
+	schema:givenName wd:Q18145967 ;
+	dcterms:identifier wd:Q21016483 .
+
+wd:Q44379426 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Ilda McVeigh"@en ;
+	foaf:name "Ilda McVeigh"@en ;
+	dcterms:identifier wd:Q44379426 .
+
+wd:Q16198181 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Clyde Pharr"@en ;
+	foaf:name "Clyde Pharr"@en ;
+	foaf:givenName wd:Q16747223 ;
+	schema:givenName wd:Q16747223 ;
+	dcterms:identifier wd:Q16198181 .
+
+wd:Q16202994 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Sam B. Girgus"@en ;
+	foaf:name "Sam B. Girgus"@en ;
+	foaf:givenName wd:Q12800694 ;
+	schema:givenName wd:Q12800694 ;
+	dcterms:identifier wd:Q16202994 .
+
+wd:Q22666021 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Jonathan Metzl "@en ;
+	foaf:name "Jonathan Metzl "@en ;
+	foaf:givenName wd:Q1158394 ;
+	schema:givenName wd:Q1158394 ;
+	dcterms:identifier wd:Q22666021 .
+
+wd:Q13560230 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Hortense Spillers"@en ;
+	foaf:name "Hortense Spillers"@en ;
+	foaf:givenName wd:Q11863640 ;
+	schema:givenName wd:Q11863640 ;
+	dcterms:identifier wd:Q13560230 .
+
+wd:Q16213524 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Isabel Gauthier"@en ;
+	foaf:name "Isabel Gauthier"@en ;
+	foaf:givenName wd:Q4218918 ;
+	schema:givenName wd:Q4218918 ;
+	foaf:familyName wd:Q19793323 ;
+	schema:familyName wd:Q19793323 ;
+	dcterms:identifier wd:Q16213524 ;
+	owl:sameAs "0000-0002-6249-4769" .
+
+wd:Q20651191 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Charles Forster Smith"@en ;
+	foaf:name "Charles Forster Smith"@en ;
+	foaf:givenName wd:Q2958359 ;
+	schema:givenName wd:Q2958359 ;
+	dcterms:identifier wd:Q20651191 .
+
+wd:Q23371371 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Alexander Olshansky"@en ;
+	foaf:name "Alexander Olshansky"@en ;
+	foaf:givenName wd:Q17501806 ;
+	schema:givenName wd:Q17501806 ;
+	foaf:familyName wd:Q20520245 ;
+	schema:familyName wd:Q20520245 ;
+	dcterms:identifier wd:Q23371371 .
+
+wd:Q8000185 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Wilbur Fisk Tillett"@en ;
+	foaf:name "Wilbur Fisk Tillett"@en ;
+	foaf:givenName wd:Q16282616 ;
+	schema:givenName wd:Q16282616 ;
+	dcterms:identifier wd:Q8000185 .
+
+wd:Q8015076 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "William Malone Baskervill"@en ;
+	foaf:name "William Malone Baskervill"@en ;
+	foaf:givenName wd:Q12344159 ;
+	schema:givenName wd:Q12344159 ;
+	dcterms:identifier wd:Q8015076 .
+
+wd:Q17183047 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Mike Spivey"@en ;
+	foaf:name "Mike Spivey"@en ;
+	foaf:givenName wd:Q361309 ;
+	schema:givenName wd:Q361309 ;
+	dcterms:identifier wd:Q17183047 .
+
+wd:Q15441970 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Sandy Solomon"@en ;
+	foaf:name "Sandy Solomon"@en ;
+	foaf:givenName wd:Q1413008 ;
+	schema:givenName wd:Q1413008 ;
+	dcterms:identifier wd:Q15441970 .
+
+wd:Q7815585 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Tom Dillehay"@en ;
+	foaf:name "Tom Dillehay"@en ;
+	foaf:givenName wd:Q3354498 ;
+	schema:givenName wd:Q3354498 ;
+	dcterms:identifier wd:Q7815585 .
+
+wd:Q15485913 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Jon Kaas"@en ;
+	foaf:name "Jon Kaas"@en ;
+	foaf:givenName wd:Q13501137 ;
+	schema:givenName wd:Q13501137 ;
+	dcterms:identifier wd:Q15485913 .
+
+wd:Q7965702 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Walter Nance"@en ;
+	foaf:name "Walter Nance"@en ;
+	foaf:givenName wd:Q499249 ;
+	schema:givenName wd:Q499249 ;
+	dcterms:identifier wd:Q7965702 .
+
+wd:Q13522452 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Joseph Blenkinsopp"@en ;
+	foaf:name "Joseph Blenkinsopp"@en ;
+	foaf:givenName wd:Q471788 ;
+	schema:givenName wd:Q471788 ;
+	dcterms:identifier wd:Q13522452 .
+
+wd:Q16011964 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "John Edwin Pomfret"@en ;
+	foaf:name "John Edwin Pomfret"@en ;
+	foaf:givenName wd:Q4925477 ;
+	schema:givenName wd:Q4925477 ;
+	dcterms:identifier wd:Q16011964 .
+
+wd:Q16933532 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Ronald D. Schrimpf"@en ;
+	foaf:name "Ronald D. Schrimpf"@en ;
+	foaf:givenName wd:Q2532287 ;
+	schema:givenName wd:Q2532287 ;
+	dcterms:identifier wd:Q16933532 .
+
+wd:Q7595851 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Stacey M. Floyd-Thomas"@en ;
+	foaf:name "Stacey M. Floyd-Thomas"@en ;
+	foaf:givenName wd:Q19826118 ;
+	schema:givenName wd:Q19826118 ;
+	dcterms:identifier wd:Q7595851 .
+
+wd:Q16063179 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Thomas Osgood Summers"@en ;
+	foaf:name "Thomas Osgood Summers"@en ;
+	foaf:givenName wd:Q16428906 ;
+	schema:givenName wd:Q16428906 ;
+	dcterms:identifier wd:Q16063179 .
+
+wd:Q16062221 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Nathaniel Thomas Lupton"@en ;
+	foaf:name "Nathaniel Thomas Lupton"@en ;
+	foaf:givenName wd:Q18978396 ;
+	schema:givenName wd:Q18978396 ;
+	dcterms:identifier wd:Q16062221 .
+
+wd:Q7614532 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Steven C. Hebert"@en ;
+	foaf:name "Steven C. Hebert"@en ;
+	foaf:givenName wd:Q17501985 ;
+	schema:givenName wd:Q17501985 ;
+	dcterms:identifier wd:Q7614532 .
+
+wd:Q12748184 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Alex N. Dragnich"@en ;
+	foaf:name "Alex N. Dragnich"@en ;
+	foaf:givenName wd:Q13258171 ;
+	schema:givenName wd:Q13258171 ;
+	dcterms:identifier wd:Q12748184 .
+
+wd:Q7812730 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Todd Zywicki"@en ;
+	foaf:name "Todd Zywicki"@en ;
+	foaf:givenName wd:Q18638465 ;
+	schema:givenName wd:Q18638465 ;
+	dcterms:identifier wd:Q7812730 .
+
+wd:Q7831689 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Tracy Barrett"@en ;
+	foaf:name "Tracy Barrett"@en ;
+	foaf:givenName wd:Q2447651 ;
+	schema:givenName wd:Q2447651 ;
+	dcterms:identifier wd:Q7831689 .
+
+wd:Q7965410 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Walter Sullivan"@en ;
+	foaf:name "Walter Sullivan"@en ;
+	foaf:givenName wd:Q499249 ;
+	schema:givenName wd:Q499249 ;
+	dcterms:identifier wd:Q7965410 .
+
+wd:Q13561610 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Suzanna Sherry"@en ;
+	foaf:name "Suzanna Sherry"@en ;
+	foaf:givenName wd:Q21141885 ;
+	schema:givenName wd:Q21141885 ;
+	dcterms:identifier wd:Q13561610 .
+
+wd:Q8014502 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "William Leroy Broun"@en ;
+	foaf:name "William Leroy Broun"@en ;
+	foaf:givenName wd:Q12344159 ;
+	schema:givenName wd:Q12344159 ;
+	dcterms:identifier wd:Q8014502 .
+
+wd:Q16011553 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Margaret Cuninggim"@en ;
+	foaf:name "Margaret Cuninggim"@en ;
+	foaf:givenName wd:Q4963612 ;
+	schema:givenName wd:Q4963612 ;
+	dcterms:identifier wd:Q16011553 .
+
+wd:Q7614731 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Steven Gabbe"@en ;
+	foaf:name "Steven Gabbe"@en ;
+	foaf:givenName wd:Q17501985 ;
+	schema:givenName wd:Q17501985 ;
+	dcterms:identifier wd:Q7614731 .
+
+wd:Q16211872 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Edward F. Fischer"@en ;
+	foaf:name "Edward F. Fischer"@en ;
+	foaf:givenName wd:Q278835 ;
+	schema:givenName wd:Q278835 ;
+	foaf:familyName wd:Q11231408 ;
+	schema:familyName wd:Q11231408 ;
+	dcterms:identifier wd:Q16211872 .
+
+wd:Q16205513 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Michael Bess"@en ;
+	foaf:name "Michael Bess"@en ;
+	foaf:givenName wd:Q4927524 ;
+	schema:givenName wd:Q4927524 ;
+	dcterms:identifier wd:Q16205513 .
+
+wd:Q21693572 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Carolyn Heinrich"@en ;
+	foaf:name "Carolyn Heinrich"@en ;
+	foaf:givenName wd:Q18091370 ;
+	schema:givenName wd:Q18091370 ;
+	foaf:familyName wd:Q1170243 ;
+	schema:familyName wd:Q1170243 ;
+	dcterms:identifier wd:Q21693572 .
+
+wd:Q5739624 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Herman Clarence Nixon"@en ;
+	foaf:name "Herman Clarence Nixon"@en ;
+	foaf:givenName wd:Q16276646 ;
+	schema:givenName wd:Q16276646 ;
+	dcterms:identifier wd:Q5739624 .
+
+wd:Q6375457 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Kate Daniels"@en ;
+	foaf:name "Kate Daniels"@en ;
+	foaf:givenName wd:Q1735678 ;
+	schema:givenName wd:Q1735678 ;
+	dcterms:identifier wd:Q6375457 .
+
+wd:Q4749053 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Amy-Jill Levine"@en ;
+	foaf:name "Amy-Jill Levine"@en ;
+	dcterms:identifier wd:Q4749053 .
+
+wd:Q2346767 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "James Cullen Martin"@en ;
+	foaf:name "James Cullen Martin"@en ;
+	foaf:givenName wd:Q677191 ;
+	schema:givenName wd:Q677191 ;
+	foaf:familyName wd:Q12035675 ;
+	schema:familyName wd:Q12035675 ;
+	dcterms:identifier wd:Q2346767 .
+
+wd:Q6797081 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Mayer Zald"@en ;
+	foaf:name "Mayer Zald"@en ;
+	dcterms:identifier wd:Q6797081 .
+
+wd:Q7323771 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Richard Arenstorf"@en ;
+	foaf:name "Richard Arenstorf"@en ;
+	foaf:givenName wd:Q1249148 ;
+	schema:givenName wd:Q1249148 ;
+	dcterms:identifier wd:Q7323771 .
+
+wd:Q4967849 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Brigid Hogan"@en ;
+	foaf:name "Brigid Hogan"@en ;
+	dcterms:identifier wd:Q4967849 .
+
+wd:Q278804 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Bear Bryant"@en ;
+	foaf:name "Bear Bryant"@en ;
+	dcterms:identifier wd:Q278804 .
+
+wd:Q2054830 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Kamie Ethridge"@en ;
+	foaf:name "Kamie Ethridge"@en ;
+	foaf:givenName wd:Q6357354 ;
+	schema:givenName wd:Q6357354 ;
+	dcterms:identifier wd:Q2054830 .
+
+wd:Q6712562 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "M. Eric Johnson"@en ;
+	foaf:name "M. Eric Johnson"@en ;
+	foaf:givenName wd:Q19803510 ;
+	schema:givenName wd:Q19803510 ;
+	foaf:familyName wd:Q1158485 ;
+	schema:familyName wd:Q1158485 ;
+	dcterms:identifier wd:Q6712562 .
+
+wd:Q6774374 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Martha Craig Daughtrey"@en ;
+	foaf:name "Martha Craig Daughtrey"@en ;
+	foaf:givenName wd:Q16279062 ;
+	schema:givenName wd:Q16279062 ;
+	dcterms:identifier wd:Q6774374 .
+
+wd:Q4979972 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Mildred T. Stahlman"@en ;
+	foaf:name "Mildred T. Stahlman"@en ;
+	foaf:givenName wd:Q11287301 ;
+	schema:givenName wd:Q11287301 ;
+	dcterms:identifier wd:Q4979972 .
+
+wd:Q4734737 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Alp Ikizler"@en ;
+	foaf:name "Alp Ikizler"@en ;
+	dcterms:identifier wd:Q4734737 .
+
+wd:Q6485803 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Langdon Brown Gilkey"@en ;
+	foaf:name "Langdon Brown Gilkey"@en ;
+	dcterms:identifier wd:Q6485803 .
+
+wd:Q3560662 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Virginia Abernethy"@en ;
+	foaf:name "Virginia Abernethy"@en ;
+	foaf:givenName wd:Q607350 ;
+	schema:givenName wd:Q607350 ;
+	dcterms:identifier wd:Q3560662 .
+
+wd:Q5345826 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Edward Webster Bemis"@en ;
+	foaf:name "Edward Webster Bemis"@en ;
+	foaf:givenName wd:Q23012205 ;
+	schema:givenName wd:Q23012205 ;
+	foaf:familyName wd:Q37575188 ;
+	schema:familyName wd:Q37575188 ;
+	dcterms:identifier wd:Q5345826 .
+
+wd:Q6197887 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Jim Rossi"@en ;
+	foaf:name "Jim Rossi"@en ;
+	foaf:givenName wd:Q15868042 ;
+	schema:givenName wd:Q15868042 ;
+	foaf:familyName wd:Q8140765 ;
+	schema:familyName wd:Q8140765 ;
+	dcterms:identifier wd:Q6197887 .
+
+wd:Q5246450 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Dean S. Tarbell"@en ;
+	foaf:name "Dean S. Tarbell"@en ;
+	foaf:givenName wd:Q1796595 ;
+	schema:givenName wd:Q1796595 ;
+	dcterms:identifier wd:Q5246450 .
+
+wd:Q6129401 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "James Barr"@en ;
+	foaf:name "James Barr"@en ;
+	foaf:givenName wd:Q677191 ;
+	schema:givenName wd:Q677191 ;
+	dcterms:identifier wd:Q6129401 .
+
+wd:Q6814140 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Melvyn P. Leffler"@en ;
+	foaf:name "Melvyn P. Leffler"@en ;
+	dcterms:identifier wd:Q6814140 .
+
+wd:Q6111683 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Ronald Spores"@en ;
+	foaf:name "Ronald Spores"@en ;
+	foaf:givenName wd:Q2532287 ;
+	schema:givenName wd:Q2532287 ;
+	dcterms:identifier wd:Q6111683 .
+
+wd:Q5293984 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Donald Ault"@en ;
+	foaf:name "Donald Ault"@en ;
+	foaf:givenName wd:Q13422248 ;
+	schema:givenName wd:Q13422248 ;
+	dcterms:identifier wd:Q5293984 .
+
+wd:Q1337955 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "John Crowe Ransom"@en ;
+	foaf:name "John Crowe Ransom"@en ;
+	foaf:givenName wd:Q4925477 ;
+	schema:givenName wd:Q4925477 ;
+	dcterms:identifier wd:Q1337955 .
+
+wd:Q5360959 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Elijah Millgram"@en ;
+	foaf:name "Elijah Millgram"@en ;
+	foaf:givenName wd:Q19827682 ;
+	schema:givenName wd:Q19827682 ;
+	dcterms:identifier wd:Q5360959 .
+
+wd:Q6232205 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "John F. Carney"@en ;
+	foaf:name "John F. Carney"@en ;
+	foaf:givenName wd:Q4925477 ;
+	schema:givenName wd:Q4925477 ;
+	dcterms:identifier wd:Q6232205 .
+
+wd:Q3193379 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Karl Dean"@en ;
+	foaf:name "Karl Dean"@en ;
+	foaf:givenName wd:Q15731830 ;
+	schema:givenName wd:Q15731830 ;
+	dcterms:identifier wd:Q3193379 .
+
+wd:Q6708077 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Lyman Ray Patterson"@en ;
+	foaf:name "Lyman Ray Patterson"@en ;
+	foaf:givenName wd:Q19830595 ;
+	schema:givenName wd:Q19830595 ;
+	dcterms:identifier wd:Q6708077 .
+
+wd:Q7327177 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Richard L. Daft"@en ;
+	foaf:name "Richard L. Daft"@en ;
+	foaf:givenName wd:Q1249148 ;
+	schema:givenName wd:Q1249148 ;
+	dcterms:identifier wd:Q7327177 .
+
+wd:Q7372683 rdfs:label "Roy Clyde Clark"@en-gb ;
+	foaf:name "Roy Clyde Clark"@en-gb .
+
+wd:Q5525124 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Gary Gerstle"@en ;
+	foaf:name "Gary Gerstle"@en ;
+	foaf:givenName wd:Q1820274 ;
+	schema:givenName wd:Q1820274 ;
+	dcterms:identifier wd:Q5525124 .
+
+wd:Q6811243 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Melanie Balcomb"@en ;
+	foaf:name "Melanie Balcomb"@en ;
+	foaf:givenName wd:Q1064920 ;
+	schema:givenName wd:Q1064920 ;
+	dcterms:identifier wd:Q6811243 .
+
+wd:Q984215 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Alfred Blalock"@en ;
+	foaf:name "Alfred Blalock"@en ;
+	foaf:givenName wd:Q3480335 ;
+	schema:givenName wd:Q3480335 ;
+	foaf:familyName wd:Q21508490 ;
+	schema:familyName wd:Q21508490 ;
+	dcterms:identifier wd:Q984215 .
+
+wd:Q6537132 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Lewis V. Baldwin"@en ;
+	foaf:name "Lewis V. Baldwin"@en ;
+	foaf:givenName wd:Q768196 ;
+	schema:givenName wd:Q768196 ;
+	dcterms:identifier wd:Q6537132 .
+
+wd:Q6558395 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Lisa Schultz Bressman"@en ;
+	foaf:name "Lisa Schultz Bressman"@en ;
+	foaf:givenName wd:Q1588186 ;
+	schema:givenName wd:Q1588186 ;
+	dcterms:identifier wd:Q6558395 .
+
+wd:Q1701672 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "John Sallis"@en ;
+	foaf:name "John Sallis"@en ;
+	foaf:givenName wd:Q4925477 ;
+	schema:givenName wd:Q4925477 ;
+	dcterms:identifier wd:Q1701672 .
+
+wd:Q3020805 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Debbie Black"@en ;
+	foaf:name "Debbie Black"@en ;
+	foaf:givenName wd:Q1181414 ;
+	schema:givenName wd:Q1181414 ;
+	foaf:familyName wd:Q2662465 ;
+	schema:familyName wd:Q2662465 ;
+	dcterms:identifier wd:Q3020805 .
+
+wd:Q6707902 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Lyle H. Lanier"@en ;
+	foaf:name "Lyle H. Lanier"@en ;
+	foaf:givenName wd:Q19970529 ;
+	schema:givenName wd:Q19970529 ;
+	dcterms:identifier wd:Q6707902 .
+
+wd:Q6768234 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Mark Jarman"@en ;
+	foaf:name "Mark Jarman"@en ;
+	foaf:givenName wd:Q13610143 ;
+	schema:givenName wd:Q13610143 ;
+	dcterms:identifier wd:Q6768234 .
+
+wd:Q516167 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Jean Bethke Elshtain"@en ;
+	foaf:name "Jean Bethke Elshtain"@en ;
+	foaf:givenName wd:Q4160311 ;
+	schema:givenName wd:Q4160311 ;
+	dcterms:identifier wd:Q516167 ;
+	rdfs:label "Jean Bethke Elshtain"@en-gb ;
+	foaf:name "Jean Bethke Elshtain"@en-gb .
+
+wd:Q7324561 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Richard C. McCarty"@en ;
+	foaf:name "Richard C. McCarty"@en ;
+	foaf:givenName wd:Q1249148 ;
+	schema:givenName wd:Q1249148 ;
+	dcterms:identifier wd:Q7324561 .
+
+wd:Q7331457 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Rick Hilles"@en ;
+	foaf:name "Rick Hilles"@en ;
+	foaf:givenName wd:Q18073734 ;
+	schema:givenName wd:Q18073734 ;
+	dcterms:identifier wd:Q7331457 .
+
+wd:Q7341907 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Robert Barsky"@en ;
+	foaf:name "Robert Barsky"@en ;
+	foaf:givenName wd:Q4927937 ;
+	schema:givenName wd:Q4927937 ;
+	dcterms:identifier wd:Q7341907 .
+
+wd:Q1289901 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Harold Ford"@en ;
+	foaf:name "Harold Ford"@en ;
+	foaf:givenName wd:Q14647205 ;
+	schema:givenName wd:Q14647205 ;
+	dcterms:identifier wd:Q1289901 .
+
+wd:Q6173281 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Jeff Balser"@en ;
+	foaf:name "Jeff Balser"@en ;
+	foaf:givenName wd:Q18609696 ;
+	schema:givenName wd:Q18609696 ;
+	dcterms:identifier wd:Q6173281 .
+
+wd:Q5387448 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Eric Schechter"@en ;
+	foaf:name "Eric Schechter"@en ;
+	foaf:givenName wd:Q12788459 ;
+	schema:givenName wd:Q12788459 ;
+	dcterms:identifier wd:Q5387448 .
+
+wd:Q2958365 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Charles Kiesler"@en ;
+	foaf:name "Charles Kiesler"@en ;
+	foaf:givenName wd:Q2958359 ;
+	schema:givenName wd:Q2958359 ;
+	dcterms:identifier wd:Q2958365 .
+
+wd:Q6272746 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Jonathan Charney"@en ;
+	foaf:name "Jonathan Charney"@en ;
+	foaf:givenName wd:Q1158394 ;
+	schema:givenName wd:Q1158394 ;
+	dcterms:identifier wd:Q6272746 .
+
+wd:Q6306725 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Julia Sears"@en ;
+	foaf:name "Julia Sears"@en ;
+	foaf:givenName wd:Q2737173 ;
+	schema:givenName wd:Q2737173 ;
+	dcterms:identifier wd:Q6306725 .
+
+wd:Q3098511 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Gary Allan Polis"@en ;
+	foaf:name "Gary Allan Polis"@en ;
+	foaf:givenName wd:Q1820274 ;
+	schema:givenName wd:Q1820274 ;
+	dcterms:identifier wd:Q3098511 .
+
+wd:Q313590 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Alain Connes"@en ;
+	foaf:name "Alain Connes"@en ;
+	foaf:givenName wd:Q2829505 ;
+	schema:givenName wd:Q2829505 ;
+	dcterms:identifier wd:Q313590 .
+
+wd:Q1351160 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Nicholas Georgescu-Roegen"@en ;
+	foaf:name "Nicholas Georgescu-Roegen"@en ;
+	foaf:givenName wd:Q42771 ;
+	schema:givenName wd:Q42771 ;
+	dcterms:identifier wd:Q1351160 .
+
+wd:Q5057973 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Celia Applegate"@en ;
+	foaf:name "Celia Applegate"@en ;
+	foaf:givenName wd:Q900312 ;
+	schema:givenName wd:Q900312 ;
+	dcterms:identifier wd:Q5057973 .
+
+wd:Q3565818 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Walter Lynwood Fleming"@en ;
+	foaf:name "Walter Lynwood Fleming"@en ;
+	foaf:givenName wd:Q499249 ;
+	schema:givenName wd:Q499249 ;
+	foaf:familyName wd:Q1427982 ;
+	schema:familyName wd:Q1427982 ;
+	dcterms:identifier wd:Q3565818 .
+
+wd:Q232299 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Stanley Cohen"@en ;
+	foaf:name "Stanley Cohen"@en ;
+	foaf:givenName wd:Q3541269 ;
+	schema:givenName wd:Q3541269 ;
+	foaf:familyName wd:Q1158586 ;
+	schema:familyName wd:Q1158586 ;
+	dcterms:identifier wd:Q232299 .
+
+wd:Q5093542 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Chester E. Finn, Jr."@en ;
+	foaf:name "Chester E. Finn, Jr."@en ;
+	foaf:givenName wd:Q16274781 ;
+	schema:givenName wd:Q16274781 ;
+	dcterms:identifier wd:Q5093542 .
+
+wd:Q7343585 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Robert Donaldson"@en ;
+	foaf:name "Robert Donaldson"@en ;
+	foaf:givenName wd:Q4927937 ;
+	schema:givenName wd:Q4927937 ;
+	dcterms:identifier wd:Q7343585 .
+
+wd:Q5145037 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Colin Dayan"@en ;
+	foaf:name "Colin Dayan"@en ;
+	foaf:givenName wd:Q495635 ;
+	schema:givenName wd:Q495635 ;
+	dcterms:identifier wd:Q5145037 .
+
+wd:Q5214706 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Dana D. Nelson"@en ;
+	foaf:name "Dana D. Nelson"@en ;
+	foaf:givenName wd:Q1559603 ;
+	schema:givenName wd:Q1559603 ;
+	dcterms:identifier wd:Q5214706 .
+
+wd:Q5258604 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Dennis Kezar"@en ;
+	foaf:name "Dennis Kezar"@en ;
+	foaf:givenName wd:Q639292 ;
+	schema:givenName wd:Q639292 ;
+	dcterms:identifier wd:Q5258604 .
+
+wd:Q6137538 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "James L. Crenshaw"@en ;
+	foaf:name "James L. Crenshaw"@en ;
+	foaf:givenName wd:Q677191 ;
+	schema:givenName wd:Q677191 ;
+	dcterms:identifier wd:Q6137538 .
+
+wd:Q3660753 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Arthur Demarest"@en ;
+	foaf:name "Arthur Demarest"@en ;
+	foaf:givenName wd:Q1778168 ;
+	schema:givenName wd:Q1778168 ;
+	dcterms:identifier wd:Q3660753 .
+
+wd:Q7146188 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Patrick C. Fischer"@en ;
+	foaf:name "Patrick C. Fischer"@en ;
+	foaf:givenName wd:Q18002623 ;
+	schema:givenName wd:Q18002623 ;
+	foaf:familyName wd:Q11231408 ;
+	schema:familyName wd:Q11231408 ;
+	dcterms:identifier wd:Q7146188 .
+
+wd:Q6227401 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "John Cowper Granbery"@en ;
+	foaf:name "John Cowper Granbery"@en ;
+	foaf:givenName wd:Q4925477 ;
+	schema:givenName wd:Q4925477 ;
+	dcterms:identifier wd:Q6227401 .
+
+wd:Q5545751 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "George W. Stocking, Sr."@en ;
+	foaf:name "George W. Stocking, Sr."@en ;
+	foaf:givenName wd:Q15921732 ;
+	schema:givenName wd:Q15921732 ;
+	dcterms:identifier wd:Q5545751 .
+
+wd:Q5568666 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Glenn Allan Millikan"@en ;
+	foaf:name "Glenn Allan Millikan"@en ;
+	foaf:givenName wd:Q19802199 ;
+	schema:givenName wd:Q19802199 ;
+	dcterms:identifier wd:Q5568666 .
+
+wd:Q7026153 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Nicholas S. Zeppos"@en ;
+	foaf:name "Nicholas S. Zeppos"@en ;
+	foaf:givenName wd:Q42771 ;
+	schema:givenName wd:Q42771 ;
+	dcterms:identifier wd:Q7026153 .
+
+wd:Q5660753 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Harold G. Maier"@en ;
+	foaf:name "Harold G. Maier"@en ;
+	foaf:givenName wd:Q14647205 ;
+	schema:givenName wd:Q14647205 ;
+	dcterms:identifier wd:Q5660753 .
+
+wd:Q4965438 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Brian T. Fitzpatrick"@en ;
+	foaf:name "Brian T. Fitzpatrick"@en ;
+	foaf:givenName wd:Q15930574 ;
+	schema:givenName wd:Q15930574 ;
+	dcterms:identifier wd:Q4965438 .
+
+wd:Q6530482 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Lesley Gill"@en ;
+	foaf:name "Lesley Gill"@en ;
+	foaf:givenName wd:Q18658557 ;
+	schema:givenName wd:Q18658557 ;
+	dcterms:identifier wd:Q6530482 .
+
+wd:Q6113796 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Jack M. Sasson"@en ;
+	foaf:name "Jack M. Sasson"@en ;
+	foaf:givenName wd:Q1159009 ;
+	schema:givenName wd:Q1159009 ;
+	foaf:familyName wd:Q21449577 ;
+	schema:familyName wd:Q21449577 ;
+	dcterms:identifier wd:Q6113796 .
+
+wd:Q6755615 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Marc Hetherington"@en ;
+	foaf:name "Marc Hetherington"@en ;
+	foaf:givenName wd:Q17520944 ;
+	schema:givenName wd:Q17520944 ;
+	dcterms:identifier wd:Q6755615 .
+
+wd:Q4756502 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Andrew C. Porter"@en ;
+	foaf:name "Andrew C. Porter"@en ;
+	foaf:givenName wd:Q18042461 ;
+	schema:givenName wd:Q18042461 ;
+	dcterms:identifier wd:Q4756502 .
+
+wd:Q5360913 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Elijah Embree Hoss"@en ;
+	foaf:name "Elijah Embree Hoss"@en ;
+	foaf:givenName wd:Q19827682 ;
+	schema:givenName wd:Q19827682 ;
+	dcterms:identifier wd:Q5360913 .
+
+wd:Q4800251 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Arthur Scott Walters"@en ;
+	foaf:name "Arthur Scott Walters"@en ;
+	foaf:givenName wd:Q1778168 ;
+	schema:givenName wd:Q1778168 ;
+	dcterms:identifier wd:Q4800251 .
+
+wd:Q6229719 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "John Donald Wade"@en ;
+	foaf:name "John Donald Wade"@en ;
+	foaf:givenName wd:Q4925477 ;
+	schema:givenName wd:Q4925477 ;
+	dcterms:identifier wd:Q6229719 .
+
+wd:Q6243779 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "John Lachs"@en ;
+	foaf:name "John Lachs"@en ;
+	foaf:givenName wd:Q4925477 ;
+	schema:givenName wd:Q4925477 ;
+	dcterms:identifier wd:Q6243779 .
+
+wd:Q1530602 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "David Keene"@en ;
+	foaf:name "David Keene"@en ;
+	foaf:givenName wd:Q18057751 ;
+	schema:givenName wd:Q18057751 ;
+	dcterms:identifier wd:Q1530602 .
+
+wd:Q6391688 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Kent D. Syverud"@en ;
+	foaf:name "Kent D. Syverud"@en ;
+	foaf:givenName wd:Q462547 ;
+	schema:givenName wd:Q462547 ;
+	dcterms:identifier wd:Q6391688 .
+
+wd:Q6490170 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Larry Dalton"@en ;
+	foaf:name "Larry Dalton"@en ;
+	foaf:givenName wd:Q18094568 ;
+	schema:givenName wd:Q18094568 ;
+	dcterms:identifier wd:Q6490170 ;
+	rdfs:label "Larry Dalton"@en-ca ;
+	foaf:name "Larry Dalton"@en-ca ;
+	rdfs:label "Larry Dalton"@en-gb ;
+	foaf:name "Larry Dalton"@en-gb .
+
+wd:Q6491139 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Larry Soderquist"@en ;
+	foaf:name "Larry Soderquist"@en ;
+	foaf:givenName wd:Q18094568 ;
+	schema:givenName wd:Q18094568 ;
+	dcterms:identifier wd:Q6491139 .
+
+wd:Q204168 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Lorrie Moore"@en ;
+	foaf:name "Lorrie Moore"@en ;
+	foaf:givenName wd:Q20899039 ;
+	schema:givenName wd:Q20899039 ;
+	foaf:familyName wd:Q10588869 ;
+	schema:familyName wd:Q10588869 ;
+	dcterms:identifier wd:Q204168 .
+
+wd:Q7299235 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Raymond Winbush"@en ;
+	foaf:name "Raymond Winbush"@en ;
+	foaf:givenName wd:Q2127728 ;
+	schema:givenName wd:Q2127728 ;
+	dcterms:identifier wd:Q7299235 .
+
+wd:Q5232311 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "David Charles"@en ;
+	foaf:name "David Charles"@en ;
+	foaf:givenName wd:Q18057751 ;
+	schema:givenName wd:Q18057751 ;
+	dcterms:identifier wd:Q5232311 .
+
+wd:Q4897443 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Beth Bachmann"@en ;
+	foaf:name "Beth Bachmann"@en ;
+	foaf:givenName wd:Q14639649 ;
+	schema:givenName wd:Q14639649 ;
+	dcterms:identifier wd:Q4897443 .
+
+wd:Q5044455 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Carol M. Swain"@en ;
+	foaf:name "Carol M. Swain"@en ;
+	foaf:givenName wd:Q18201469 ;
+	schema:givenName wd:Q18201469 ;
+	dcterms:identifier wd:Q5044455 .
+
+wd:Q6129900 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "James Blumstein"@en ;
+	foaf:name "James Blumstein"@en ;
+	foaf:givenName wd:Q677191 ;
+	schema:givenName wd:Q677191 ;
+	dcterms:identifier wd:Q6129900 .
+
+wd:Q1520978 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Alexander Winchell"@en ;
+	foaf:name "Alexander Winchell"@en ;
+	foaf:givenName wd:Q923 ;
+	schema:givenName wd:Q923 ;
+	dcterms:identifier wd:Q1520978 .
+
+wd:Q5536441 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "George Arthur Buttrick"@en ;
+	foaf:name "George Arthur Buttrick"@en ;
+	foaf:givenName wd:Q15921732 ;
+	schema:givenName wd:Q15921732 ;
+	dcterms:identifier wd:Q5536441 .
+
+wd:Q6195012 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "Jim Foglesong"@en ;
+	foaf:name "Jim Foglesong"@en ;
+	foaf:givenName wd:Q15868042 ;
+	schema:givenName wd:Q15868042 ;
+	dcterms:identifier wd:Q6195012 .
+
+wd:Q6263975 adhoc:identifierSource "wikidata" ;
+	adhoc:status "employee" ;
+	rdfs:label "John Wikswo"@en ;
+	foaf:name "John Wikswo"@en ;
+	foaf:givenName wd:Q4925477 ;
+	schema:givenName wd:Q4925477 ;
+	dcterms:identifier wd:Q6263975 .
+
+wd:Q5345826 foaf:givenName wd:Q278835 ;
+	schema:givenName wd:Q278835 .
