@@ -11,6 +11,7 @@ declare namespace education = "http://www.orcid.org/ns/education";
 declare namespace employment = "http://www.orcid.org/ns/employment";
 declare namespace work = "http://www.orcid.org/ns/work";
 declare namespace rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+declare namespace rdfs = "http://www.w3.org/2000/01/rdf-schema#";
 declare namespace foaf = "http://xmlns.com/foaf/0.1/";
 declare namespace schema = "http://schema.org/";
 declare namespace dcterms = "http://purl.org/dc/terms/";
@@ -78,21 +79,15 @@ return (file:write("c:\test\orcid\people.rdf",<rdf:RDF>{
                    <dcterms:identifier>{$orcidID}</dcterms:identifier>,
                    <adhoc:identifierSource>orcid</adhoc:identifierSource>,
                    <foaf:familyName>{$surname}</foaf:familyName>,
-                   <foaf:firstName>{$givenName}</foaf:firstName>,
+                   <foaf:givenName>{$givenName}</foaf:givenName>,
                    <schema:familyName>{$surname}</schema:familyName>,
                    <schema:givenName>{$givenName}</schema:givenName>,
                    <foaf:name>{$givenName||" "||$surname}</foaf:name>,
+                   <rdfs:label>{$givenName||" "||$surname}</rdfs:label>,
                    for $altName in $altNames
                        let $otherName := $altName/other-name:content/text()
                        return <foaf:name>{$otherName}</foaf:name>,
-                   (:
-                   for $work in $works
-                       let $ids := $work/common:external-ids/common:external-id
-                           for $id in $ids
-                           where $id/common:external-id-type/text() = "doi"
-                           let $doi := $id/common:external-id-value/text()
-                           return <dcterms:creator>{$doi}</dcterms:creator>,
-                   :)
+                       
                    local:generate-works-links($works),
                    if ($student  = $organizationID)
                        then (
