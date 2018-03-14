@@ -52,7 +52,22 @@ for $work in $works
        for $id in $ids
        where $id/common:external-id-type/text() = "doi"
        let $doi := $id/common:external-id-value/text()
-       return element foaf:made {attribute rdf:resource{"http://dx.doi.org/"||$doi} }
+       let $cleanDoi := local:clean-doi($doi)
+       return element foaf:made {attribute rdf:resource{"http://dx.doi.org/"||$cleanDoi} }
+};
+
+declare function local:clean-doi($doi)
+{
+  let $a := replace(replace($doi,"\}",""),"\{","")  (: get rid of extraneous curly brackets :)
+  (: get rid of inappropriate URI forms :)
+  let $b := replace($a,"https://doi.org/","")
+  let $c := replace($b,"https://dx.doi.org/","")
+  let $d := replace($c,"http://dx.doi.org/","")
+  let $e := replace($d,"doi: ","")
+  let $f := replace($e,"doi:","")
+  let $g := replace($f,"DOI: ","")
+  let $h := replace($g,"DOI ","")
+  return $h
 };
 
 let $records := fn:collection('orcid')/record:record
