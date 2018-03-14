@@ -52,7 +52,7 @@ for $work in $works
        for $id in $ids
        where $id/common:external-id-type/text() = "doi"
        let $doi := $id/common:external-id-value/text()
-       return element dcterms:creator {attribute rdf:resource{"http://dx.doi.org/"||$doi} }
+       return element foaf:made {attribute rdf:resource{"http://dx.doi.org/"||$doi} }
 };
 
 let $records := fn:collection('orcid')/record:record
