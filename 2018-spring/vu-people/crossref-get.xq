@@ -25,8 +25,9 @@ return http:send-request($request)
 };
 
 
-let $textDoi := http:send-request(<http:request method='get' href='https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2018-spring/vu-people/vanderbilt-doi.csv'/>)[2]
-let $xmlDoi := csv:parse($textDoi, map { 'header' : true(),'separator' : "|" })
+(: let $textDoi := http:send-request(<http:request method='get' href='https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2018-spring/vu-people/vanderbilt-doi.csv'/>)[2] :)
+let $textDoi := file:read-text('file:///c:/test/vanderbilt-doi.csv')
+let $xmlDoi := csv:parse($textDoi, map { 'header' : true(),'separator' : "," })
 
 return (file:write("c:\test\orcid\doi.rdf",<rdf:RDF>{
       for $doiRecord in $xmlDoi/csv/record
