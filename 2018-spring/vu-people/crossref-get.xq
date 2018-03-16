@@ -29,22 +29,31 @@ return http:send-request($request)
 let $textDoi := file:read-text('file:///c:/test/vanderbilt-doi.csv')
 let $xmlDoi := csv:parse($textDoi, map { 'header' : true(),'separator' : "," })
 
-return (file:write("c:\test\orcid\doi.rdf",<rdf:RDF>{
-      for $doiRecord in $xmlDoi/csv/record
-      let $uri := $doiRecord/work/text()
-      
-      (: let $uri := "http://dx.doi.org/10.1002/0470007745.ch15"
-      let $uri := "http://dx.doi.org/10.1002/(SICI)1096-8628(19960809)64:2&lt;278::AID-AJMG9&gt;3.0.CO;2-Q" :)
-      
-      let $redirectUri := local:get-redirect($uri)
-      
-      return if ($redirectUri = "error")
-             then element rdf:Description { 
-                           attribute rdf:about {$uri},
-                           <prism:doi>{substring-after($uri,"http://dx.doi.org/")}</prism:doi>,
-                           <bibo:doi>{substring-after($uri,"http://dx.doi.org/")}</bibo:doi>,
-                           <rdfs:comment>bad doi</rdfs:comment>
-                           }
-             else local:query-endpoint($redirectUri)[2]/rdf:RDF/rdf:Description
-}</rdf:RDF>
-))
+let $numberOfResults := count($xmlDoi/csv/record)
+let $pages := ($numberOfResults idiv 1000) (: pages are sets of 1000 results :)
+
+for $page in (0 to $pages)
+  for $record in (1 to 1000)
+  return string($page)||" "||string($record)
+
+(:
+return 
+(
+  file:write("c:\test\orcid\doi.rdf",
+    <rdf:RDF>{
+          for $doiRecord in $xmlDoi/csv/record
+          let $uri := $doiRecord/work/text()          
+          let $redirectUri := local:get-redirect($uri)
+          
+          return if ($redirectUri = "error")
+                 then element rdf:Description { 
+                               attribute rdf:about {$uri},
+                               <prism:doi>{substring-after($uri,"http://dx.doi.org/")}</prism:doi>,
+                               <bibo:doi>{substring-after($uri,"http://dx.doi.org/")}</bibo:doi>,
+                               <rdfs:comment>bad doi</rdfs:comment>
+                               }
+                 else local:query-endpoint($redirectUri)[2]/rdf:RDF/rdf:Description
+    }</rdf:RDF>
+  )
+)
+ :)
