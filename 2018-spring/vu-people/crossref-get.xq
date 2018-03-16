@@ -1,4 +1,4 @@
-(: Note: this takes a really lon time to run because it has to make 17,000+ HTTP calls.  This newer versions does a sort of "paging" to break the results into separate RDF/XML files of 1000 records per file :)
+(: Note: this takes a really lon time to run because it has to make 17,000+ HTTP calls.  This newer version does a sort of "paging" to break the results into separate RDF/XML files of 1000 records per file :)
 
 declare namespace search="http://www.orcid.org/ns/search";
 declare namespace common="http://www.orcid.org/ns/common";
@@ -48,7 +48,7 @@ let $remainder := $numberOfResults mod 1000
 return (
     for $page in (0 to $pages - 1)
     return 
-    file:write("c:\test\orcid\doi"||string($page)||".rdf",
+    file:write("c:\test\doi\doi"||string($page)||".rdf",
           <rdf:RDF>{
           for $record in (1 to 1000)
               let $uri := $xmlDoi/csv/record[$page * 1000 + $record]/work/text()
@@ -57,7 +57,7 @@ return (
        )
    ,
 
-    file:write("c:\test\orcid\doi"||string($pages)||".rdf",
+    file:write("c:\test\doi\doi"||string($pages)||".rdf",
           <rdf:RDF>{
               for $record in (1 to $remainder)
               let $uri := $xmlDoi/csv/record[$pages * 1000 + $record]/work/text()   
