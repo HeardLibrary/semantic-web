@@ -1,4 +1,4 @@
-(: Note: this takes a really lon time to run because it has to make 17,000+ HTTP calls.  The input file may need to be broken into smaller pieces :)
+(: Note: this takes a really lon time to run because it has to make 17,000+ HTTP calls.  This newer versions does a sort of "paging" to break the results into separate RDF/XML files of 1000 records per file :)
 
 declare namespace search="http://www.orcid.org/ns/search";
 declare namespace common="http://www.orcid.org/ns/common";
@@ -24,36 +24,45 @@ let $request := <http:request href='{$endpoint}' method='get'><http:header name=
 return http:send-request($request)
 };
 
+declare function local:generate-description-element($uri as xs:string)
+{
+let $redirectUri := local:get-redirect($uri)
+return if ($redirectUri = "error")
+       then element rdf:Description { 
+                     attribute rdf:about {$uri},
+                     <prism:doi>{substring-after($uri,"http://dx.doi.org/")}</prism:doi>,
+                     <bibo:doi>{substring-after($uri,"http://dx.doi.org/")}</bibo:doi>,
+                     <rdfs:comment>bad doi</rdfs:comment>
+                     }
+       else local:query-endpoint($redirectUri)[2]/rdf:RDF/rdf:Description
+};
 
 (: let $textDoi := http:send-request(<http:request method='get' href='https://raw.githubusercontent.com/HeardLibrary/semantic-web/master/2018-spring/vu-people/vanderbilt-doi.csv'/>)[2] :)
 let $textDoi := file:read-text('file:///c:/test/vanderbilt-doi.csv')
 let $xmlDoi := csv:parse($textDoi, map { 'header' : true(),'separator' : "," })
 
 let $numberOfResults := count($xmlDoi/csv/record)
-let $pages := ($numberOfResults idiv 1000) (: pages are sets of 1000 results :)
+let $pages := $numberOfResults idiv 1000 (: pages are sets of 1000 results :)
+let $remainder := $numberOfResults mod 1000
 
-for $page in (0 to $pages)
-  for $record in (1 to 1000)
-  return string($page)||" "||string($record)
+return (
+    for $page in (0 to $pages - 1)
+    return 
+    file:write("c:\test\orcid\doi"||string($page)||".rdf",
+          <rdf:RDF>{
+          for $record in (1 to 1000)
+              let $uri := $xmlDoi/csv/record[$page * 1000 + $record]/work/text()
+              return local:generate-description-element($uri)
+          }</rdf:RDF>
+       )
+   ,
 
-(:
-return 
-(
-  file:write("c:\test\orcid\doi.rdf",
-    <rdf:RDF>{
-          for $doiRecord in $xmlDoi/csv/record
-          let $uri := $doiRecord/work/text()          
-          let $redirectUri := local:get-redirect($uri)
-          
-          return if ($redirectUri = "error")
-                 then element rdf:Description { 
-                               attribute rdf:about {$uri},
-                               <prism:doi>{substring-after($uri,"http://dx.doi.org/")}</prism:doi>,
-                               <bibo:doi>{substring-after($uri,"http://dx.doi.org/")}</bibo:doi>,
-                               <rdfs:comment>bad doi</rdfs:comment>
-                               }
-                 else local:query-endpoint($redirectUri)[2]/rdf:RDF/rdf:Description
-    }</rdf:RDF>
-  )
+    file:write("c:\test\orcid\doi"||string($pages)||".rdf",
+          <rdf:RDF>{
+              for $record in (1 to $remainder)
+              let $uri := $xmlDoi/csv/record[$pages * 1000 + $record]/work/text()   
+              return local:generate-description-element($uri)
+          }</rdf:RDF>
+       ) 
 )
- :)
+
