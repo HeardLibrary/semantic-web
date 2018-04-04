@@ -63,3 +63,118 @@ Example:
 ## Application: (Union List of Artist Names) ULAN at Getty http://www.getty.edu/research/tools/vocabularies/
 
 Go to ULAN.  Enter "Warhol". Click on "Warhol, Andy". Click on N3/Turtle.  Examine in text editor.
+
+# Notes from 2018-04-02 meeting
+
+# from William about the PROV Ontology
+
+* PROV-O: The PROV Ontology: <https://www.w3.org/TR/prov-o/>  
+* The PROV Namespace: <https://www.w3.org/ns/prov>  
+* `prov:Activity`: <https://www.w3.org/TR/prov-o/#Activity>
+* `prov:Agent`: <https://www.w3.org/TR/prov-o/#Agent>
+* `prov:startedAtTime`: <https://www.w3.org/TR/prov-o/#startedAtTime>
+
+
+## Getty Example of Prov
+<http://vocab.getty.edu/aat/rev/5000057716>  
+
+## Gregg's Sparql Query
+
+> Note: Gregg's method uses dcterms:modified
+
+Getty Sparql Endpoint: <http://vocab.getty.edu/sparql>
+
+
+```
+select ?dv {
+aat:300198841 dcterms:modified ?dv
+filter not exists {aat:300198841 dcterms:modified ?dv2
+filter (?dv2 > ?dv)}}
+```
+
+## Getty Recently Modified Subject  
+<http://vocab.getty.edu/queries#Recently_Modified_Subjects>
+
+### 3.11   Recently Modified Subjects
+Recently modified subjects have dct:modified after their dct:created (there's no such guarantee for subjects created a long time ago). There's a dct:modified timestamp for every revision action (see Revision History Representation), and there are a lot of them (3.8M as of Mar 2016). So let's limit to AAT, and look for the last 100 revision actions. We use max() to select only the latest modification time for each subject.  
+
+```
+select ?x ?lab (max(?mod) as ?mod1) {
+
+  {select * {?x skos:inScheme aat:; dct:modified ?mod} order by desc(?mod) limit 100}
+
+  ?x gvp:prefLabelGVP/xl:literalForm ?lab
+
+} group by ?x ?lab
+```
+
+If you need to find all subjects changed since a certain date, use the following query. (Note: you need to copy it manually to the edit box put a more recent date, since we don't want it to get progressively slower with time.)
+
+```
+select ?x ?lab (max(?mod) as ?mod1) {
+
+  ?x skos:inScheme aat:; dct:modified ?mod
+
+  filter (?mod >= "2016-03-01T00:00:00"^^xsd:dateTime)
+
+  ?x gvp:prefLabelGVP/xl:literalForm ?lab
+
+} group by ?x ?lab
+```
+
+## Getty Vocabulary Web Services
+
+>NOTE: The excerpt below comes from this document: <http://www.getty.edu/research/tools/vocabularies/vocab_web_services.pdf>
+
+### GetRevisionHistory
+
+Returns information on edits made to vocabulary data based on a date range and input parameter that indicates which piece of revision history information is desired.
+
+Input Notes: Parameters for revision history option include,
+
+
+1. – Overall subject record edits  
+2. – Added, deleted, modified terms  
+3. – Scope note edits  
+4. – Moved records  
+5. – New records  
+6. – All edits and record types  
+7. – Deleted records
+
+English_only parameter (AAT only) allows users to request only English note edits.
+GET examples:
+
+<http://vocabsservices.getty.edu/AATService.asmx/AATGetRevisionHistory?startDate=1-AUG-2017&endDate=31-DEC-2017&param=2&english_only=N>
+
+<http://vocabsservices.getty.edu/ULANService.asmx/ULANGetRevisionHistory?startDate=1-AUG-2017&endDate=31-DEC-2017&param=2>
+
+<http://vocabsservices.getty.edu/TGNService.asmx/TGNGetRevisionHistory?startDate=1-AUG-2017&endDate=31-DEC-2017&param=2>
+
+Output schemas:
+
+<http://vocabsservices.getty.edu/Schemas/AAT/AATGetRevisionHistory.xsd>
+<http://vocabsservices.getty.edu/Schemas/ULAN/ULANGetRevisionHistory.xsd>
+<http://vocabsservices.getty.edu/Schemas/TGN/TGNGetRevisionHistory.xsd>
+
+# from Steve about Web Annotation Data model
+
+Web Annotation Data Model (W3C Recommendation): https://www.w3.org/TR/annotation-model/
+
+Web Annotation Data Model uses JSON-LD.  Example: https://www.w3.org/TR/annotation-model/#annotations
+
+Reasons for annotating: https://www.w3.org/TR/annotation-model/#motivation-and-purpose
+
+Motivation and purpose example 15, use converter: http://www.easyrdf.org/converter
+
+Notice how rdf:value is used for the text of the body
+
+A SpecificResource (https://www.w3.org/TR/annotation-model/#specific-resources) captures additional information about the Target (or body) as it applies in the annotation. For example, the state - including time.  See https://www.w3.org/TR/annotation-model/#states . A state can have a link to a cached copy of the sources representation appropriate for the annotation.
+
+dokieli uses the Web Annotation Model: https://dokie.li/ and https://github.com/linkeddata/dokieli
+
+dokieli documentation: https://dokie.li/docs
+
+annotated article: http://csarven.ca/dokieli-rww#abstract
+
+dokieli annotation example (An example I haven't figured out how to use.): https://linkedresearch.org/annotation/csarven.ca/dokieli-rww/b6738766-3ce5-4054-96a9-ced7f05b439f
+Use View Source in RDF translator. Note that the value of the body is in the HTML, but not a TextualBody included in the Turtle.  Need to create, then sign in with a WebID (see https://www.w3.org/wiki/WebID), can this work with Keybase?
