@@ -24,6 +24,8 @@ This graph describes places, their names, locations, and the sources from which 
 
 The primary described resource is outlined in yellow. Other resources described in this graph are outlined in blue.  Linked resources described outside this graph are outlined in gray.
 
+Note: although many of the triples shown in this graph are actually represented in the graph, a few are made up to illustrate relationships expressed for other resources in the dataset.
+
 **CURIEs (namespaces) used:**
 ```
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
