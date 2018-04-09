@@ -38,7 +38,24 @@ PREFIX lawd: <http://lawd.info/ontology/>
 ```
 **Sample queries:**
 
-Find place name labels in English, Syriac, and Arabic:
+List the preferred English names and geocoordinates of places that are geolocated.  If there is a preferred Syriac name, list that as well.
+```
+SELECT DISTINCT ?engLabel ?syrLabel ?lat ?long
+FROM <http://syriaca.org/place>
+WHERE {
+  ?place geo:location/geo:lat ?lat.
+  ?place geo:location/geo:long ?long.
+  ?place lawd:hasName/lawd:primaryForm ?engLabel.
+  FILTER (langMatches(lang(?engLabel),"en" ))
+  OPTIONAL {
+  	?place lawd:hasName/lawd:primaryForm ?syrLabel.
+  	FILTER (langMatches(lang(?syrLabel),"syr" ))
+	}
+  }
+ORDER BY ?engLabel
+```
+
+Find variant place name labels in English, Syriac, and Arabic:
 ```
 PREFIX lawd: <http://lawd.info/ontology/>
 SELECT DISTINCT ?place ?english ?syriac ?arabic
