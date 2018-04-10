@@ -178,3 +178,9 @@ annotated article: http://csarven.ca/dokieli-rww#abstract
 
 dokieli annotation example (An example I haven't figured out how to use.): https://linkedresearch.org/annotation/csarven.ca/dokieli-rww/b6738766-3ce5-4054-96a9-ced7f05b439f
 Use View Source in RDF translator. Note that the value of the body is in the HTML, but not a TextualBody included in the Turtle.  Need to create, then sign in with a WebID (see https://www.w3.org/wiki/WebID), can this work with Keybase?
+
+# Additional references to consider
+
+Defining N-ary Relations on the Semantic Web http://www.w3.org/TR/swbp-n-aryRelations
+
+Tracking RDF Graph Provenance using RDF Molecules https://ebiquity.umbc.edu/paper/html/id/240/Tracking-RDF-Graph-Provenance-using-RDF-Molecules
