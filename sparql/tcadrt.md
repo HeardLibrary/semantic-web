@@ -134,7 +134,7 @@ SELECT DISTINCT ?pinyinName ?periodName WHERE {
   FILTER (lang(?periodName)="en")
   ?site dwc:stateProvince "Shanxi"@zh-latn-pinyin.
   ?site rdfs:label ?pinyinName.
-  FILTER (lang(?chineseName)="zh-latn-pinyin")
+  FILTER (lang(?pinyinName)="zh-latn-pinyin")
   }
 ```
 
@@ -151,6 +151,7 @@ Find buildings contained in the Baitai Monastery, then find the images that depi
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <http://schema.org/>
 PREFIX ac: <http://rs.tdwg.org/ac/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
 SELECT DISTINCT ?pinyinName ?thumbnail WHERE {
   ?site rdfs:label "Baitaisi"@zh-latn-pinyin.
@@ -246,6 +247,7 @@ SELECT DISTINCT ?label WHERE {
 The following query uses [SPARQL 1.1 property paths](https://www.w3.org/TR/sparql11-query/#propertypaths) (indicated by the "\*" after time:intervalMetBy) to constrain starting and ending dynasties of an interval to include the Yuan dynasty.  It then finds sites whose construction intervals meet this constraint.  Note that it does not take into consideration whether a particular site actually falls into a geographic region that was under the control of the constraining dynasty.  It only uses the temporal order of the dynasties shown in the diagram above.
 
 ```
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX time: <http://www.w3.org/2006/time#>
 
