@@ -1,0 +1,57 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix schema: <http://schema.org/>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix dwciri: <http://rs.tdwg.org/dwc/iri/>.
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix time: <http://www.w3.org/2006/time#>.
+@prefix gn: <http://www.geonames.org/ontology#>.
+@prefix gvp: <http://vocab.getty.edu/ontology#>.
+
+<http://n2t.net/ark:/99152/p0fp7wvtqp9> #Qing
+     time:intervalMetBy <http://n2t.net/ark:/99152/p0fp7wv2s8c>. #Ming
+
+<http://n2t.net/ark:/99152/p0fp7wv2s8c> #Ming
+     time:intervalMetBy <http://n2t.net/ark:/99152/p0fp7wvvrz5>. #Yuan
+
+<http://n2t.net/ark:/99152/p0fp7wvvrz5> #Yuan
+     time:intervalMetBy <http://n2t.net/ark:/99152/p0fp7wvmghn>. #Jin
+
+<http://n2t.net/ark:/99152/p0fp7wvvrz5> #Yuan
+     time:intervalMetBy <http://n2t.net/ark:/99152/p0fp7wv9x7n>. #Southern Song
+
+<http://n2t.net/ark:/99152/p0fp7wv9x7n> #Southern Song
+     time:intervalMetBy <http://n2t.net/ark:/99152/p0fp7wvjvn8>. #Northern Song
+
+<http://n2t.net/ark:/99152/p0fp7wvmghn> #Jin
+     time:intervalMetBy <http://n2t.net/ark:/99152/p0fp7wvjvn8>. #Northern Song
+
+<http://n2t.net/ark:/99152/p0fp7wvmghn> #Jin
+     time:intervalMetBy <http://n2t.net/ark:/99152/p0fp7wvw8zq>. #Liao
+
+<http://n2t.net/ark:/99152/p0fp7wvjvn8> #Northern Song
+     time:intervalMetBy <http://n2t.net/ark:/99152/p0fp7wv5h26>. #Five Dynasties
+
+<http://n2t.net/ark:/99152/p0fp7wv5h26> #Five Dynasties
+     time:intervalMetBy <http://n2t.net/ark:/99152/p0fp7wvrjpj>. #Tang
+
+<http://lod.vanderbilt.edu/historyart/site/dynasty-timeline.ttl>
+     dc:format "text/turtle";
+     dc:creator "Steve Baskauf";
+     dcterms:references <http://n2t.net/ark:/99152/p0fp7wvtqp9>,
+     <http://n2t.net/ark:/99152/p0fp7wv2s8c>,
+     <http://n2t.net/ark:/99152/p0fp7wvvrz5>,
+     <http://n2t.net/ark:/99152/p0fp7wvmghn>,
+     <http://n2t.net/ark:/99152/p0fp7wv9x7n>,
+     <http://n2t.net/ark:/99152/p0fp7wvjvn8>,
+     <http://n2t.net/ark:/99152/p0fp7wvw8zq>,
+     <http://n2t.net/ark:/99152/p0fp7wv5h26>,
+     <http://n2t.net/ark:/99152/p0fp7wvrjpj>;
+     dcterms:modified "2016-11-12T20:30:00-06:00"^^xsd:dateTime;
+     a foaf:Document.
+
