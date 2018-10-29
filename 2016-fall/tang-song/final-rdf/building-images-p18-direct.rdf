@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:ac="http://rs.tdwg.org/ac/terms/"
+	xmlns:schema="http://schema.org/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:hint="http://www.bigdata.com/queryHints#"
+	xmlns:bd="http://www.bigdata.com/rdf#"
+	xmlns:bds="http://www.bigdata.com/rdf/search#">
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000240">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4122/4821011595_17b19b9d4d_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000244">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4105/4838047335_a4924ed695_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000258">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4110/4836625486_fe25f6b97d_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000230">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm3.staticflickr.com/2503/4108244263_bb5a84d91b_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000280">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm4.staticflickr.com/3471/3972919062_40648b406b_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000125">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4122/4831075875_107fbf1b42_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000127">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4137/4831113201_47f4cd2646_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000136">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4152/4831472157_99a533d0c3_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000126">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4151/4831068639_b3110fc98a_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000137">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4110/4831544309_0a228f4684_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000146">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4138/4809531967_3560864b6a_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000228">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm3.staticflickr.com/2469/3824031609_ec01d01cfa_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000167">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4144/4840956853_92068654c3_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000270">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4102/4820650023_e3725d477d_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000162">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4083/4835033597_cace9e578b_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000246">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4118/4818544901_a4c8300cab_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000151">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4078/4821732417_6b78db8e1b_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000247">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4141/4818551971_ae142df510_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000227">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4132/4836049617_c231301cbf_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000204">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm3.staticflickr.com/2720/4108162863_d77773f940_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000180">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm3.staticflickr.com/2462/3842335089_4d942b39d4_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000266">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4091/4834415619_353efe6a5e_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000233">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4123/4821376819_94855668a8_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000176">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4109/4835974061_3c427fda67_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000272">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4079/4820597261_101808f982_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000195">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4078/4821552535_b3e4b42039_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000253">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4122/4820707853_a3640dfe62_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000196">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4079/4820667627_d88b78dcb3_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000164">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4036/4686522417_b04ff30fe1_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000153">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4085/4834229413_2bfb982592_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000225">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4111/4837577921_f2f2eb4d84_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000239">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4095/4821262797_9a6433b495_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000215">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4102/4821493543_2e73ce790d_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000150">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4138/4821725453_b0e71c44d4_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000250">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4100/4820806605_50082ab2f5_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000222">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm4.staticflickr.com/3555/3824111543_1be9ff04dc_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000274">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4134/4818822323_7390244c41_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000163">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4063/4685824019_a8550d0519_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000229">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4125/4836005329_9331dbd8a7_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000198">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm4.staticflickr.com/3518/3824777780_23e75c5ede_b.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://tcadrt.org/work/000200">
+	<P18 xmlns="http://www.wikidata.org/prop/direct/" rdf:resource="https://farm5.staticflickr.com/4134/4821310415_333524cea5_b.jpg"/>
+</rdf:Description>
+
+</rdf:RDF>
