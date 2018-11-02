@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:hint="http://www.bigdata.com/queryHints#"
+	xmlns:bd="http://www.bigdata.com/rdf#"
+	xmlns:bds="http://www.bigdata.com/rdf/search#">
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000125">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4122/4831075875_107fbf1b42_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000126">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4151/4831068639_b3110fc98a_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000127">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4137/4831113201_47f4cd2646_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000136">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4152/4831472157_99a533d0c3_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000137">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4110/4831544309_0a228f4684_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000146">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4138/4809531967_3560864b6a_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000150">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4138/4821725453_b0e71c44d4_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000151">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4078/4821732417_6b78db8e1b_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000153">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4085/4834229413_2bfb982592_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000162">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4083/4835033597_cace9e578b_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000163">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4063/4685824019_a8550d0519_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000164">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4036/4686522417_b04ff30fe1_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000167">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4144/4840956853_92068654c3_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000176">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4109/4835974061_3c427fda67_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000180">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm3.staticflickr.com/2462/3842335089_4d942b39d4_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000195">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4078/4821552535_b3e4b42039_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000196">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4079/4820667627_d88b78dcb3_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000198">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm4.staticflickr.com/3518/3824777780_23e75c5ede_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000200">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4134/4821310415_333524cea5_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000204">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm3.staticflickr.com/2720/4108162863_d77773f940_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000215">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4102/4821493543_2e73ce790d_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000222">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm4.staticflickr.com/3555/3824111543_1be9ff04dc_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000225">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4111/4837577921_f2f2eb4d84_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000227">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4132/4836049617_c231301cbf_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000228">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm3.staticflickr.com/2469/3824031609_ec01d01cfa_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000229">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4125/4836005329_9331dbd8a7_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000230">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm3.staticflickr.com/2503/4108244263_bb5a84d91b_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000233">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4123/4821376819_94855668a8_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000239">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4095/4821262797_9a6433b495_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000240">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4122/4821011595_17b19b9d4d_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000244">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4105/4838047335_a4924ed695_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000246">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4118/4818544901_a4c8300cab_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000247">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4141/4818551971_ae142df510_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000250">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4100/4820806605_50082ab2f5_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000253">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4122/4820707853_a3640dfe62_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000258">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4110/4836625486_fe25f6b97d_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000266">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4091/4834415619_353efe6a5e_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000270">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4102/4820650023_e3725d477d_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000272">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4079/4820597261_101808f982_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000274">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm5.staticflickr.com/4134/4818822323_7390244c41_t.jpg"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://architecturasinica.org/place/000280">
+	<thumbnail xmlns="http://schema.org/" rdf:resource="https://farm4.staticflickr.com/3471/3972919062_40648b406b_t.jpg"/>
+</rdf:Description>
+
+</rdf:RDF>
