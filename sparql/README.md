@@ -1,5 +1,5 @@
 # SPARQL Endpoint User Guide
-**Vanderbilt University Semantic Web Working Group**
+**Vanderbilt University Linked Data Working Group**
 
 [go to the SPARQL query interface](https://sparql.vanderbilt.edu/#query)
 
@@ -17,7 +17,7 @@ The pages linked in the Project column below contain descriptions of graphs incl
 | ------- | ----------- | ------ | ----------- |
 | [Bioimages](bioimages.md) | http://bioimages.vanderbilt.edu | stable | Collection of organism images and biodiversity database |
 | [Syriac Gazetteer](syriaca.md) | http://syriaca.org/geo/index.html | stable | Gazetteer of place names important in Syriac history and culture |
-| [Architecture Sinica](tcadrt.md) | https://architecturasinica.org/ | testing | A research Portal for the study of China's Traditional Architecture|
+| [Architecture Sinica](tcadrt.md) | https://architecturasinica.org/ | testing | A research portal for the study of China's Traditional Architecture|
 | [Ancient Italian Vases](vase.md) | https://github.com/HeardLibrary/semantic-web/tree/master/vase | experimental | Cultural heritage dataset to explore music and vase-painting |
 | [Controlled vocabulary for occurrence status](status-cv.md) | https://github.com/qgroom/ias-dwc-proposal | experimental | Project to develop a controlled vocabulary for the TDWG Darwin Core term occurrenceStatus |
 
@@ -31,6 +31,6 @@ Experimental = graph model under construction; don't expect any sort of stabilit
 
 ## How does this work?
 
-The graphs are modeled using the [World Wide Web Consortium](https://www.w3.org/) (W3C) [Resource Description Framework (RDF) Recommendation](https://www.w3.org/TR/rdf11-primer/). The graph database and SPARQL REST API are an implementation of the freely-available [Blazegraph](https://www.blazegraph.com/) application.  The web server is hosted on a Jelastic-based cloud service using an Nginx front end server to manage security and a Tomcat back end server to manage Blazegraph. (See [this page](setup.md) for more details.)  This resource was developed by the [Vanderbilt University Semantic Web Working Group](https://heardlibrary.github.io/semantic-web/) supported by a grant from the [Vanderbilt Institute for Digital Learning](http://www.vanderbilt.edu/vidl/) (VIDL).  For more information, contact [Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu).
+The graphs are modeled using the [World Wide Web Consortium](https://www.w3.org/) (W3C) [Resource Description Framework (RDF) Recommendation](https://www.w3.org/TR/rdf11-primer/). The graph database and SPARQL REST API are an implementation of the freely-available [Blazegraph](https://www.blazegraph.com/) application.  The web server is hosted on a Jelastic-based cloud service using an Nginx front end server to manage security and a Tomcat back end server to manage Blazegraph. (See [this page](setup.md) for more details.)  This resource was developed by the [Vanderbilt University Linked Data Working Group](https://heardlibrary.github.io/linked-data/) supported by a grant from the [Vanderbilt Institute for Digital Learning](http://www.vanderbilt.edu/vidl/) (VIDL).  For more information, contact [Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu).
 
 [go to the SPARQL query interface](https://sparql.vanderbilt.edu/#query)
