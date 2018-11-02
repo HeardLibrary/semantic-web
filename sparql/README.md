@@ -17,7 +17,7 @@ The pages linked in the Project column below contain descriptions of graphs incl
 | ------- | ----------- | ------ | ----------- |
 | [Bioimages](bioimages.md) | http://bioimages.vanderbilt.edu | stable | Collection of organism images and biodiversity database |
 | [Syriac Gazetteer](syriaca.md) | http://syriaca.org/geo/index.html | stable | Gazetteer of place names important in Syriac history and culture |
-| [Traditional Chinese Architecture Digital Research Tool](tcadrt.md) | http://tcadrt.org | testing | Tool for exploring the architecture of historical Chinese religious buildings|
+| [Architecture Sinica](tcadrt.md) | https://architecturasinica.org/ | testing | A research Portal for the study of China's Traditional Architecture|
 | [Ancient Italian Vases](vase.md) | https://github.com/HeardLibrary/semantic-web/tree/master/vase | experimental | Cultural heritage dataset to explore music and vase-painting |
 | [Controlled vocabulary for occurrence status](status-cv.md) | https://github.com/qgroom/ias-dwc-proposal | experimental | Project to develop a controlled vocabulary for the TDWG Darwin Core term occurrenceStatus |
 

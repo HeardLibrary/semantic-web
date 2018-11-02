@@ -1,5 +1,5 @@
-# Traditional Chinese Architecture graph model
-**Vanderbilt University Semantic Web Working Group**
+# Architectura Sinica graph model
+**Vanderbilt University Linked Data Working Group**
 
 [back to the User Guide](README.md)
 
@@ -7,11 +7,11 @@
 
 ## Status
 
-The Traditional Chinese Architecture Digital Research Tool (http://tcadrt.org/) dataset has undergone preliminary testing and is in a usable form.  However, the selection of properties in its underlying model were not based on a single particular standard or community consensus, so those properties may be subject to change in the future as consensus develops within the traditional Chinese architecture community.  The graph model was developed by [Steve Baskauf](https://my.vanderbilt.edu/baskauf/) in consultation with the members of the [Semantic Web Working Group](https://heardlibrary.github.io/semantic-web) at Vanderbilt during the fall of 2016.  For a narrative about the development of the model and dataset, see blog posts [here](http://baskauf.blogspot.com/2016/10/guid-o-matic-goes-to-china.html) and [here](http://baskauf.blogspot.com/2016/11/sparql-based-web-app-to-find-chinese.html).
+The Architectura Sinica (https://architecturasinica.org/) dataset has undergone preliminary testing and is in a usable form.  However, the selection of properties in its underlying model were not based on a single particular standard or community consensus, so those properties may be subject to change in the future as consensus develops within the traditional Chinese architecture community.  The graph model was developed by [Steve Baskauf](https://my.vanderbilt.edu/baskauf/) in consultation with the members of the [Linked Data Working Group](https://heardlibrary.github.io/linked-data/) at Vanderbilt during the fall of 2016.  For a narrative about the development of the model and dataset, see blog posts [here](http://baskauf.blogspot.com/2016/10/guid-o-matic-goes-to-china.html) and [here](http://baskauf.blogspot.com/2016/11/sparql-based-web-app-to-find-chinese.html).
 
 ## Named graphs in the triple store (URIs do not dereference)
 
-### Structures graph http://tcadrt.org/building
+### Structures graph http://architecturasinica.org/place/building
 
 This graph describes particular structures of importance to traditional Chinese architecture.  They may be single temple buildings, particular halls within temple complexes, gates (shanmen), or other structures.  These structures are nested within sites.  Structures are typed as schema:LandmarksOrHistoricalBuildings .
 
@@ -78,7 +78,7 @@ SELECT DISTINCT ?chineseName ?englishName WHERE {
   }
 ```
 
-### Site graph http://tcadrt.org/site
+### Site graph http://architecturasinica.org/place/site
 
 This graph describes sites that contain structures.  There may be one to many structures within a site.  Sites are typed as schema:Place and geo:SpatialThing .
 
@@ -138,7 +138,7 @@ SELECT DISTINCT ?pinyinName ?periodName WHERE {
   }
 ```
 
-### Images graph http://tcadrt.org/temple-images
+### Images graph http://architecturasinica.org/place/image
 
 Currently, images are handled in a somewhat ad hoc manner. They are modeled in similar manner to the Bioimages images (see the [Bioimages graph description page](bioimages.md) for details).  Images are linked to particular structures using foaf:depicts.
 
