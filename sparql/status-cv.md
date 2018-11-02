@@ -1,5 +1,5 @@
 # Controlled vocabulary for Darwin Core occurrenceStatus
-**Vanderbilt University Semantic Web Working Group SPARQL endpoint**
+**Vanderbilt University Linked Data Working Group SPARQL endpoint**
 
 [back to the User Guide](README.md)
 
