@@ -1,5 +1,5 @@
 # Bioimages graph model
-**Vanderbilt University Semantic Web Working Group**
+**Vanderbilt University Linked Data Working Group**
 
 [back to the User Guide](README.md)
 
