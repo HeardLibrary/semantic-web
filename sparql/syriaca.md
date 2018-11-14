@@ -195,7 +195,7 @@ LIMIT 10
 This graph is essentially a SKOS thesaurus or keyword dictionary.
 
 **Graph model:**
-![subjects graph](syriaca-subjects.png)
+![subjects graph](media/syriaca-subjects.png)
 
 The primary described resource is in the center of the graph. skos:broadMatch and skos:closeMatch are used to relate similar subjects.  The subjects are also linked to RDF/Turtle, RDF/XML, TEI, and HTML documents.
 
@@ -235,7 +235,7 @@ LIMIT 10
 This graph relates conceptual works to their bibliographic citations and persons commemorated in them.
 
 **Graph model:**
-![works graph](syriaca-works.png)
+![works graph](media/syriaca-works.png)
 
 The primary described resource is in the left of the graph. The conceptual works are connected to citations via lawd:hasCitation.  They are linked to people via syriaca:commemorated.  Hierarchical relationships are expressed using dcterms:isPartOf.  They are also linked to RDF/Turtle, RDF/XML, TEI, and HTML documents.
 
