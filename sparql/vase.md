@@ -150,6 +150,7 @@ SELECT DISTINCT ?museum WHERE {
 What are top-level subjects of scenes painted by the Varrese Painter?
 ```
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
